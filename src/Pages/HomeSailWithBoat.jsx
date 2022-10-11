@@ -29,6 +29,7 @@ export const HomeSailWithBoat = () => {
   //   '2xl': '96em',
   // }
   // const theme = extendTheme({ breakpoints,mdlg:'50em'})
+  
   // {base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}
   return (
     <Box width="100%" margin="auto" marginTop="100px">
