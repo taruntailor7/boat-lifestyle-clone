@@ -1,4 +1,7 @@
 {
+  "users":[
+
+  ],
   "allProducts" : [
     {
       "id": 1,
@@ -429,10 +432,10 @@
     {
         "id":1,
         "name":"boAt Watch Xtend",
-        "actualPrice":"7,990",
-        "latestPrice":"3,499",
-        "reviews":"34",
-        "rating":"4.68",
+        "actualPrice":7990,
+        "latestPrice":3499,
+        "reviews":34,
+        "rating":4.68,
         "p1":"Colour variants for every style",
         "p2":"Fast Charge in just 15 minutes",
         "p3":"Ace your workouts with IPX5 rating",
@@ -441,10 +444,10 @@
     {
         "id":2,
         "name":"boAt Storm",
-        "actualPrice":"5,990",
-        "latestPrice":"2,999",
-        "reviews":"757",
-        "rating":"4.79",
+        "actualPrice":5990,
+        "latestPrice":2999,
+        "reviews":757,
+        "rating":4.79,
         "p1":"Track and transform your health",
         "p2":"Full touch display",
         "p3":"Track your SpO2 levels",
@@ -453,10 +456,10 @@
     {
         "id":3,
         "name":"boAt Watch Iris",
-        "actualPrice":"11,999",
-        "latestPrice":"4,399",
-        "reviews":"34",
-        "rating":"4.68",
+        "actualPrice":11999,
+        "latestPrice":4399,
+        "reviews":34,
+        "rating":4.68,
         "p1":"Amoled display",
         "p2":"1.39 inches display",
         "p3":"Health on the go",
@@ -465,10 +468,10 @@
     {
         "id":4,
         "name":"boAt Watch‌ Vertex",
-        "actualPrice":"6,990",
-        "latestPrice":"2,499",
-        "reviews":"2",
-        "rating":"5",
+        "actualPrice":6990,
+        "latestPrice":2499,
+        "reviews":2,
+        "rating":5,
         "p1":"Colour variants for every style",
         "p2":"Fast Charge in just 15 minutes",
         "p3":"Ace your workouts with IPX5 rating",
@@ -477,10 +480,10 @@
     {
         "id":5,
         "name":"boAt Watch Flash",
-        "actualPrice":"6,990",
-        "latestPrice":"2,999",
-        "reviews":"7",
-        "rating":"4.86",
+        "actualPrice":6990,
+        "latestPrice":2999,
+        "reviews":7,
+        "rating":4.86,
         "p1":"Track and transform your health",
         "p2":"Full touch display",
         "p3":"Track your menstrual cycle",
@@ -489,10 +492,10 @@
     {
         "id":6,
         "name":"boAt Watch Mystiq",
-        "actualPrice":"6,990",
-        "latestPrice":"3,499",
-        "reviews":"34",
-        "rating":"4.68",
+        "actualPrice":6990,
+        "latestPrice":3499,
+        "reviews":34,
+        "rating":4.68,
         "p1":"1.57 inch Display",
         "p2":"Multiple Sports Mode",
         "p3":"Call, Text & Social Media Notifications",
@@ -501,10 +504,10 @@
     {
         "id":7,
         "name":"boAt Watch Xtend",
-        "actualPrice":"7,990",
-        "latestPrice":"3,499",
-        "reviews":"34",
-        "rating":"4.68",
+        "actualPrice":7990,
+        "latestPrice":3499,
+        "reviews":34,
+        "rating":4.68,
         "p1":"Colour variants for every style",
         "p2":"Fast Charge in just 15 minutes",
         "p3":"Ace your workouts with IPX5 rating",
@@ -513,24 +516,24 @@
     {
         "id":8,
         "name":"boAt Storm",
-        "actualPrice":"5,990",
-        "latestPrice":"2,999",
-        "reviews":"757",
-        "rating":"4.79",
+        "actualPrice":5990,
+        "latestPrice":2999,
+        "reviews":757,
+        "rating":4.79,
         "p1":"Track and transform your health",
         "p2":"Full touch display",
         "p3":"Track your SpO2 levels",
         "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/e7910a39-186a-41f6-ac57-fc3e84108104_600x.png?v=1625045106"
     }
-],
-"TopPicks":[
+  ],
+  "TopPicks":[
     {
         "id":"1",
         "name":"boAt Airdopes 131 - Wireless Earbuds",
-        "actualPrice":"2,990",
-        "latestPrice":"1,119",
-        "reviews":"585",
-        "rating":"4.72",
+        "actualPrice":2990,
+        "latestPrice":1119,
+        "reviews":585,
+        "rating":4.72,
         "p1":"Colour variants for every style",
         "p2":"Fast Charge in just 15 minutes",
         "p3":"Ace your workouts with IPX5 rating",
@@ -539,10 +542,10 @@
     {
         "id":"2",
         "name":"Zoom boAt Rockerz 333",
-        "actualPrice":"3,990",
-        "latestPrice":"1,480",
-        "reviews":"7",
-        "rating":"2.9",
+        "actualPrice":3990,
+        "latestPrice":1480,
+        "reviews":7,
+        "rating":2.9,
         "p1":"Track and transform your health",
         "p2":"Full touch display",
         "p3":"Track your SpO2 levels",
@@ -551,10 +554,10 @@
     {
         "id":"3",
         "name":"boAt Watch Iris",
-        "actualPrice":"11,999",
-        "latestPrice":"4,399",
-        "reviews":"34",
-        "rating":"4.68",
+        "actualPrice":11999,
+        "latestPrice":4399,
+        "reviews":34,
+        "rating":4.68,
         "p1":"Amoled display",
         "p2":"1.39 inches display",
         "p3":"Health on the go",
@@ -563,318 +566,315 @@
     {
         "id":"4",
         "name":"boAt Watch‌ Vertex",
-        "actualPrice":"6,990",
-        "latestPrice":"2,499",
-        "reviews":"2",
-        "rating":"5",
+        "actualPrice":6990,
+        "latestPrice":2499,
+        "reviews":2,
+        "rating":5,
         "p1":"Colour variants for every style",
         "p2":"Fast Charge in just 15 minutes",
         "p3":"Ace your workouts with IPX5 rating",
         "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_red_c23085c4-970f-421b-9752-d82a5bc8d17d_600x.png?v=1635140773"
     }
     
-],
-"Earbuds":[
-    {
-        "id":"1",
-        "name":"boAt Airdopes 131 - Wireless Earbuds",
-        "actualPrice":"5,690",
-        "latestPrice":"3,499",
-        "reviews":"343",
-        "rating":"4.78",
-        "p1":"Colour variants for every style",
-        "p2":"Fast Charge in just 15 minutes",
-        "p3":"Ace your workouts with IPX5 rating",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/32011675-2ad8-4b99-9787-895caf201d28_300x.png?v=1642405569"
-    },
-    {
-        "id":"2",
-        "name":"boAt Airdopes 121 v2",
-        "actualPrice":"2,990",
-        "latestPrice":"1,099",
-        "reviews":"257",
-        "rating":"4.74",
-        "p1":"Track and transform your health",
-        "p2":"Full touch display",
-        "p3":"Track your SpO2 levels",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/airdopes-121-v2-blue_300x.png?v=1612765376"
-    },
-    {
-        "id":"3",
-        "name":"Airdopes 115",
-        "actualPrice":"2,399",
-        "latestPrice":"1,399",
-        "reviews":"134",
-        "rating":"4.08",
-        "p1":"Amoled display",
-        "p2":"1.39 inches display",
-        "p3":"Health on the go",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/115-main1_300x.png?v=1650530656"
-    },
-    {
-        "id":"4",
-        "name":"boAt Airdopes 141",
-        "actualPrice":"5,990",
-        "latestPrice":"2,499",
-        "reviews":"52",
-        "rating":"5",
-        "p1":"Colour variants for every style",
-        "p2":"Fast Charge in just 15 minutes",
-        "p3":"Ace your workouts with IPX5 rating",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/grey_300x.png?v=1648723802"
-    },
-    {
-        "id":"5",
-        "name":"boAt Airdopes 402 - Wireless Earbuds",
-        "actualPrice":"1,990",
-        "latestPrice":"1,999",
-        "reviews":"237",
-        "rating":"4.06",
-        "p1":"Track and transform your health",
-        "p2":"Full touch display",
-        "p3":"Track your menstrual cycle",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/402-main-img_300x.png?v=1630059242"
-    },
-    {
-        "id":"6",
-        "name":"boAt Airdopes 621",
-        "actualPrice":"6,990",
-        "latestPrice":"3,499",
-        "reviews":"34",
-        "rating":"4.68",
-        "p1":"1.57 inch Display",
-        "p2":"Multiple Sports Mode",
-        "p3":"Call, Text & Social Media Notifications",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img_AD621_1_300x.png?v=1616230788"
-    }
-],
-"Wireless":[
-    {
-        "id":"1",
-        "name":"boAt Rockerz 235 V2",
-        "actualPrice":"1,690",
-        "latestPrice":"2,499",
-        "reviews":"843",
-        "rating":"2.78",
-        "p1":"Colour variants for every style",
-        "p2":"Fast Charge in just 15 minutes",
-        "p3":"Ace your workouts with IPX5 rating",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ed46e58c-9643-43e0-b350-9539d293aa51_300x.png?v=1625045114"
-    },
-    {
-        "id":"2",
-        "name":"boAt Rockerz 245 V2",
-        "actualPrice":"4,890",
-        "latestPrice":"3,099",
-        "reviews":"167",
-        "rating":"4.04",
-        "p1":"Track and transform your health",
-        "p2":"Full touch display",
-        "p3":"Track your SpO2 levels",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/245v2_main_2_300x.png?v=1627276367"
-    },
-    {
-        "id":"3",
-        "name":"boAt Rockerz 450",
-        "actualPrice":"5,399",
-        "latestPrice":"3,399",
-        "reviews":"134",
-        "rating":"4.08",
-        "p1":"Amoled display",
-        "p2":"1.39 inches display",
-        "p3":"Health on the go",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/7499af44-9d7a-489c-80f0-51f7799289e4_300x.png?v=1625045491"
-    },
-    {
-        "id":"4",
-        "name":"boAt Rockerz 330",
-        "actualPrice":"8,990",
-        "latestPrice":"6,499",
-        "reviews":"452",
-        "rating":"3.08",
-        "p1":"Colour variants for every style",
-        "p2":"Fast Charge in just 15 minutes",
-        "p3":"Ace your workouts with IPX5 rating",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/0cfa4417-0213-4b49-b78e-0ae68aeb7057_300x.png?v=1625046144"
-    },
-    {
-        "id":"5",
-        "name":"Trebel Rockerz 255 Pro+",
-        "actualPrice":"2,990",
-        "latestPrice":"1,999",
-        "reviews":"237",
-        "rating":"4.06",
-        "p1":"Track and transform your health",
-        "p2":"Full touch display",
-        "p3":"Track your menstrual cycle",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/0cfa4417-0213-4b49-b78e-0ae68aeb7057_300x.png?v=1625046144"
-    },
-    {
-        "id":"6",
-        "name":"Trebel Rockerz 550",
-        "actualPrice":"3,990",
-        "latestPrice":"3,499",
-        "reviews":"34",
-        "rating":"4.68",
-        "p1":"1.57 inch Display",
-        "p2":"Multiple Sports Mode",
-        "p3":"Call, Text & Social Media Notifications",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/48b829ed-bee6-492e-b9bc-1824d5c63bd4_1aa0a835-9bbd-432c-ad92-76d0c2b7a36d_600x.png?v=1646390147"
-    }
-],
-"NewLaunches":[
-    {
-        "id":"1",
-        "type":"Wireless Earbuds",
-        "name":"boAt Airdopes 115",
-        "actualPrice":"1,690",
-        "latestPrice":"1,499",
-        "reviews":"843",
-        "rating":"2.78",
-        "des":"Pro gamer? We got you. A do-it-all hustler? Even better! Airdopes 115 is the perfect choice for both worlds. Its 13mm drivers will make you experience a thumping bass and drown you in the unbeatable boAt Signature Sound. Get the gamer to win matches with minimum lag powered by BEAST™ Mode. Call disturbance will never be an issue with ENx™ technology that makes calls crystal clear for you. So, pick from its dynamic colours & vibe limitless with its 24HRS playback",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/AD-115-Black.jpg?v=1652257521"
-    },
-    {
-        "id":"2",
-        "type":"Wireless Earbuds",
-        "name":"boAt Airdopes 500 ANC",
-        "actualPrice":"4,890",
-        "latestPrice":"3,999",
-        "reviews":"367",
-        "rating":"3.04",
-         "des":"ap out of chaos & listen to the #SoundThatMatters with Airdopes 500 ANC. The erratic chatter while commuting, the swoosh of the strong winds, and the deafening traffic – tune out of everything and focus on what matters with Hybrid Active Noise Cancellation up to 35dB. Don’t let your words fail you – its Quad Mics & ENx™ Technology ensure your voice is heard as good as in person. And when you’re ready to game, BEAST™ Mode offers seamless gaming with minimal lag. Plug in. Switch on.",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/new-launch-500-anc.jpg?v=1650021089"
-    }
-],
-
-"Gaming":[
-    {
-        "id":"1",
-        "name":"boAt Immortal 1300",
-        "actualPrice":"7,990",
-        "latestPrice":"3,499",
-        "reviews":"34",
-        "rating":"4.68",
-        "p1":"Colour variants for every style",
-        "p2":"Fast Charge in just 15 minutes",
-        "p3":"Ace your workouts with IPX5 rating",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_33ed4e4f-8ef4-4c8a-a0c7-68216dfafa4a_300x.png?v=1643477993"
-    },
-    {
-        "id":"2",
-        "name":"boAt Immortal 1000D",
-        "actualPrice":"5,990",
-        "latestPrice":"2,999",
-        "reviews":"757",
-        "rating":"4.79",
-        "p1":"Track and transform your health",
-        "p2":"Full touch display",
-        "p3":"Track your SpO2 levels",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/IM1300_main_2_300x.png?v=1632715015"
-    },
-    {
-        "id":"3",
-        "name":"boAt Immortal 400",
-        "actualPrice":"11,999",
-        "latestPrice":"4,399",
-        "reviews":"34",
-        "rating":"4.68",
-        "p1":"Amoled display",
-        "p2":"1.39 inches display",
-        "p3":"Health on the go",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/2_f3aa2756-01f3-4e39-80bc-7b4f6551c7aa_300x.png?v=1625748159"
-    },
-    {
-        "id":"4",
-        "name":"boAt Immortal 200",
-        "actualPrice":"6,990",
-        "latestPrice":"2,499",
-        "reviews":"2",
-        "rating":"5",
-        "p1":"Colour variants for every style",
-        "p2":"Fast Charge in just 15 minutes",
-        "p3":"Ace your workouts with IPX5 rating",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2-700_300x.png?v=1643632679"
-    },
-    {
-        "id":"5",
-        "name":"boAt Immortal 700",
-        "actualPrice":"6,990",
-        "latestPrice":"2,999",
-        "reviews":"7",
-        "rating":"4.86",
-        "p1":"Track and transform your health",
-        "p2":"Full touch display",
-        "p3":"Track your menstrual cycle",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-bl_300x.png?v=1625748090"
-    },
-    {
-        "id":"6",
-        "name":"boAt Immortal 100",
-        "actualPrice":"6,990",
-        "latestPrice":"2,999",
-        "reviews":"7",
-        "rating":"4.86",
-        "p1":"Track and transform your health",
-        "p2":"Full touch display",
-        "p3":"Track your menstrual cycle",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/7499af44-9d7a-489c-80f0-51f7799289e4_300x.png?v=1625045491"
-    } 
-],
- 
-"Blog":[
-    {
-        "id":"1",
-         "des":"Earphones Buying Guide - Everything You Need To Know",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Earphone_1296x_540x_25759241-1386-4661-bec0-bad7c111178f_540x.png?v=1650620291"
-    },
-    {
-        "id":"2",
-       "des":"The Ultimate Smartwatch Guide - Get The World On Your Wrist",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Main-banner_520x500_540x_d7c9944e-0985-498b-9a89-3a54d32c9dd2_520x.png?v=1650620307"
-    },
-    {
-        "id":"3",
-        "des":"Top Headphones Under 2000 to Buy in 2022",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/articles/Banner_2_700x.png?v=1653120525"
-    } 
-],
-"actors":[
-    {
-        "id":"1",
-        "type":"Meet the boAttheads",
-        "name":"K L RAHUL",
-        "p1":"Fierce. Flamboyant. Fearless.",
-        "des":"When you hear the crowd raor, be assured that it's KL Rahul making his way to the field. Our hardcore boAthead, KL Rahul, hits it with his performance as well as his fashion statement. ON or off field, Rahul always makes #MoveOfTheChampions.",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Fierce_-Flamboyant_-Fearless_jpg_563x.jpg?v=1651227694"
-    },
-    {
-        "id":"2",
-        "type":"Meet the boAttheads",
-        "name":"RASHMIKA MANDANNA",
-        "p1":"Radiant.Rebel. Trailblazer.",
-        "des":"The Queen of sasa & hearts, Rashmika Mandanna is the newly on-board boAthead. Do you know what our boAthead Rashmika & boAt have in common?They both leave you speechless with their mind-boggling performance.",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Radiant_-Rebel_-Trailblazer_jpg_563x.jpg?v=1651227770"
-    }
-],
-
-"About":[
-    {
-        "id":"1",
-         "des":"It is value for money, best sound especially bass",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/testi-1200_284x.png?v=1649980899"
-    },
-    {
-        "id":"2",
-       "des":"The battery backup is something unbelievable",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/testimonial-img-2_284x.png?v=1649668053"
-    },
-    {
-        "id":"3",
-        "des":"Amazing product great sound quality and the mic performance is also awesome",
-        "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/testimonial-img-3_284x.png?v=1649668053"
-    } 
-],
+  ],
+  "Earbuds":[
+      {
+          "id":"1",
+          "name":"boAt Airdopes 131 - Wireless Earbuds",
+          "actualPrice":5691,
+          "latestPrice":3499,
+          "reviews":343,
+          "rating":4.78,
+          "p1":"Colour variants for every style",
+          "p2":"Fast Charge in just 15 minutes",
+          "p3":"Ace your workouts with IPX5 rating",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/32011675-2ad8-4b99-9787-895caf201d28_300x.png?v=1642405569"
+      },
+      {
+          "id":"2",
+          "name":"boAt Airdopes 121 v2",
+          "actualPrice":2990,
+          "latestPrice":1099,
+          "reviews":257,
+          "rating":4.74,
+          "p1":"Track and transform your health",
+          "p2":"Full touch display",
+          "p3":"Track your SpO2 levels",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/airdopes-121-v2-blue_300x.png?v=1612765376"
+      },
+      {
+          "id":"3",
+          "name":"Airdopes 115",
+          "actualPrice":2399,
+          "latestPrice":1399,
+          "reviews":134,
+          "rating":4.08,
+          "p1":"Amoled display",
+          "p2":"1.39 inches display",
+          "p3":"Health on the go",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/115-main1_300x.png?v=1650530656"
+      },
+      {
+          "id":"4",
+          "name":"boAt Airdopes 141",
+          "actualPrice":5990,
+          "latestPrice":2499,
+          "reviews":52,
+          "rating":5,
+          "p1":"Colour variants for every style",
+          "p2":"Fast Charge in just 15 minutes",
+          "p3":"Ace your workouts with IPX5 rating",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/grey_300x.png?v=1648723802"
+      },
+      {
+          "id":"5",
+          "name":"boAt Airdopes 402 - Wireless Earbuds",
+          "actualPrice":1990,
+          "latestPrice":1999,
+          "reviews":237,
+          "rating":4.06,
+          "p1":"Track and transform your health",
+          "p2":"Full touch display",
+          "p3":"Track your menstrual cycle",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/402-main-img_300x.png?v=1630059242"
+      },
+      {
+          "id":"6",
+          "name":"boAt Airdopes 621",
+          "actualPrice":6990,
+          "latestPrice":3499,
+          "reviews":34,
+          "rating":4.68,
+          "p1":"1.57 inch Display",
+          "p2":"Multiple Sports Mode",
+          "p3":"Call, Text & Social Media Notifications",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img_AD621_1_300x.png?v=1616230788"
+      }
+  ],
+  "Wireless":[
+      {
+          "id":"1",
+          "name":"boAt Rockerz 235 V2",
+          "actualPrice":1690,
+          "latestPrice":2499,
+          "reviews":843,
+          "rating":2.78,
+          "p1":"Colour variants for every style",
+          "p2":"Fast Charge in just 15 minutes",
+          "p3":"Ace your workouts with IPX5 rating",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ed46e58c-9643-43e0-b350-9539d293aa51_300x.png?v=1625045114"
+      },
+      {
+          "id":"2",
+          "name":"boAt Rockerz 245 V2",
+          "actualPrice":4890,
+          "latestPrice":3099,
+          "reviews":167,
+          "rating":4.04,
+          "p1":"Track and transform your health",
+          "p2":"Full touch display",
+          "p3":"Track your SpO2 levels",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/245v2_main_2_300x.png?v=1627276367"
+      },
+      {
+          "id":"3",
+          "name":"boAt Rockerz 450",
+          "actualPrice":5399,
+          "latestPrice":3399,
+          "reviews":134,
+          "rating":4.08,
+          "p1":"Amoled display",
+          "p2":"1.39 inches display",
+          "p3":"Health on the go",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/7499af44-9d7a-489c-80f0-51f7799289e4_300x.png?v=1625045491"
+      },
+      {
+          "id":"4",
+          "name":"boAt Rockerz 330",
+          "actualPrice":8990,
+          "latestPrice":6499,
+          "reviews":452,
+          "rating":3.08,
+          "p1":"Colour variants for every style",
+          "p2":"Fast Charge in just 15 minutes",
+          "p3":"Ace your workouts with IPX5 rating",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/0cfa4417-0213-4b49-b78e-0ae68aeb7057_300x.png?v=1625046144"
+      },
+      {
+          "id":"5",
+          "name":"Trebel Rockerz 255 Pro+",
+          "actualPrice":2990,
+          "latestPrice":1999,
+          "reviews":237,
+          "rating":4.06,
+          "p1":"Track and transform your health",
+          "p2":"Full touch display",
+          "p3":"Track your menstrual cycle",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/0cfa4417-0213-4b49-b78e-0ae68aeb7057_300x.png?v=1625046144"
+      },
+      {
+          "id":"6",
+          "name":"Trebel Rockerz 550",
+          "actualPrice":3990,
+          "latestPrice":3499,
+          "reviews":34,
+          "rating":4.68,
+          "p1":"1.57 inch Display",
+          "p2":"Multiple Sports Mode",
+          "p3":"Call, Text & Social Media Notifications",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/48b829ed-bee6-492e-b9bc-1824d5c63bd4_1aa0a835-9bbd-432c-ad92-76d0c2b7a36d_600x.png?v=1646390147"
+      }
+  ],
+  "NewLaunches":[
+      {
+          "id":"1",
+          "type":"Wireless Earbuds",
+          "name":"boAt Airdopes 115",
+          "actualPrice":1690,
+          "latestPrice":1499,
+          "reviews":843,
+          "rating":2.78,
+          "des":"Pro gamer? We got you. A do-it-all hustler? Even better! Airdopes 115 is the perfect choice for both worlds. Its 13mm drivers will make you experience a thumping bass and drown you in the unbeatable boAt Signature Sound. Get the gamer to win matches with minimum lag powered by BEAST™ Mode. Call disturbance will never be an issue with ENx™ technology that makes calls crystal clear for you. So, pick from its dynamic colours & vibe limitless with its 24HRS playback",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/AD-115-Black.jpg?v=1652257521"
+      },
+      {
+          "id":"2",
+          "type":"Wireless Earbuds",
+          "name":"boAt Airdopes 500 ANC",
+          "actualPrice":4890,
+          "latestPrice":3999,
+          "reviews":367,
+          "rating":3.04,
+          "des":"ap out of chaos & listen to the #SoundThatMatters with Airdopes 500 ANC. The erratic chatter while commuting, the swoosh of the strong winds, and the deafening traffic – tune out of everything and focus on what matters with Hybrid Active Noise Cancellation up to 35dB. Don’t let your words fail you – its Quad Mics & ENx™ Technology ensure your voice is heard as good as in person. And when you’re ready to game, BEAST™ Mode offers seamless gaming with minimal lag. Plug in. Switch on.",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/new-launch-500-anc.jpg?v=1650021089"
+      }
+  ],
+  "Gaming":[
+      {
+          "id":"1",
+          "name":"boAt Immortal 1300",
+          "actualPrice":7990,
+          "latestPrice":3499,
+          "reviews":34,
+          "rating":4.68,
+          "p1":"Colour variants for every style",
+          "p2":"Fast Charge in just 15 minutes",
+          "p3":"Ace your workouts with IPX5 rating",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_33ed4e4f-8ef4-4c8a-a0c7-68216dfafa4a_300x.png?v=1643477993"
+      },
+      {
+          "id":"2",
+          "name":"boAt Immortal 1000D",
+          "actualPrice":5990,
+          "latestPrice":2999,
+          "reviews":757,
+          "rating":4.79,
+          "p1":"Track and transform your health",
+          "p2":"Full touch display",
+          "p3":"Track your SpO2 levels",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/IM1300_main_2_300x.png?v=1632715015"
+      },
+      {
+          "id":"3",
+          "name":"boAt Immortal 400",
+          "actualPrice":11999,
+          "latestPrice":4399,
+          "reviews":34,
+          "rating":4.68,
+          "p1":"Amoled display",
+          "p2":"1.39 inches display",
+          "p3":"Health on the go",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/2_f3aa2756-01f3-4e39-80bc-7b4f6551c7aa_300x.png?v=1625748159"
+      },
+      {
+          "id":"4",
+          "name":"boAt Immortal 200",
+          "actualPrice":6990,
+          "latestPrice":2499,
+          "reviews":2,
+          "rating":5,
+          "p1":"Colour variants for every style",
+          "p2":"Fast Charge in just 15 minutes",
+          "p3":"Ace your workouts with IPX5 rating",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2-700_300x.png?v=1643632679"
+      },
+      {
+          "id":"5",
+          "name":"boAt Immortal 700",
+          "actualPrice":6990,
+          "latestPrice":2999,
+          "reviews":7,
+          "rating":4.86,
+          "p1":"Track and transform your health",
+          "p2":"Full touch display",
+          "p3":"Track your menstrual cycle",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-bl_300x.png?v=1625748090"
+      },
+      {
+          "id":"6",
+          "name":"boAt Immortal 100",
+          "actualPrice":6990,
+          "latestPrice":2999,
+          "reviews":7,
+          "rating":4.86,
+          "p1":"Track and transform your health",
+          "p2":"Full touch display",
+          "p3":"Track your menstrual cycle",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/products/7499af44-9d7a-489c-80f0-51f7799289e4_300x.png?v=1625045491"
+      } 
+  ],
+  "Blog":[
+      {
+          "id":"1",
+          "des":"Earphones Buying Guide - Everything You Need To Know",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Earphone_1296x_540x_25759241-1386-4661-bec0-bad7c111178f_540x.png?v=1650620291"
+      },
+      {
+          "id":"2",
+        "des":"The Ultimate Smartwatch Guide - Get The World On Your Wrist",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Main-banner_520x500_540x_d7c9944e-0985-498b-9a89-3a54d32c9dd2_520x.png?v=1650620307"
+      },
+      {
+          "id":"3",
+          "des":"Top Headphones Under 2000 to Buy in 2022",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/articles/Banner_2_700x.png?v=1653120525"
+      } 
+  ],
+  "actors":[
+      {
+          "id":"1",
+          "type":"Meet the boAttheads",
+          "name":"K L RAHUL",
+          "p1":"Fierce. Flamboyant. Fearless.",
+          "des":"When you hear the crowd raor, be assured that it's KL Rahul making his way to the field. Our hardcore boAthead, KL Rahul, hits it with his performance as well as his fashion statement. ON or off field, Rahul always makes #MoveOfTheChampions.",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Fierce_-Flamboyant_-Fearless_jpg_563x.jpg?v=1651227694"
+      },
+      {
+          "id":"2",
+          "type":"Meet the boAttheads",
+          "name":"RASHMIKA MANDANNA",
+          "p1":"Radiant.Rebel. Trailblazer.",
+          "des":"The Queen of sasa & hearts, Rashmika Mandanna is the newly on-board boAthead. Do you know what our boAthead Rashmika & boAt have in common?They both leave you speechless with their mind-boggling performance.",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Radiant_-Rebel_-Trailblazer_jpg_563x.jpg?v=1651227770"
+      }
+  ],
+  "About":[
+      {
+          "id":"1",
+          "des":"It is value for money, best sound especially bass",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/testi-1200_284x.png?v=1649980899"
+      },
+      {
+          "id":"2",
+        "des":"The battery backup is something unbelievable",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/testimonial-img-2_284x.png?v=1649668053"
+      },
+      {
+          "id":"3",
+          "des":"Amazing product great sound quality and the mic performance is also awesome",
+          "img":"https://cdn.shopify.com/s/files/1/0057/8938/4802/files/testimonial-img-3_284x.png?v=1649668053"
+      } 
+  ],
   "sailWithBoatOnHome" : [
     {
       "id": 1,
@@ -980,6 +980,80 @@
       "color": ["Active Black", "Teal Green", "Cherry Black"]
     }
   ],
+  "shopByCategory":[
+    {
+      "id":1,
+      "categoryImage": "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/dropdown-TWS_100x.png?v=1663752600",
+      "category":"Airdopes True Wireless",
+      "url":"true-wireless-earbuds"
+    },
+    {
+      "id":2,
+      "categoryImage": "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Rectangle271_100x.png?v=1663752867",
+      "category":"Rockerz Wireless",
+      "url":"bluetooth-wireless-headphones"
+    },
+    {
+      "id":3,
+      "categoryImage": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/smartwatches_new_ee36456a-ebda-49f9-9c08-b681ec622b02_150x.png?v=1663838446",
+      "category":"Smart Watches",
+      "url":"smart-watches"
+    },
+    {
+      "id":4,
+      "categoryImage": "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/latest_background_b4f773ca-05d9-41cc-a7cf-3104993ae895_100x.png?v=1663753167",
+      "category":"Bassheads Wired",
+      "url":"wired-headphones"
+    },
+    {
+      "id":5,
+      "categoryImage": "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/box-5_100x.png?v=1663753243",
+      "category":"Stone Speakers",
+      "url":"bluetooth-speakers"
+    },
+    {
+      "id":6,
+      "categoryImage": "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Collections_5baef8f1-a67a-40a5-a537-4258c6caae6a_100x.png?v=1663753280",
+      "category":"Aavante Home Audio",
+      "url":"home-audio"
+    },
+    {
+      "id":7,
+      "categoryImage": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/cables_150x.png?v=1662980890",
+      "category":"Mobile Accessories",
+      "url":"mobile-accessories"
+    },
+    {
+      "id":8,
+      "categoryImage": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/trebel_cat_150x.png?v=1664449979",
+      "category":"Trebel for Women",
+      "url":"trebel-for-women"
+    },
+    {
+      "id":9,
+      "categoryImage": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/limited_editions_150x.png?v=1664450066",
+      "category":"Limited Edition",
+      "url":"limited-edition"
+    },
+    {
+      "id":10,
+      "categoryImage": "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/MISFIT-shop_100x.png?v=1663753379",
+      "category":"Misfit Trimmers",
+      "url":"misfit-by-boat"
+    },
+    {
+      "id":11,
+      "categoryImage": "https://cdn.shopify.com/s/files/1/0057/8938/4802/collections/Immortal_category_Image_100x.png?v=1663753419",
+      "category":"Immortal Gaming",
+      "url":"immortal-gaming"
+    },
+    {
+      "id":12,
+      "categoryImage": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/boat_A_icon_white_150x.png?v=1664455792",
+      "category":"View All",
+      "url":""
+    }
+  ],
   "airdopesTrueWireless" : [
     {
       "id": 1,
@@ -1036,7 +1110,7 @@
       "category": "WIRELESS EARBUDS",
       "rating": 4.8,
       "reviews": 461,
-      "original_price": 1099,
+      "original_price": 4490,
       "discount": 76,
       "isAvailable": true,
       "isSuperSaver":true,
@@ -1061,7 +1135,7 @@
       "category": "WIRELESS EARBUDS",
       "rating": 5.0,
       "reviews": 58 ,
-      "original_price": 1499,
+      "original_price": 4490,
       "discount": 67,
       "isAvailable": true,
       "isSuperSaver":false,
@@ -1083,6 +1157,639 @@
     {
       "id":5,
       "bannerImge": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Airdopes_Catgry-web_7cf20899-eb4a-427f-9a8a-799d7e1c37fa.jpg?v=1634716734"
+    },
+    {
+      "id":6,
+      "heading":"Wireless Earbuds"
+    }
+  ],
+  "rockerzWireless": [
+    {
+      "id": 1,
+      "name": "Rockerz 235 V2",
+      "category": "Wireless Headphones",
+      "rating": 4.8,
+      "reviews": 799,
+      "original_price": 2990,
+      "discount": 73,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ed46e58c-9643-43e0-b350-9539d293aa51_600x.png?v=1625045114",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/FeatureImagesR235V28hours_800x.jpg?v=1655133526",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/FeatureImagesR235V2B5.0_800x.jpg?v=1655133526",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/FeatureImagesR235V2CallAlert_800x.jpg?v=1655133527",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/FeatureImagesR235V2FastCharge_800x.jpg?v=1655133527",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/FeatureImagesR235V2IPX_800x.jpg?v=1655133528"
+      ],
+      "color": [
+        "Lightpink",
+        "Black",
+        "CrimsonCream",
+        "Steelblue",
+        "Ivory White"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Rockerz 255 Pro+",
+      "category": "Wireless Headphones",
+      "rating": 4.8,
+      "reviews": 378,
+      "original_price": 3990,
+      "discount": 70,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/35ca6350-d6f3-4bc2-a742-01b2c88d80c4_72x.png?v=1625552657",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R255-pro-plus-FI-1.2_26120694-ce73-4648-914d-cac83344be75_800x.jpg?v=1655378030",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R255-pro-plus-FI-2_4d688eb6-2427-457b-9100-1ea64331ea22_800x.jpg?v=1655378032",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R255-pro-plus-FI-3.1_7fbe07cb-34d2-4134-8335-907a11d30ede_800x.jpg?v=1655378028",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R255-pro-plus-FI-5_728249d4-f907-426a-81c0-999c326da907_800x.jpg?v=1655378031"
+      ],
+      "color": [
+        "Lightpink",
+        "Black",
+        "CrimsonCream",
+        "Steelblue",
+        "Ivory White"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Rockerz 245 V2",
+      "category": "Wireless Headphones",
+      "rating": 4.8,
+      "reviews": 201,
+      "original_price": 2990,
+      "discount": 67,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/245v2_main_4_72x.png?v=1655719698",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R245v2-fi-3.2_800x.jpg?v=1655442440",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R245v2-fi-4_72x.jpg?v=1655442440"
+      ],
+      "color": [
+        "Lightpink",
+        "Black",
+        "CrimsonCream",
+        "Steelblue",
+        "Ivory White"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Rockerz 330",
+      "category": "Wireless Headphones",
+      "rating": 4.8,
+      "reviews": 260,
+      "original_price": 2990,
+      "discount": 58,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_15634ca0-9f81-4d11-b891-9a1496f709b1_600x.png?v=1641801688",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/asap-n-playback-red_800x.jpg?v=1655376289",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/drivers-red_800x.jpg?v=1655376290",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WHITE23_800x.jpg?v=1658996617",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Dual-pairing-red_800x.jpg?v=1655376287"
+      ],
+      "color": [
+        "Lightpink",
+        "Black",
+        "CrimsonCream",
+        "Steelblue",
+        "Ivory White"
+      ]
+    },
+    {
+      "id":5,
+      "bannerImge": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Rockerz-_Catgry_web_d201c6e3-e067-4280-a127-56a2e1b51399.jpg?v=1634806683"
+    },
+    {
+      "id":6,
+      "heading":"Wireless Headphones"
+    }
+  ],
+  "smartWatches": [
+    {
+      "id": 1,
+      "name": "Wave Connect Bluetooth",
+      "category": "Smart Watches",
+      "rating": 4.8,
+      "reviews": 75,
+      "original_price": 6990,
+      "discount": 61,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/black2_600x.png?v=1654312291",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/02_3103aeab-67e6-49a8-88d1-48eb63704439_800x.jpg?v=1655283552",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/03_e0b942df-f147-4c51-9eb0-9c16b54b8d58_800x.jpg?v=1655285156",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/06_ef28d715-04ce-4d24-a12e-6226ce25bec0_800x.jpg?v=1655285156",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/09_800x.jpg?v=1657348769"
+      ],
+      "color": [
+        "Lightpink",
+        "Black",
+        "CrimsonCream",
+        "Steelblue",
+        "Ivory White"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Storm Smart Watches ",
+      "category": "Smart Watches",
+      "rating": 4.8,
+      "reviews": 1010,
+      "original_price": 5990,
+      "discount": 58,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/e7910a39-186a-41f6-ac57-fc3e84108104_600x.png?v=1625045106",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/a6549acb-b075-4c3e-8ed3-9c9fcba32d42_600x.png?v=1625046216",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1bca7fb9-5f5c-42e3-930a-8a430d8a9e60_600x.png?v=1625046217",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/8f01d1e9-48f4-4e55-886d-0b255b9bbf24_600x.png?v=1625045855",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/a09a67f0-75bd-42b8-8f0d-58ffad51e03b_600x.png?v=1625045372",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/485ea9aa-b170-4efc-ac40-ab8b0854083c_600x.png?v=1625044988"
+      ],
+      "color": [
+        "Lightpink",
+        "Black",
+        "CrimsonCream",
+        "Steelblue",
+        "Ivory White"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Watch Flash - Smart Watch ",
+      "category": "Smart Watches",
+      "rating": 4.8,
+      "reviews": 47,
+      "original_price": 6990,
+      "discount": 64,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/9da7e1ae-89f2-42c4-9714-76ac5ec83817_600x.png?v=1625045743",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/5752f5e4-89e0-4f84-b7fe-4d9f85771046_600x.png?v=1625157753",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/9e5b8bf2-29bf-4e1c-b24f-f8f4196ac14b_600x.png?v=1625157764"
+      ],
+      "color": [
+        "Lightpink",
+        "Black",
+        "CrimsonCream",
+        "Steelblue",
+        "Ivory White"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Wave Select Smartwatch",
+      "category": "Smart Watches",
+      "rating": 5.0,
+      "reviews": 4,
+      "original_price": 6990,
+      "discount": 64,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Untitled-5_600x.png?v=1658294451",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/001_427f42b5-e6df-4fc5-a025-1db1f9eb2117_800x.jpg?v=1660370339",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/005_a226d1dd-6277-405a-b9a5-031a588f5a9c_800x.jpg?v=1660370339",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/002_ea5f69f6-2cff-4168-9529-7d53f256d32d_800x.jpg?v=1660370339",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/004_8cabd448-5ff8-4227-9d2f-96b1d7c686cd_800x.jpg?v=1660370339"
+      ],
+      "color": [
+        "Lightpink",
+        "Black",
+        "CrimsonCream",
+        "Steelblue",
+        "Ivory White"
+      ]
+    },
+    {
+      "id":5,
+      "bannerImge": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Rockerz-_Catgry_web_d201c6e3-e067-4280-a127-56a2e1b51399.jpg?v=1634806683"
+    },
+    {
+      "id":6,
+      "heading":"Smart Watches"
+    }
+  ],
+  "immortalGaming" : [
+    {
+      "id": 1,
+      "name": "boAt Immortal 700",
+      "category": "Immortal Gaming",
+      "rating": 4.2,
+      "reviews": 5,
+      "original_price": 6900,
+      "discount": 64,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+              "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_65ff249b-c4f8-4dad-ae88-2aae76723ce2_600x.png?v=1643477993",
+              "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_33ed4e4f-8ef4-4c8a-a0c7-68216dfafa4a_600x.png?v=1643477993"
+      ],
+      "color": [
+        "Black Sabre"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Immortal 200",
+      "category": "Immortal Gaming",
+      "rating": 4.7,
+      "reviews": 11,
+      "original_price": 4900,
+      "discount": 68,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-b_60x.png?v=1625748090",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-bl_600x.png?v=1625748090",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/MAIN-O_600x.png?v=1625748111"
+      ],
+      "color": [
+        "Active Black",
+        "Raging Red",
+        "Furious Blue"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "boAt Immortal 1000D",
+      "category": "Immortal Gaming",
+      "rating": 4.8,
+      "reviews": 10,
+      "original_price": 5990,
+      "discount": 65,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1_600x.png?v=1625748155",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/2_f3aa2756-01f3-4e39-80bc-7b4f6551c7aa_600x.png?v=1625748159",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_green_551e0f56-cb9c-4910-be88-3c9fd1383c50_600x.png?v=1652363760"
+      ],
+      "color": [
+        "Red",
+        "Black",
+        "CrimsonCream"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "boAt Immortal 1300",
+      "category": "Immortal Gaming",
+      "rating": 4.8,
+      "reviews": 10 ,
+      "original_price": 2999,
+      "discount": 70,
+      "isAvailable": false,
+      "isSuperSaver":false,
+      "image": [
+          "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/IM1300_main_2_600x.png?v=1632715015",
+          "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/IM1300-FI_Red02_700x.png?v=1659425496",
+          "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/IM1300-FI_Red03_700x.png?v=1659425496",
+          "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/IM1300-FI_Red04_700x.png?v=1659425496",
+          "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/IM1300-FI_Red06_700x.png?v=1659425496",
+          "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/IM1300-FI_Red01_700x.png?v=1659425496"
+      ],
+      "color": [
+        "Red"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "boAt Immortal 400",
+      "category": "Immortal Gaming",
+      "rating": 4.7,
+      "reviews": 3 ,
+      "original_price": 1999,
+      "discount": 70,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-700_600x.png?v=1643632678",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2-700_600x.png?v=1643632679",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/IM400-FI02_700x.png?v=1659425849",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/IM400-FI03_700x.png?v=1659425848",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/IM400-FI04_700x.png?v=1659425849",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/IM400-FI04_700x.png?v=1659425849",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/IM400-FI06_700x.png?v=1659425849"
+      ],
+      "color": [
+        "Red"
+      ]
+    },
+    {
+      "id":6,
+      "bannerImge": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Immortal-Catgry_web.jpg?v=1634903645"
+    },
+    {
+      "id":7,
+      "heading":"Immortal Gaming"
+    }
+  ],
+  "misfitTrimmers" : [
+    {
+      "id": 1,
+      "name": "Misfit T50 Trimmer",
+      "category": "Misfit Trimmers",
+      "rating": 4.9,
+      "reviews": 17,
+      "original_price": 2499,
+      "discount": 60,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+            "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/907e7c9d-4373-4809-a3e8-efe5bb1e7c7f_600x.png?v=1625045409",
+            "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/d67adff0-f513-4b4b-abdc-226ee39287a6_600x.png?v=1625045409",
+            "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_blue_600x.png?v=1630060654"
+      ],
+      "color": [
+        "Black Chrome",
+        "Silver Chrome",
+        "Blue Chrome"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Misfit T50 Lite",
+      "category": "Misfit Trimmers",
+      "rating": 4.5,
+      "reviews": 4,
+      "original_price": 1999,
+      "discount": 56,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_efb2d946-02c5-412b-bb86-ce83807d2318_600x.png?v=1630646783",
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_d1a8963d-822e-481e-a61e-ce27d5734c68_600x.png?v=1630646787"
+      ],
+      "color": [
+        "Black"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Misfit T30 Trimmer",
+      "category": "Misfit Trimmers",
+      "rating": 4.8,
+      "reviews": 5,
+      "original_price": 1499,
+      "discount": 49,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_black_600x.png?v=1630646486",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_grey_600x.png?v=1630646490"
+      ],
+      "color": [
+        "Grey"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Misfit T200 3-in-1 ",
+      "category": "Misfit Trimmers",
+      "rating": 4.6,
+      "reviews": 10 ,
+      "original_price": 3999,
+      "discount": 70,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Untitled-3_700x.png?v=1661405585"
+      ],
+      "color": [
+        "Black"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Misfit T200",
+      "category": "Misfit Trimmers",
+      "rating": 4.0,
+      "reviews": 4,
+      "original_price": 3999,
+      "discount": 58,
+      "isAvailable": false,
+      "isSuperSaver": true,
+      "image": [
+          "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_f61e2190-be0f-4ff7-9c85-d43ab93f1ef2_600x.png?v=1630143376",
+          "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-2_a588d89e-2287-469a-bcba-e7fe880becbc_600x.png?v=1630143380"
+      ],
+      "color": [
+        "Black"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Misfit T150 Trimmer",
+      "category": "Misfit Trimmers",
+      "rating": 4.0,
+      "reviews": 1,
+      "original_price": 3499,
+      "discount": 59,
+      "isAvailable": true,
+      "isSuperSaver": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_f61e2190-be0f-4ff7-9c85-d43ab93f1ef2_600x.png?v=1630143376",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-2_a588d89e-2287-469a-bcba-e7fe880becbc_600x.png?v=1630143380"
+      ],
+      "color": [
+        "Black"
+      ]
+    },
+    {
+      "id":7,
+      "bannerImge": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/MISFIT-T200_Catgry_Web.jpg?v=1634806683"
+    },
+    {
+      "id":8,
+      "heading":"Misfit Trimmers"
+    }
+  ],
+  "limitedEdition":[
+    {
+      "id": 1,
+      "name": "boAt Rockerz 558",
+      "category": "Limited Edition",
+      "rating": 4.5,
+      "reviews": 13,
+      "original_price": 4999,
+      "discount": 60,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+            "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_ac87c6d9-2293-468e-bdf0-175798458b87_600x.png?v=1662547691",
+            "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_2b670523-0832-488c-9344-897907a84a79_600x.png?v=1662547691",
+            "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_6861bb95-5e85-4b39-b715-43b22c488377_600x.png?v=1662547691"
+      ],
+      "color": [
+        "Black Chrome",
+        "Silver Chrome",
+        "Blue Chrome"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "boAt Airdopes 383",
+      "category": "Limited Edition",
+      "rating": 5.0,
+      "reviews": 1,
+      "original_price": 4999,
+      "discount": 70,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+            "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_965b2bd3-896a-44f1-81a7-e8b09b9897da_600x.png?v=1661854765",
+            "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_be843c79-656c-4745-b260-50e50cc8acd5_600x.png?v=1661854765"
+      ],
+      "color": [
+        "cosmic Black",
+        "Jazzy  Blue",
+        "Techno Purple"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "boAt Airdopes 131",
+      "category": "Limited Edition",
+      "rating": 5.0,
+      "reviews": 1,
+      "original_price": 2990,
+      "discount": 47,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+          "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/CA131-main_600x.png?v=1639987804",
+          "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD131-FI-CaptainsBlue06_700x.png?v=1655112365",
+          "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD131-FI-CaptainsBlue06_700x.png?v=1655112365",
+          "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD131-FI-CaptainsBlue01_700x.png?v=1655112366",
+          "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD131-FI-CaptainsBlue03_700x.png?v=1655112365",
+          "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD131-FI-CaptainsBlue04_700x.png?v=1655112367"
+      ],
+      "color": [
+        "Captains Blue "
+      ]
+    },
+    {
+      "id": 4,
+      "name": "boAt Airdopes Iron man ",
+      "category": "Limited Edition",
+      "rating": 4.8,
+      "reviews": 68,
+      "original_price": 2990,
+      "discount": 47,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/IM131-main_600x.png?v=1639988622"
+      ],
+      "color": [
+        "Iron Blood "
+      ]
+    },
+    {
+        "id":5,
+        "bannerImge": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Immortal-Catgry_web.jpg?v=1634903645"
+    },
+    {
+      "id":6,
+      "heading":"Limited Edition"   
+    }
+  ],
+  "tRebel":[
+    {
+      "id": 1,
+      "name": "TRebel Watch Blaze ",
+      "category": "TRebel",
+      "rating": 4.5,
+      "reviews": 13,
+      "original_price": 4999,
+      "discount": 60,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_e305aecd-69d4-4d6d-a6ec-b3133676fc57_600x.png?v=1646394745",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3.1_46f69d85-75a0-483c-a215-2a29ee068b3c_600x.png?v=1646394746",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3.3_9198fbdb-47fc-4ba1-878f-10d3acdb3d9c_600x.png?v=1646394746"
+      ],
+      "color": [
+             "Blue",
+             "pink",
+             "red"
+
+      ]
+    },
+    {
+      "id": 2,
+      "name": "TRebel Rockerz 333",
+      "category": "TRebel",
+      "rating": 5.0,
+      "reviews": 3,
+      "original_price": 3990,
+      "discount": 62,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+            "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img-R333-3_585b7d34-c9b3-4fc4-912d-92ebbb04a410_600x.png?v=1646391063",
+            "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R333Pro-FI_Blue01_700x.png?v=1659422242",
+            "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R333Pro-FI_Blue02_700x.png?v=1659422243",
+            "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R333Pro-FI_Blue06_700x.png?v=1659422242"
+      ],
+      "color": [
+        "Navy Blues"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "boAt TRebel Airdopes 381",
+      "category": "TRebel",
+      "rating": 4.8,
+      "reviews": 11,
+      "original_price": 4990,
+      "discount": 70,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/airdopes-381-mediumspinggreen_43d63b08-d281-4c88-aa0c-ab9fab9add89_600x.png?v=1622527413"
+      ],
+      "color": [
+        "Mediumspringgreen"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "TRebel Nirvanaa 751 ANC",
+      "category": "TRebel",
+      "rating": 4.8,
+      "reviews": 68,
+      "original_price": 7990,
+      "discount": 50,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_35ad08a3-ed67-4b87-b7a6-e4d8ae22847d_600x.png?v=1646391225"
+      ],
+      "color": [
+        "Sterling Silver"
+      ]
+    },
+    {
+        "id":5,
+        "bannerImge": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Trebel_Category_Web.jpg?v=1634903645"
+    },
+    {
+      "id":6,
+      "heading":"TRebel "   
     }
   ]
 }
