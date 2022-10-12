@@ -1054,9 +1054,19 @@
       "url":""
     }
   ],
+  
+
   "airdopesTrueWireless" : [
     {
-      "id": 1,
+      "id":1,
+      "bannerImge": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Airdopes_Catgry-web_7cf20899-eb4a-427f-9a8a-799d7e1c37fa.jpg?v=1634716734"
+    },
+    {
+      "id":2,
+      "heading":"Wireless Earbuds"
+    },
+    {
+      "id": 3,
       "name": "Airdopes 131 - Wireless",
       "category": "WIRELESS EARBUDS",
       "rating": 4.8,
@@ -1080,7 +1090,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 4,
       "name": "TRebel Airdopes 131",
       "category": "WIRELESS EARBUDS",
       "rating": 4.7,
@@ -1105,7 +1115,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 5,
       "name": "Airdopes 141",
       "category": "WIRELESS EARBUDS",
       "rating": 4.8,
@@ -1130,7 +1140,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 6,
       "name": "TRebel Airdopes 141",
       "category": "WIRELESS EARBUDS",
       "rating": 5.0,
@@ -1155,19 +1165,126 @@
       ]
     },
     {
-      "id":5,
-      "bannerImge": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Airdopes_Catgry-web_7cf20899-eb4a-427f-9a8a-799d7e1c37fa.jpg?v=1634716734"
+      "id": 7,
+      "name": "Airdopes 131 PRO",
+      "category": "WIRELESS EARBUDS",
+      "rating": 5.0,
+      "reviews": 55 ,
+      "original_price": 2990,
+      "discount": 63,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Grey_560cad08-698b-45d6-a3dd-d10ae3fec8ee_400x.png?v=1657775492",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Blue_0b68b413-f3ee-4c92-84bc-ba9cd6665463_600x.png?v=1657775058",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/01_a3a796e3-2cad-4a22-942e-c5b48cbfb1b1_700x.jpg?v=1662533385",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/02_9499f7a4-a98a-44e4-9932-37767b68ff46_700x.jpg?v=1662533385",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/07_700x.jpg?v=1662533385"
+      ],
+      "color": [
+        "Blue",
+        "Black",
+        "Mint green",
+        "Mint Bubblegum",
+        "Ivory White"
+      ]
     },
     {
-      "id":6,
-      "heading":"Wireless Earbuds"
+      "id": 8,
+      "name": "boAt Airdopes 411 ANC",
+      "category": "WIRELESS EARBUDS",
+      "rating": 4.8,
+      "reviews": 64 ,
+      "original_price": 4990,
+      "discount": 50,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_9230f72d-9f86-4aec-9ae2-a7d87d332877_600x.png?v=1647426798",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD411ANC-FI-Black01_40119e37-3298-4ab0-9931-03d1651bd8cc_700x.png?v=1655187798",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD411ANC-FI-Black02_8844f4c6-a7dc-49f4-9b0c-c72edf5c03d8_700x.png?v=1655187800",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD411ANC-FI-Black03_a6de150c-f3f2-4d6b-9045-a5c776698543_700x.png?v=1655187798",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD411ANC-FI-Black04_00a7e28d-8730-4dc9-bbe5-ff012b5b0cb7_700x.png?v=1655187804"
+      ],
+      "color": [
+        "Black",
+        "Grey",
+        "Blue",
+        "Mint Bubblegum",
+        "Ivory White"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "boAt Airdopes 121 PRO",
+      "category": "WIRELESS EARBUDS",
+      "rating": 4.9,
+      "reviews": 31 ,
+      "original_price": 2990,
+      "discount": 55,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/iiolo_700x.png?v=1658150489",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/121-pro-BG_600x.gif?v=1665492449",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD121Pro-FI_Blue02_700x.png?v=1665492449",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD121Pro-FI_Blue03_700x.png?v=1665492449",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD121Pro-FI_Blue04_700x.png?v=1665492449"
+      ],
+      "color": [
+        "Blue",
+        "Black",
+        "Green",
+        "Pink",
+        "Ivory White"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "boAt Airdopes 121 v2 ",
+      "category": "WIRELESS EARBUDS",
+      "rating": 4.8,
+      "reviews":507,
+      "original_price": 2999,
+      "discount":67,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/airdopes-121-v2-black_600x.png?v=1612765376",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD-121v2-FI-1.2_fdccc774-bba0-46e5-80fe-4d73afa690f7_700x.jpg?v=1655366309",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD-121v2-FI-3_1b3f567a-640b-419d-9b9d-83c8aae58ee8_700x.jpg?v=1655366310",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD-121v2-FI-4.2_89ce0fdf-d6e7-48e9-95ce-73b13f564ec9_700x.jpg?v=1655366310",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AD-121v2-FI-5.2_3aeb5c60-975e-4715-9b45-b28f7e8d9edd_700x.jpg?v=1655366312"
+      ],
+      "color": [
+        "Black",
+        "Lightsteelblue",
+        "pink",
+        "Mint Bubblegum"
+      
+      ]
     }
+
+  
   ],
+
+
+
+
+
   "rockerzWireless": [
     {
-      "id": 1,
-      "name": "Rockerz 235 V2",
-      "category": "Wireless Headphones",
+      "id":1,
+      "bannerImge": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Rockerz-_Catgry_web_d201c6e3-e067-4280-a127-56a2e1b51399.jpg?v=1634806683"
+    },
+    {
+      "id":2,
+      "heading":"Wireless Headphones"
+    },
+    {
+      "id": 3,
+      "name": "boAt Rockerz 235 V2",
+      "category": "BLUETOOTH EARPHONES",
       "rating": 4.8,
       "reviews": 799,
       "original_price": 2990,
@@ -1176,22 +1293,22 @@
       "isSuperSaver":true,
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ed46e58c-9643-43e0-b350-9539d293aa51_600x.png?v=1625045114",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/FeatureImagesR235V28hours_800x.jpg?v=1655133526",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/FeatureImagesR235V2B5.0_800x.jpg?v=1655133526",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/FeatureImagesR235V2CallAlert_800x.jpg?v=1655133527",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/FeatureImagesR235V2FastCharge_800x.jpg?v=1655133527",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/FeatureImagesR235V2IPX_800x.jpg?v=1655133528"
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/FeatureImagesR235V28hours_700x.jpg?v=1655133526",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/FeatureImagesR235V2CallAlert_700x.jpg?v=1655133527",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/FeatureImagesR235V2FastCharge_700x.jpg?v=1655133527",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/FeatureImagesR235V2IPX_700x.jpg?v=1655133528",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/FeatureImagesR235V2IPX_700x.jpg?v=1655133528"
       ],
       "color": [
         "Lightpink",
-        "Black",
-        "CrimsonCream",
-        "Steelblue",
-        "Ivory White"
+        "Royalblue",
+        "Grey",
+        "Indianred",
+        "Teal"
       ]
     },
     {
-      "id": 2,
+      "id": 4,
       "name": "Rockerz 255 Pro+",
       "category": "Wireless Headphones",
       "rating": 4.8,
@@ -1216,7 +1333,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 5,
       "name": "Rockerz 245 V2",
       "category": "Wireless Headphones",
       "rating": 4.8,
@@ -1239,9 +1356,9 @@
       ]
     },
     {
-      "id": 4,
-      "name": "Rockerz 330",
-      "category": "Wireless Headphones",
+      "id": 6,
+      "name": "boAt Rockerz 330",
+      "category": "BLUETOOTH EARPHONES",
       "rating": 4.8,
       "reviews": 260,
       "original_price": 2990,
@@ -1250,31 +1367,132 @@
       "isSuperSaver":true,
       "image": [
         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_15634ca0-9f81-4d11-b891-9a1496f709b1_600x.png?v=1641801688",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/asap-n-playback-red_800x.jpg?v=1655376289",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/drivers-red_800x.jpg?v=1655376290",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WHITE23_800x.jpg?v=1658996617",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Dual-pairing-red_800x.jpg?v=1655376287"
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/asap-n-playback-red_700x.jpg?v=1655376289",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/drivers-red_700x.jpg?v=1655376290",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Dual-pairing-red_700x.jpg?v=1655376287"
       ],
       "color": [
-        "Lightpink",
-        "Black",
-        "CrimsonCream",
-        "Steelblue",
+        "Raging Red",
+        "Active Black",
+        "Blazing Yellow",
+        "Navy Blue",
         "Ivory White"
       ]
     },
     {
-      "id":5,
+      "id": 7,
+      "name": "boAt Rockerz 333",
+      "category": "BLUETOOTH EARPHONES",
+      "rating": 4.9,
+      "reviews": 169,
+      "original_price": 3990,
+      "discount": 60,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img-R333-1_600x.png?v=1641801662",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R333-FI_Black02_700x.png?v=1655133631",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R333-FI_Black03_700x.png?v=1655133633",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R333-FI_Black04_700x.png?v=1655133632",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R333-FI_Black05_700x.png?v=1655133631"
+      ],
+      "color": [
+        "Active Black",
+        "Cherry Black",
+        "Navy Blue",
+        "Cherry Black"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "boAt Rockerz 255",
+      "category": "BLUETOOTH EARPHONES",
+      "rating": 4.8,
+      "reviews": 277,
+      "original_price": 2990,
+      "discount": 67,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/6b237ddc-f894-4dfd-a474-2435f93e6611_600x.png?v=1662531863",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/IPX5-blue_fab58274-5b74-441e-a31c-c30f5143abc7_700x.jpg?v=1662531861",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/last-blue_4e5962ef-4543-4a8c-8b46-58365c980b6a_700x.jpg?v=1662531861",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/magnetic-blue_9438b602-f9c5-47d4-b599-501ed69e0309_700x.jpg?v=1662531861"
+      ],
+      "color": [
+        "Deepskyblue",
+        "Orange",
+        "Black",
+        "Red",
+        "Lime"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "boAt Rockerz 550",
+      "category": "BLUETOOTH EARPHONES",
+      "rating": 4.8,
+      "reviews": 322,
+      "original_price": 4999,
+      "discount": 70,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/0cfa4417-0213-4b49-b78e-0ae68aeb7057_600x.png?v=1625046144",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R550ergonomicdesign_e046c0e1-88cb-4a5b-aa08-74785bd8c4b4_700x.jpg?v=1659339569",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R550playbacktime20hrs_01423432-41fe-4c08-8fb0-b36054e64eb3_700x.jpg?v=1659339545",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/R55050mmdrivers_2ecbed0b-a731-41db-b532-daed838c5b5d_700x.jpg?v=1659339546"
+      ],
+      "color": [
+        "Red",
+        "Black",
+        "Darkgreen",
+        "Navy Blue",
+        "Ivory White"
+      ]
+    },
+    {
+      "id":10,
+      "name": "boAt Rockerz 255 Pro",
+      "category": "BLUETOOTH EARPHONES",
+      "rating": 4.8,
+      "reviews": 380,
+      "original_price":3499,
+      "discount":71,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/756866f0-25e4-4b5d-8b7c-546c2111da69_600x.png?v=1625045615",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/asap-red_56382970-abfe-4896-ba96-378ab66f1484_700x.jpg?v=1655391823",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/drivers-red_896425ae-7d1b-4469-8597-ee0d49ed6d54_700x.jpg?v=1655391824",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ipx5-red_b8dac271-f083-407b-9382-a32464f95ffc_700x.jpg?v=1655391821",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/playback-red_5c79f775-dc8f-4116-9eba-1b012e647490_700x.jpg?v=1655391824"
+      ],
+      "color": [
+        "Red",
+        "Black",
+        "Midnightblue",
+        "Goldenrod",
+        "Teal"
+      ]
+    }
+  ],
+
+
+
+
+  
+  "smartWatches": [
+    {
+      "id":1,
       "bannerImge": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Rockerz-_Catgry_web_d201c6e3-e067-4280-a127-56a2e1b51399.jpg?v=1634806683"
     },
     {
-      "id":6,
-      "heading":"Wireless Headphones"
-    }
-  ],
-  "smartWatches": [
+      "id":2,
+      "heading":"Smart Watches"
+    },
     {
-      "id": 1,
+      "id": 3,
       "name": "Wave Connect Bluetooth",
       "category": "Smart Watches",
       "rating": 4.8,
@@ -1299,7 +1517,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 4,
       "name": "Storm Smart Watches ",
       "category": "Smart Watches",
       "rating": 4.8,
@@ -1325,7 +1543,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 5,
       "name": "Watch Flash - Smart Watch ",
       "category": "Smart Watches",
       "rating": 4.8,
@@ -1348,7 +1566,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 6,
       "name": "Wave Select Smartwatch",
       "category": "Smart Watches",
       "rating": 5.0,
@@ -1373,17 +1591,118 @@
       ]
     },
     {
-      "id":5,
-      "bannerImge": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Rockerz-_Catgry_web_d201c6e3-e067-4280-a127-56a2e1b51399.jpg?v=1634806683"
+      "id": 7,
+      "name": "boAt Wave Pro Smartwatch ",
+      "category": "Smart Watches",
+      "rating": 5.0,
+      "reviews": 12,
+      "original_price": 6990,
+      "discount":71,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_0ae2597d-dee4-42fd-9a18-eb4ae0b3bc43_600x.png?v=1647765304",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WavePro-FI-Black02_b0996e23-53ad-4bae-9f81-b7f16eba9260_700x.png?v=1662616587",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WavePro-FI-Black03_bcc39a1f-aa6b-43e2-bfd4-d26d41069612_700x.png?v=1662616587",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WavePro-FI-Black04_a4f1dfde-a9ff-438e-bcca-685e6dc50884_700x.png?v=1662616587",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/WavePro-FI-Black08_700x.png?v=1662616587"
+      ],
+      "color": [
+        "Black",
+        "Blue",
+        "Maroon",
+        "Cherry Blossom"
+      ]
     },
     {
-      "id":6,
-      "heading":"Smart Watches"
+      "id": 8,
+      "name": "boAt Xtend Sport ",
+      "category": "Smart Watches",
+      "rating": 4.8,
+      "reviews":6,
+      "original_price": 6990,
+      "discount":66,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-images_600x.png?v=1655198531",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/XtendSport-FI-Black03_700x.png?v=1655451313",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/XtendSport-FI-Black05_700x.png?v=1655451327",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/XtendSport-FI-Black06_700x.png?v=1655451327",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/XtendSport-FI-Black07_700x.png?v=1655451327"
+        
+      ],
+      "color": [
+        "Classic Black",
+        "Cool Blue",
+        "Cool Blue"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "boAt Watch Blaze ",
+      "category": "Smart Watches",
+      "rating":5.0,
+      "reviews":20,
+      "original_price": 6990,
+      "discount":50,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_d2f6ad16-c97c-4600-88c1-b835fd58c647_600x.png?v=1646394582",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Blaze-FI-Black05_700x.png?v=1658123184",
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Blaze-FI-Black04_700x.png?v=1658123183",
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Blaze-FI-Black03_700x.png?v=1658123184",
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Blaze-FI-Black03_700x.png?v=1658123184",
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Blaze-FI-Black02_700x.png?v=1658123182"
+        
+      ],
+      "color": [
+        "Black",
+        "Red",
+        "Blue",
+        "Pink"
+      ]
+    },
+    {
+      "id":10,
+      "name": "boAt Wave Lite Smartwatch",
+      "category": "Smart Watches",
+      "rating":4.9,
+      "reviews":44,
+      "original_price": 6990,
+      "discount":81,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_black_72207866-b34c-4b47-885d-998168d62245_600x.png?v=1648108781",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/02_4485072f-1cb8-411f-b3dc-4fe2b6d2a070_700x.jpg?v=1656234289",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/05_e71500a0-e06f-453f-926f-5ee18b4d2d39_700x.jpg?v=1656234434",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/03_c1403863-ce69-4cc9-a4e4-20d06fece403_700x.jpg?v=1656234434",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/04_7fd7f59a-c61d-4a68-ac93-28e207d98a05_700x.jpg?v=1656234434"
+],
+      "color": [
+        "Active Black",
+        "Scarlet Red",
+        "Deep Blue"
+      ]
     }
+  
   ],
+
+
   "immortalGaming" : [
     {
-      "id": 1,
+      "id":1,
+      "bannerImge": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Immortal-Catgry_web.jpg?v=1634903645"
+    },
+    {
+      "id":2,
+      "heading":"Immortal Gaming"
+    },
+
+    {
+      "id": 3,
       "name": "boAt Immortal 700",
       "category": "Immortal Gaming",
       "rating": 4.2,
@@ -1401,7 +1720,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 4,
       "name": "Immortal 200",
       "category": "Immortal Gaming",
       "rating": 4.7,
@@ -1422,7 +1741,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 5,
       "name": "boAt Immortal 1000D",
       "category": "Immortal Gaming",
       "rating": 4.8,
@@ -1443,7 +1762,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 6,
       "name": "boAt Immortal 1300",
       "category": "Immortal Gaming",
       "rating": 4.8,
@@ -1465,7 +1784,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": 7,
       "name": "boAt Immortal 400",
       "category": "Immortal Gaming",
       "rating": 4.7,
@@ -1486,19 +1805,24 @@
       "color": [
         "Red"
       ]
-    },
-    {
-      "id":6,
-      "bannerImge": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Immortal-Catgry_web.jpg?v=1634903645"
-    },
-    {
-      "id":7,
-      "heading":"Immortal Gaming"
     }
+
   ],
-  "misfitTrimmers" : [
+
+
+
+
+"misfitTrimmers" : [
     {
-      "id": 1,
+      "id":1,
+      "bannerImge": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/MISFIT-T200_Catgry_Web.jpg?v=1634806683"
+    },
+    {
+      "id":2,
+      "heading":"Misfit Trimmers"
+    },
+    {
+      "id": 3,
       "name": "Misfit T50 Trimmer",
       "category": "Misfit Trimmers",
       "rating": 4.9,
@@ -1519,7 +1843,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 4,
       "name": "Misfit T50 Lite",
       "category": "Misfit Trimmers",
       "rating": 4.5,
@@ -1537,7 +1861,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 5,
       "name": "Misfit T30 Trimmer",
       "category": "Misfit Trimmers",
       "rating": 4.8,
@@ -1555,7 +1879,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 6,
       "name": "Misfit T200 3-in-1 ",
       "category": "Misfit Trimmers",
       "rating": 4.6,
@@ -1572,7 +1896,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": 7,
       "name": "Misfit T200",
       "category": "Misfit Trimmers",
       "rating": 4.0,
@@ -1590,7 +1914,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": 8,
       "name": "Misfit T150 Trimmer",
       "category": "Misfit Trimmers",
       "rating": 4.0,
@@ -1606,19 +1930,231 @@
       "color": [
         "Black"
       ]
+    }
+  
+  ],
+
+
+
+
+
+
+  "Stone Speakers" : [
+    {
+      "id":1,
+      "bannerImge": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/ezgif-4-eb4f1db03c_1.gif?v=1662102341"
+    },
+    {
+      "id":2,
+      "heading":"Wireless Speakers"
+    },
+    {
+      "id": 3,
+      "name": "Stone 190 DC Edition",
+      "category": "BLUETOOTH SPEAKERS",
+      "rating": 5.0,
+      "reviews": 3,
+      "original_price": 2999,
+      "discount": 67,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+            "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-image_600x.png?v=1655534170",
+           "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S190-FI-DC_Batman02_700x.png?v=1656101102",
+           "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S190-FI-DC_Batman03_700x.png?v=1656101278",
+           "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S190-FI-DC_Batman04_700x.png?v=1656101278",
+           "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S190-FI-DC_Batman05_700x.png?v=1656101278"
+      ],
+      "color": [
+        "Knight Black",
+        "Krypton Blue",
+        "Amazonian Red"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Stone 190 Wonder Woman DC Edition",
+      "category": "BLUETOOTH SPEAKERS",
+      "rating": 4.5,
+      "reviews": 4,
+      "original_price": 2999,
+      "discount": 57,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+                      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-image-3_55f3214a-ec1f-4764-9efe-1369c6668755_600x.png?v=1655542199",
+                      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S190-FI-DC_WW02_a7ba0e48-779c-4625-acb9-2f79310b4c8b_700x.png?v=1656101346",
+                      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S190-FI-DC_WW03_faea534e-ac48-45ee-a949-3747bfcf3138_700x.png?v=1656101347",
+                      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S190-FI-DC_WW04_8663ef95-c841-4c08-a3c6-aeb20ed86def_700x.png?v=1656101346",
+                      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S190-FI-DC_WW05_ebfbc856-0c40-405d-9b3c-505101431479_700x.png?v=1656101347"
+      ],
+      "color": [
+        "Amazonian Red"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "boAt Stone 1000v2",
+      "category": "BLUETOOTH SPEAKERS",
+      "rating": 5.0,
+      "reviews": 2,
+      "original_price": 6999,
+      "discount":57,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+           "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Untitled-1_e66c4515-7594-4726-89d6-e2b311a39c94_600x.png?v=1658436784",
+           "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/3_6f20b409-43b2-43d5-96ac-e9f8a26d79a8_600x.png?v=1658436783",
+           "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/2_f79ac2e3-f310-4473-87b4-ab70955b21d8_600x.png?v=1658436784"
+      ],
+      "color": [
+        "Ballistic Black",
+        "Goblin Green",
+        "Blizzard Blue"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "boAt Stone Grenade",
+      "category": "BLUETOOTH SPEAKERS",
+      "rating": 4.8,
+      "reviews": 89 ,
+      "original_price": 3990,
+      "discount":67,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_reed_600x.png?v=1635842501",
+         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_blue_e09ae3e8-7534-4ad2-a9a2-1b545a423fd1_600x.png?v=1635842500",
+         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_grey_eb235c82-e1ad-40dc-83d3-2521d040b479_600x.png?v=1635842501",
+         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main_green_600x.png?v=1635842500",
+         "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/0932e2dd-44fb-43f1-988b-82c086b7ff94_600x.png?v=1625046596"
+      ],
+      "color": [
+        "Black",
+        "Red",
+        "Grey",
+        "Green",
+        "Blue"
+      ]
     },
     {
       "id":7,
-      "bannerImge": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/MISFIT-T200_Catgry_Web.jpg?v=1634806683"
+      "name": "boAt Stone 190",
+      "category": "BLUETOOTH SPEAKERS",
+      "rating": 4.8,
+      "reviews": 105,
+      "original_price": 2999,
+      "discount":67,
+      "isAvailable":true,
+      "isSuperSaver": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/448e5d44-7829-4597-9238-aebe7554b9a4_600x.png?v=1625045368",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/2b57048f-0a88-4234-a72c-e57c6ed99cb6_600x.png?v=1625045116",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/8f17d4a5-844a-472d-9c60-d9741fd0290e_600x.png?v=1625045367",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Stone190Packaging3.2_700x.png?v=1662636693",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Stone190Packaging2.2_700x.png?v=1662636692",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Stone190Packaging1.2_700x.png?v=1662636693"
+
+      ],
+      "color": [
+        "Black",
+        "Red",
+        "Darkslateblue",
+        "Rowdy Red",
+        "Bossy Black",
+        "Majestic Purple"
+      ]
     },
     {
       "id":8,
-      "heading":"Misfit Trimmers"
+      "name": "boAt Stone 352",
+      "category": "BLUETOOTH SPEAKERS",
+      "rating": 4.8,
+      "reviews": 22,
+      "original_price": 3490,
+      "discount":66,
+      "isAvailable": false,
+      "isSuperSaver": false,
+      "image": [
+     "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_c1144ee5-d03e-483a-8e5f-7552b138a4b1_600x.png?v=1649857754",
+     "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/01_8859ee4d-ba1f-4d84-b64f-90aa38a3ca07_700x.jpg?v=1655373080",
+     "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/03_700x.jpg?v=1655373080",
+     "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/05_700x.jpg?v=1655373080",
+     "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/06_700x.jpg?v=1655373079"
+      ],
+      "color": [
+        "Black",
+        "Grey",
+        "Blue"
+      ]
+    },
+    {
+      "id":9,
+      "name": "boAt Stone 650",
+      "category": "BLUETOOTH SPEAKERS",
+      "rating": 4.9,
+      "reviews": 107,
+      "original_price": 4990,
+      "discount":70,
+      "isAvailable": true,
+      "isSuperSaver": true,
+      "image": [
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/91efc297-d380-4ccf-a70e-b9ab9ab1ad5b_600x.png?v=1625045298",
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/0efd1f68-8988-4e8a-98bc-6690ccb6a828_600x.png?v=1625045298",
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/a9474cf2-0bed-4318-a2ab-2ab8608a5552_600x.png?v=1625045298"
+       
+      ],
+      "color": [
+        "Black",
+        "Red",
+        "Mediumblue"
+      ]
+    },
+    {
+      "id":10,
+      "name": "boAt Stone 1200F",
+      "category": "BLUETOOTH SPEAKERS",
+      "rating": 4.9,
+      "reviews":35,
+      "original_price": 3499,
+      "discount": 59,
+      "isAvailable": true,
+      "isSuperSaver": true,
+      "image": [
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1200f_main3_600x.png?v=1632893559",
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1200F14wattpower_ffb6b027-5e75-4681-aafb-70e828023ede_700x.jpg?v=1655190349",
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1200FPlayback_59755d22-650b-4da7-a991-13ec305dbf7d_700x.jpg?v=1659507463",
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1200FTWSgreen_2c58b200-62bc-4d85-8d40-1d42902aa423_700x.jpg?v=1655190349",
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1200Flastgreen_69bb4d68-39fe-4c12-96a0-0c05f6969b5e_700x.jpg?v=1655190349"
+      ],
+      "color": [
+        "Black",
+        "Olive",
+        "Yellow"
+      ]
     }
+  
+  
+
+  
+
+
+
+
+
   ],
   "limitedEdition":[
     {
-      "id": 1,
+      "id":1,
+      "bannerImge": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Immortal-Catgry_web.jpg?v=1634903645"
+  },
+  {
+    "id":2,
+    "heading":"Limited Edition"   
+  },
+    {
+      "id": 3,
       "name": "boAt Rockerz 558",
       "category": "Limited Edition",
       "rating": 4.5,
@@ -1639,7 +2175,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 4,
       "name": "boAt Airdopes 383",
       "category": "Limited Edition",
       "rating": 5.0,
@@ -1659,7 +2195,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 5,
       "name": "boAt Airdopes 131",
       "category": "Limited Edition",
       "rating": 5.0,
@@ -1681,7 +2217,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 6,
       "name": "boAt Airdopes Iron man ",
       "category": "Limited Edition",
       "rating": 4.8,
@@ -1698,19 +2234,105 @@
       ]
     },
     {
-        "id":5,
-        "bannerImge": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Immortal-Catgry_web.jpg?v=1634903645"
+      "id": 7,
+      "name": "boAt Bassheads 172 Sunburn Edition",
+      "category": "Limited Edition",
+      "rating": 4.9,
+      "reviews":9,
+      "original_price":1299,
+      "discount":73,
+      "isAvailable": false,
+      "isSuperSaver":false,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_d46d18bd-17a2-417a-af86-9f851bdf7068_600x.png?v=1645083010",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_7a380655-7365-41d0-aecf-ade51928b1f7_600x.png?v=1645083009"
+      ],
+      "color": [
+        "Techno Purple",
+        "Jazzy Blue"
+      ]
     },
     {
-      "id":6,
-      "heading":"Limited Edition"   
+      "id": 8,
+      "name": "boAt BassHeads 152 Sunburn Edition",
+      "category": "Limited Edition",
+      "rating": 4.9,
+      "reviews":14,
+      "original_price":1299,
+      "discount":69,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_f295a600-2857-4ff8-940c-3873fc2f1367_600x.png?v=1645015211",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_a4cec7f2-3bd3-423d-b4a8-3ace8c41893e_600x.png?v=1645015211"
+      ],
+      "color": [
+        "Techno Purple",
+        "Jazzy Blue"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "boAt Stone 1208 Sunburn Edition",
+      "category": "Limited Edition",
+      "rating": 1.8,
+      "reviews":5,
+      "original_price": 5990,
+      "discount":33,
+      "isAvailable": false,
+      "isSuperSaver":false,
+      "image": [
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_5f41606a-604c-4433-b1a0-404b31892ab8_600x.png?v=1662546797",
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_c609fdda-89f7-44e4-ba04-ca485538711f_600x.png?v=1662546797"
+      ],
+      "color": [
+        "Techno Purple",
+        "Jazzy Blue"
+      ]
+    },
+    {
+      "id":10,
+      "name": "boAt Stone 170 LFW Edition",
+      "category": "Limited Edition",
+      "rating": 4.8,
+      "reviews":27,
+      "original_price": 2490,
+      "discount":60,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/64a076e9-ef0c-443d-b86e-16715212dd92_600x.png?v=1631788202",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/992fa71b-0203-43f3-a1ca-43c9f535e87a_600x.png?v=1631788202",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/07206764-2d19-47ab-84b8-f2b77485fe18_600x.png?v=1631788202"
+      ],
+      "color": [
+        "Firebrick",
+        "Darkblue",
+        "Olivedrab"
+      ]
     }
   ],
+
+
+
+
+
+
+
+
   "tRebel":[
     {
-      "id": 1,
+      "id":1,
+      "bannerImge": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Trebel_Category_Web.jpg?v=1634903645"
+  },
+  {
+    "id":2,
+    "heading":"TRebel "   
+  },
+    {
+      "id":3,
       "name": "TRebel Watch Blaze ",
-      "category": "TRebel",
+      "category": "SMART WATCHES",
       "rating": 4.5,
       "reviews": 13,
       "original_price": 4999,
@@ -1730,9 +2352,9 @@
       ]
     },
     {
-      "id": 2,
+      "id": 4,
       "name": "TRebel Rockerz 333",
-      "category": "TRebel",
+      "category": "BLUETOOTH EARPHONES",
       "rating": 5.0,
       "reviews": 3,
       "original_price": 3990,
@@ -1750,9 +2372,9 @@
       ]
     },
     {
-      "id": 3,
+      "id": 5,
       "name": "boAt TRebel Airdopes 381",
-      "category": "TRebel",
+      "category": "AUDIOWEAR FOR WOMEN",
       "rating": 4.8,
       "reviews": 11,
       "original_price": 4990,
@@ -1767,9 +2389,9 @@
       ]
     },
     {
-      "id": 4,
+      "id":6,
       "name": "TRebel Nirvanaa 751 ANC",
-      "category": "TRebel",
+      "category": "BLUETOOTH HEADPHONES",
       "rating": 4.8,
       "reviews": 68,
       "original_price": 7990,
@@ -1784,12 +2406,427 @@
       ]
     },
     {
-        "id":5,
-        "bannerImge": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Trebel_Category_Web.jpg?v=1634903645"
+      "id":7,
+      "name": "boAt TRebel Airdopes 402",
+      "category": "AUDIOWEAR FOR WOMEN",
+      "rating": 4.8,
+      "reviews":9,
+      "original_price": 5990,
+      "discount": 50,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/402-main-img_e2e6523c-c448-40bd-be18-117f2fc151cc_600x.png?v=1630569010",
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/FeatureImagesAD40210mmdrivers_021ce0cc-a404-4a82-85ff-802835a3db07_700x.jpg?v=1659335730",
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/FeatureImagesAD40220HrsPlaybackASAPcharge_a84e2a9d-560f-4e5c-bf76-0f0d72a2752b_700x.jpg?v=1659335732",
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/FeatureImagesAD402CLUBBED_717bce3c-542a-4772-bd7e-db4224ac7b81_700x.jpg?v=1659335731",
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/FeatureImagesAD402IPX_5a045f49-cf4e-4729-b75a-6715f65ad788_700x.jpg?v=1659335731"
+      ],
+      "color": [
+        "White"
+      ]
+    },
+    {
+      "id":8,
+      "name": "TRebel BassHeads 100",
+      "category": "AUDIOWEAR FOR WOMEN",
+      "rating": 5.0,
+      "reviews":15,
+      "original_price": 999,
+      "discount": 50,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/mint-green_600x.png?v=1634371631",
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/mint--orange_600x.png?v=1634371640",
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/mint-purple_600x.png?v=1634371648"
+      ],
+      "color": [
+        "Mint Orange",
+        "Mint Green",
+        "Mint Purple"
+      ]
+    },
+    {
+      "id":9,
+      "name": "TRebel Watch Xtend‌ Smart Watch with Alexa",
+      "category": "SMART WATCHES",
+      "rating": 5.0,
+      "reviews":2,
+      "original_price": 7990,
+      "discount": 56,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_86ea6392-558a-4943-ab86-f9f12fe8f4d9_600x.png?v=1646393709",
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main6_2_8e1cdd84-4a34-4e92-97c5-0e1d4ba6da46_600x.png?v=1646393710",
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_1_751a0a5b-cf0d-48af-9205-e87de3b75f71_600x.png?v=1646393710"
+      ],
+      "color": [
+        "Deep Blue",
+        "Mint Green",
+        "Sandy Cream"
+      ]
+    },
+    {
+      "id":10,
+      "name": "TRebel Rockerz 450",
+      "category": "AUDIOWEAR FOR WOMEN",
+      "rating": 5.0,
+      "reviews":1,
+      "original_price":3999,
+      "discount":62,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/013a08f8-85c4-49cf-914a-aa6586249b09_600x.png?v=1624882639",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/drivers-blue_6e2e9aa9-1884-41eb-941c-5c3239ee4d59_700x.jpg?v=1659344780",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/last-beige_4835e9e5-456e-4f7c-bb58-1e4cf74708bd_700x.jpg?v=1659344779",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/playback-beige_820ec2bd-13f0-440c-b447-957971072ca8_700x.jpg?v=1659344791",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/lightweight-beige_605e8fd5-b8c7-4984-85a5-2ae69115d5e7_700x.jpg?v=1659344791"
+      
+      ],
+      "color": [
+        "Blanchedalmond",
+        "Lightblue"
+      ]
+    }
+  ],
+    
+  
+  "Aavante": [
+    {
+      "id":1,
+      "bannerImge": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Aavante_category_web_1.jpg?v=1634903645"
+  },
+  {
+    "id":2,
+    "heading":"Avante Home-audio "   
+  },
+    {
+      "id":3,
+      "name": "boAt Aavante Bar 1150",
+      "category": "HOME THEATRE & SOUND BARS",
+      "rating": 2.5,
+      "reviews": 13,
+      "original_price": 9990,
+      "discount":55,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/aavante-bar-1160-1_1cd9e34a-6cb5-475e-abd8-3af626084116_600x.png?v=1629091898",
+      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/aavante-bar-1160-2_b0b3aa4f-c695-4157-857c-1864c2ac947f_600x.png?v=1629091906"
+      ],
+      "color": [
+             "Black"
+
+      ]
+    },
+    {
+      "id": 4,
+      "name": "boAt Aavante Bar 553",
+      "category": "HOME THEATRE & SOUND BARS",
+      "rating": 5.0,
+      "reviews": 3,
+      "original_price": 3999,
+      "discount":43,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+          "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/AB550PPCMFTweak.112_700x.png?v=1664352293"
+      ],
+      "color": [
+        "Black"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Aavante Bar 503",
+      "category": "HOME THEATRE & SOUND BARS",
+      "rating": 5.0,
+      "reviews":2,
+      "original_price": 2990,
+      "discount":33,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/111_600x.png?v=1659966176",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/01_1d174cd4-5898-4449-a249-d414a0205e47_700x.jpg?v=1659966176",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/02_9f2c0b80-84ba-4927-b93d-749d47d5a0b1_700x.jpg?v=1659966176",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/03_0591732c-d487-4978-9525-cf491e62c9a6_700x.jpg?v=1659966176",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/04_7c0d3255-135c-4de5-b1d0-8f4590561cfa_700x.jpg?v=1659966176"
+      ],
+      "color": [
+        "Black"
+      ]
     },
     {
       "id":6,
-      "heading":"TRebel "   
+      "name": "boAt Aavante Bar 500",
+      "category": "HOME THEATRE & SOUND BARS",
+      "rating": 5.0,
+      "reviews":2,
+      "original_price": 2990,
+      "discount": 50,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Untitled-3_bd675e53-f993-4006-98c6-44c8217d42ca_600x.png?v=1639130347"
+      ],
+      "color": [
+          "Black"
+      ]
+    },
+    {
+      "id":7,
+      "name": "boAt Aavante Bar 1190",
+      "category": "HOME THEATRE & SOUND BARS",
+      "rating": 5.0,
+      "reviews":11,
+      "original_price": 14990,
+      "discount": 63,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/23a5344a-2fe1-4fab-8cd1-7fd42597b9cf_600x.png?v=1623813138",
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/aavante-bar-1190-2_600x.png?v=1623813138"
+      ],
+      "color": [
+        "Black"
+      ]
+    },
+    {
+      "id":8,
+      "name": "boAt Aavante Bar 1180",
+      "category": "HOME THEATRE & SOUND BARS",
+      "rating": 5.0,
+      "reviews":1,
+      "original_price":7999,
+      "discount":44,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-image_2_1_600x.png?v=1656914178"
+      ],
+      "color": [
+        "Black"
+      ]
+    },
+    {
+      "id":9,
+      "name": "boAt Aavante Bar 1300",
+      "category": "HOME THEATRE & SOUND BARS",
+      "rating": 4.8,
+      "reviews":6,
+      "original_price":8990,
+      "discount":44,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/73630972-9d9d-416b-aeeb-861374dfc7a7_600x.png?v=1623813139"
+      ],
+      "color": [
+        "Black"
+      ]
+    },
+    {
+      "id":10,
+      "name": "boAt Aavante Bar 1160",
+      "category": "HOME THEATRE & SOUND BARS",
+      "rating":4.7,
+      "reviews":19,
+      "original_price":9990,
+      "discount":55,
+      "isAvailable": true,
+      "isSuperSaver":true,
+      "image": [
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/aavante-bar-1160-1_600x.png?v=1613736230",
+       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/aavante-bar-1160-2_600x.png?v=1613457301"
+      
+      ],
+      "color": [
+        "Black"
+      ]
     }
+  ],
+  
+  "Mobile Accessories": [
+    {
+      "id":1,
+      "bannerImge": "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Mobile_Accessories_web.jpg?v=1634903645"
+  },
+  {
+    "id":2,
+    "heading":"Mobile-Accessories"   
+  },
+    {
+      "id":3,
+      "name": "boAt Mask",
+      "category": "MOBILE ACCESSORIES",
+      "rating":4.9,
+      "reviews":146,
+      "original_price": 599,
+      "discount":55,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/77081a14-84ab-4a56-9977-9c902c341e5a_700x.png?v=1625045422",
+      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/ff8f9f73-7e43-46a8-94d0-ff9bf45e4fc3_700x.png?v=1625045422"
+      ],
+      "color": [
+             "Black"
+
+      ]
+    },
+    {
+      "id": 4,
+      "name": "boAt Deuce 330",
+      "category": "MOBILE ACCESSORIES",
+      "rating": 5.0,
+      "reviews": 3,
+      "original_price":699,
+      "discount":57,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+          "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_3fb9236b-811d-49ae-ba4e-b681e6954451_600x.png?v=1622705591",
+          "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_7f78ecf9-9452-44ef-b161-32ab11af703a_600x.png?v=1622705592"
+      ],
+      "color": [
+        "Red",
+        "Black"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "boAt LTG 500 Indestructible Apple",
+      "category": "MOBILE ACCESSORIES",
+      "rating":4.8,
+      "reviews":25,
+      "original_price": 1749,
+      "discount":49,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/boat-ltg-500_600x.png?v=1613736579",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/boat-ltg-500-2-meter_600x.png?v=1613457270"
+       
+      ],
+      "color": [
+        "Silver",
+        "Grey"
+
+      ]
+    },
+    {
+      "id":6,
+      "name": "boAt Micro USB 150 1.5 Meter",
+      "category": "MOBILE ACCESSORIES",
+      "rating": 5.0,
+      "reviews":2,
+      "original_price": 2990,
+      "discount": 50,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Banner1-Product_3c1785ae-85f8-4e5c-9d13-93e92aad5821_600x.png?v=1622705204",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/Banner2-product_600x.png?v=1622705253"
+       
+      ],
+      "color": [
+          "Black",
+          "Jet Black"
+      ]
+    },
+    {
+      "id":7,
+      "name": "boAt A400 USB Type C Data Cable",
+      "category": "MOBILE ACCESSORIES",
+      "rating": 4.9,
+      "reviews":14,
+      "original_price": 999,
+      "discount": 65,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+          "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/f9c2c916-c439-4635-bf3f-caf1ec82b2a6_600x.png?v=1625045418",
+          "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/2454d476-f3f9-41e1-b84f-caf0d523808f_600x.png?v=1625045418"
+      ],
+      "color": [
+        "Black",
+        "Grey"
+      ]
+    },
+    {
+      "id":8,
+      "name": "boAt Type C C400",
+      "category": "MOBILE ACCESSORIES",
+      "rating": 4.8,
+      "reviews":6,
+      "original_price":999,
+      "discount":44,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+  
+           "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/type-c-c400_600x.png?v=1613736869"
+      ],
+      "color": [
+        "Black"
+      ]
+    },
+    {
+      "id":9,
+      "name": "boAt Rugged V3 Micro USB 1.5 Meter",
+      "category": "MOBILE ACCESSORIES",
+      "rating": 4.9,
+      "reviews":64,
+      "original_price":799,
+      "discount":44,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/rgged-v3_600x.png?v=1613736788",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/rugged-v3-blue_600x.png?v=1613457268",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/rugged-v3-green_600x.png?v=1613457268",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/rugged-v3-orange_600x.png?v=1613457269",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/rugged-v3-purple_600x.png?v=1613457269",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/rugged-v3-white_600x.png?v=1613457269"
+      
+      ],
+      "color": [
+        "Black",
+        "Blue",
+        "Green",
+        "Orange",
+        "Purple",
+        "White"
+      ]
+    },
+    {
+      "id":10,
+      "name": "boAt Deuce USB 300",
+      "category": "MOBILE ACCESSORIES",
+      "rating":4.8,
+      "reviews":75,
+      "original_price":699,
+      "discount":57,
+      "isAvailable": true,
+      "isSuperSaver":false,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/0ed71809-c9ce-47ee-b334-41ee33b11f03_600x.png?v=1625046268",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/5abfc4a1-e100-42da-ba97-1b540446596e_600x.png?v=1625046268"
+
+      
+      ],
+      "color": [
+        "Black",
+        "Red"
+      ]
+    }
+      
   ]
 }
+
+
+
