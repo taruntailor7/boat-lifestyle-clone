@@ -1,6 +1,6 @@
-//import React from 'react'
 import { RecaptchaVerifier, signInWithPhoneNumber } from 'firebase/auth';
 import { auth } from '../firebase';
+import { getAuth } from "firebase/auth";
 import { Box, Input, Textarea,Button ,Text,useToast,
     Stack,
     VStack
@@ -8,7 +8,9 @@ import { Box, Input, Textarea,Button ,Text,useToast,
 
 import { useState } from 'react';
 import { MDBInput } from 'mdb-react-ui-kit';
-import { NavLink } from 'react-router-dom';
+import { Navigate, NavLink } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { get_error, get_loading, get_suceess } from '../Redux App/action';
 
 const InitState={
     first_name:"",
@@ -20,44 +22,99 @@ const InitState={
 }
 const SignUp=()=>{
 
+   const { loading , error , token  }=useSelector((state)=>state)
+    const dispatch=useDispatch();
      const [values,setValues]=useState(InitState);
      const toast = useToast();
      const handleChange=(e)=>{
         const {name,value}=e.target;
         setValues({...values,[name]:value})
      }
+    const [nav,setNav]=useState(false);
+     
+    if(nav){
+      <Navigate to='/login' />
+    }
 
-
-     const handleClick=(e)=>{
+     const handleClick=async(e)=>{
+      
         e.preventDefault();
-        console.log(values);
-        // window.recaptchaVerifier = new RecaptchaVerifier('recaptcha-container', {}, auth);
-         let recaptcha=new RecaptchaVerifier('recaptcha-container', {}, auth);
-         recaptcha.render();
-         let number=`+91${values.phone_number}`
-         signInWithPhoneNumber(auth,number,recaptcha).then(function(e){
-           let code=prompt('enter opt');
-           if(code==null) return;
-           e.confirm(code).then(function(res){
-             console.log(res.user,'user');
-             toast({
-                title: 'Account created.',
-                description: "We've created your account for you.",
-                status: 'success',
+        dispatch( get_loading() );
+        let res1=await fetch(' http://localhost:3000/users')
+        let res2=await res1.json();
+        let flag=false;
+        res2.map((elem)=>{
+         if(elem.email===values.email){
+           flag=true;
+         }
+        })
+        if(flag==false){
+          let recaptcha=new RecaptchaVerifier('recaptcha-container', {}, auth);
+          recaptcha.render();
+          let number=`+91${values.phone_number}`
+          signInWithPhoneNumber(auth,number,recaptcha).then(function(e){
+            let code=prompt('enter opt');
+            if(code==null) return;
+            e.confirm(code).then(function(res){
+              console.log(res.user,'user');        
+                fetch(' http://localhost:3000/users',{
+                  method:'POST',
+                  body: JSON.stringify(values),
+                  headers : {
+                      'content-type': 'application/json'
+                  }
+                })
+                dispatch(get_suceess(false));
+                setNav(true);          //for navigation
+              toast({                                // for sucess
+                 title: 'Account created.',
+                 description: "We've created your account for you.",
+                 status: 'success',
+                 duration: 4000,
+                 isClosable: true,
+               })
+            }).catch((err)=>{
+              dispatch(get_error())
+              console.log(err)
+               toast({
+                title: "WRONG OTP",               //for wrong otp
+                description: "Try Again",
+                status: 'error',
                 duration: 4000,
                 isClosable: true,
               })
+              setValues(InitState);
+              return;
+             })
+          }).catch((err)=>{
+            dispatch(get_error())
+           console.log(err)
+            toast({
+             title: "Server Error",            // for server error
+             description: "Something went wrong",
+             status: 'error',
+             duration: 4000,
+             isClosable: true,
            })
-         }).catch((err)=>{
-           toast({
-            title: "OTP WRONG",
-            description: "Try Again !!",
-            status: 'error',
-            duration: 4000,
-            isClosable: true,
+           return;
           })
-         })
-       }
+         console.log(values);
+          }else{
+           alert("user Already Exists !!")
+           dispatch(get_error());
+          }
+        //  window.recaptchaVerifier = new RecaptchaVerifier('recaptcha-container', {}, auth);
+        setValues(InitState);
+      }
+
+
+      // if(loading){
+      //   return <h1>...loading...</h1>
+      // }
+
+      // if(error){
+      //   return <h1>...error..</h1>
+      // }
 
     return (
 
@@ -103,8 +160,6 @@ const SignUp=()=>{
          id='typeNumber' type='number'
          onChange={handleChange}
          required
-         maxLen='10'
-         maxLength='10'
         />
         <Box position='relative' >
          <MDBInput
@@ -119,15 +174,14 @@ const SignUp=()=>{
         />
      <Box position='absolute' right='2' top='2' >  <NavLink  > <Text style={{ textUnderlinePosition:'under' }}>forgot password?</Text> </NavLink> </Box>  
         </Box>
-        <Button width='100%'
+        <Box width='100%' id='recaptcha-container' ></Box>
+        <Button width='100%' isLoading={loading}
           type='submit' height='60px' style={{ backgroundColor:"red", padding:"20px", textAlign:"center" }}
         variant="contained" color='#ffff' >CREATE ACCOUNT</Button>
-       <Text fontSize='xs'>Already have an account <NavLink to='/login' >Login</NavLink> </Text>
+       <Text fontSize='lg'>Already have an account <NavLink to='/login' >Login</NavLink> </Text>
         </Stack>
       </form>
     </Box>
   )
 }
-
 export default SignUp
-

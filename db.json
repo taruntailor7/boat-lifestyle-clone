@@ -1,0 +1,76 @@
+{
+  "user": [
+    {
+      "first_name": "sakti prasad",
+      "last_name": "Behura",
+      "email": "saktiprasad8093@gmail.com",
+      "password": "1234",
+      "phone_number": "09078015002",
+      "id": 1
+    },
+    {
+      "first_name": "sakti prasad",
+      "last_name": "Behura",
+      "email": "saktiprasad8093@gmail.com",
+      "password": "1234",
+      "phone_number": "09078015002",
+      "id": 2
+    },
+    {
+      "first_name": "sakti prasad",
+      "last_name": "Behura",
+      "email": "saktiprasad8093@gmail.com",
+      "password": "1234",
+      "phone_number": "09078015002",
+      "id": 3
+    },
+    {
+      "first_name": "sakti prasad",
+      "last_name": "Behura",
+      "email": "saktiprasad8093@gmail.com",
+      "password": "1234",
+      "phone_number": "09078015002",
+      "id": 4
+    },
+    {
+      "first_name": "sakti prasad",
+      "last_name": "Behura",
+      "email": "saktiprasad803@gmail.com",
+      "password": "1234",
+      "phone_number": "09078015002",
+      "id": 5
+    },
+    {
+      "first_name": "sakti prasad",
+      "last_name": "Behura",
+      "email": "saktiprasad8093@gmail.com",
+      "password": "123",
+      "phone_number": "09078015002",
+      "id": 6
+    },
+    {
+      "first_name": "sakti prasad",
+      "last_name": "Behura",
+      "email": "saktiprasad8093@gmail.com",
+      "password": "",
+      "phone_number": "09078015002",
+      "id": 7
+    },
+    {
+      "first_name": "sakti prasad",
+      "last_name": "Behura",
+      "email": "saktiprasad8093@gmail.com",
+      "password": "1243",
+      "phone_number": "09078015002",
+      "id": 8
+    },
+    {
+      "first_name": "sakti prasad",
+      "last_name": "Behura",
+      "email": "saktiprasad8093@gmail.com",
+      "password": "123",
+      "phone_number": "09078015002",
+      "id": 9
+    }
+  ]
+}
