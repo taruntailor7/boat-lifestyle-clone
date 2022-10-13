@@ -44,8 +44,6 @@ const responsive = {
 }
 
 
-console.log(images[0]);
-
 export const ExploreNow = () => {
   return (
     <OwlCarousel {...responsive} >

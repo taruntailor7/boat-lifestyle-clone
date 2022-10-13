@@ -16,6 +16,7 @@ import {
   MenuList,
 } from "@chakra-ui/react"
 import { ChevronDownIcon } from '@chakra-ui/icons'
+import { NavbarCategory } from "../Pages/NavbarCategory";
 
 const links = [
     // {
@@ -70,25 +71,24 @@ export const Navbar = () => {
                       onMouseLeave={onClose}
                       color="black"
                       marginRight="-20px"
+                      className='hover-underline-animation'
                   >
                       CATEGORIES {isOpen ? <ChevronDownIcon fontSize="23px" mt={-1.5}/> : <ChevronDownIcon fontSize="23px" mt={-1.5}/>}
                   </MenuButton>
                 <MenuList mt={4} onMouseEnter={onOpen} onMouseLeave={onClose}>
-                    <MenuItem>Menu Item 1 </MenuItem>
-                    <MenuItem>Menu Item 2</MenuItem>
-                    <MenuItem>Menu Item 3</MenuItem>
+                  <NavbarCategory />
                 </MenuList>
             </Menu>
           {links.map((link)=>(
             <Box fontSize="20px" fontWeight="500" color="black" key={link.to}>
-              <NavLink style={({isActive})=>(isActive ? activetStyle : defaultStyle)} to={link.to} end>
+              <NavLink className='hover-underline-animation' style={({isActive})=>(isActive ? activetStyle : defaultStyle)} to={link.to} end>
                 {link.title} 
                 {/* <Text color="black">{link.title}</Text> */}
               </NavLink>
             </Box>
           ))}
           <Menu>
-            <MenuButton as={Text}fontSize="20px" fontWeight="500"  bg="white">
+            <MenuButton as={Text}fontSize="20px" fontWeight="500"  bg="white" className='hover-underline-animation'>
               MORE <ChevronDownIcon fontSize="23px" mt={-1.5}/>
             </MenuButton>
             <MenuList mt={6}>

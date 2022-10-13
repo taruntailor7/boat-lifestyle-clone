@@ -63,13 +63,13 @@ export const IndivisualCategory = () => {
     }
 
     const updatedProducts = products.filter((elem)=>{
-        return elem.id !==1 && elem.id !==2;
+        return elem.id !==1001 && elem.id !==1002;
     })
     // console.log(updatedProducts)
 
     useEffect(()=>{
         getData();
-    },[])
+    },[products])
 
     let price = 0;
     

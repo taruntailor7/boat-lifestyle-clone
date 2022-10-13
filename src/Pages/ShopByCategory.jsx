@@ -18,11 +18,11 @@ export const ShopByCategory = () => {
     return (
         <Box width="100%" margin="auto" marginTop="70px">
         <Text fontSize="25px" fontWeight="500">SHOP BY CATEGORY</Text>
-        <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(8, 1fr)"}} gap={10} marginTop="50px">
+        <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(7, 1fr)"}} gap={10} marginTop="50px">
             {categoryData.map((cat)=>(
                 <NavLink key={cat.id} to={`/collections/${cat.id}/${cat.url}`} >
                     <Box w="100%" textAlign="center" position="relative">
-                        <Box w="54%" margin="auto" bg='#e3e3e3' height="35px" borderRadius="10px" position="absolute" top="47px" left="0" right="0" zIndex="-1">
+                        <Box w="54%" margin="auto" bg='#e3e3e3' height="38px" borderRadius="10px" position="absolute" top="59px" left="0" right="0" zIndex="-1">
                             
                         </Box>
                         <Box w="50%" margin="auto" zIndex="1000">
