@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex,Box,HStack,InputGroup} from '@chakra-ui/react'
+import { Flex,Box,HStack,InputGroup, Text} from '@chakra-ui/react'
 import { Image } from '@chakra-ui/react'
 import { NavLink } from "react-router-dom";
 import { Input } from '@chakra-ui/react'
@@ -8,12 +8,20 @@ import { RiCustomerService2Fill } from 'react-icons/ri'
 import { AiOutlineSearch } from 'react-icons/ai'
 import { HiOutlineMenuAlt1 } from 'react-icons/hi'
 import { useMediaQuery } from '@chakra-ui/react'
+import {
+  useDisclosure,
+  MenuItem,
+  Menu,
+  MenuButton,
+  MenuList,
+} from "@chakra-ui/react"
+import { ChevronDownIcon } from '@chakra-ui/icons'
 
 const links = [
-    {
-      to:"/collections",
-      title:"CATEGORIES"
-    },
+    // {
+    //   to:"/collections",
+    //   title:"CATEGORIES"
+    // },
     {
       to:"/collections/sail-with-boat",
       title:"SAIL WITH BOAT"
@@ -22,10 +30,10 @@ const links = [
       to:"/collections/offer-zone",
       title:"OFFER ZONE"
     },
-    {
-      to:"/collections/offer-zone#",
-      title:"MORE"
-    }
+    // {
+    //   to:"/collections/offer-zone#",
+    //   title:"MORE"
+    // }
 ]
 
 const defaultStyle = {
@@ -33,37 +41,75 @@ const defaultStyle = {
 }
 
 const activetStyle = {
-  color:"red",
+  color:"black",
+  borderBottom:"1px solid black",
 }
-
 
 export const Navbar = () => {
   const [isLargerThan1144] = useMediaQuery('(min-width: 1144px)')
-
+  const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <>
       {isLargerThan1144 ? <Box boxShadow='md' width="100%" padding="24px" bg='white' position="fixed" top="0" zIndex="1000">
-      <Flex display="flex" color='white' width="98%" margin="auto" justifyContent="space-between">
+      <Flex display="flex" color='white' width="98%" margin="auto" justifyContent="space-between" >
         <Box width="6%" >
           <NavLink to="/"><Image width="100%" src='https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Asset_2_288x-8_5_small.png?v=1661838672' alt='Dan Abramov' /></NavLink>
         </Box>
-        <HStack width="54%" spacing={8}  color="black"  display='flex' justifyContent="center">
+        <HStack width="57%" spacing={8}  color="black"  display='flex' justifyContent="center">
+            <Menu isOpen={isOpen} >
+                  <MenuButton 
+                      fontSize="20px" 
+                      variant="ghost"
+                      mx={1}
+                      py={[1, 2, 2]}
+                      px={4}
+                      borderRadius={5}
+                      // aria-label="Courses"
+                      fontWeight="500"
+                      onMouseEnter={onOpen}
+                      onMouseLeave={onClose}
+                      color="black"
+                      marginRight="-20px"
+                  >
+                      CATEGORIES {isOpen ? <ChevronDownIcon fontSize="23px" mt={-1.5}/> : <ChevronDownIcon fontSize="23px" mt={-1.5}/>}
+                  </MenuButton>
+                <MenuList mt={4} onMouseEnter={onOpen} onMouseLeave={onClose}>
+                    <MenuItem>Menu Item 1 </MenuItem>
+                    <MenuItem>Menu Item 2</MenuItem>
+                    <MenuItem>Menu Item 3</MenuItem>
+                </MenuList>
+            </Menu>
           {links.map((link)=>(
-            <Box fontSize="20px" fontWeight="500" key={link.to}>
-              <NavLink style={({isActive})=>(isActive ? activetStyle : defaultStyle)} to={link.to} end>{link.title}</NavLink>
+            <Box fontSize="20px" fontWeight="500" color="black" key={link.to}>
+              <NavLink style={({isActive})=>(isActive ? activetStyle : defaultStyle)} to={link.to} end>
+                {link.title} 
+                {/* <Text color="black">{link.title}</Text> */}
+              </NavLink>
             </Box>
           ))}
+          <Menu>
+            <MenuButton as={Text}fontSize="20px" fontWeight="500"  bg="white">
+              MORE <ChevronDownIcon fontSize="23px" mt={-1.5}/>
+            </MenuButton>
+            <MenuList mt={6}>
+              <MenuItem>Download</MenuItem>
+              <MenuItem>Create a Copy</MenuItem>
+              <MenuItem>Mark as Draft</MenuItem>
+              <MenuItem>Delete</MenuItem>
+              <MenuItem>Attend a Workshop</MenuItem>
+            </MenuList>
+          </Menu>
         </HStack>
-        <HStack width="40%" spacing={6}  color="black"  display='flex' justifyContent="flex-end">
+        <HStack width="37%" spacing={6}  color="black"  display='flex' justifyContent="flex-end">
           <Box> 
             <InputGroup bg="#eaeaea" borderRadius="25px" variant="unstyled" width="300px" height="45px" padding="10px">
               <AiOutlineSearch  fontSize="25px"/>
               <Input placeholder='Search here...' color="black" size='lg' />
             </InputGroup>
           </Box>
-          <Box><NavLink><FaUserAlt fontSize="20px" /></NavLink></Box>
-          <Box><NavLink><RiCustomerService2Fill fontSize="22px"/></NavLink></Box>
-          <Box><NavLink><FaShoppingCart fontSize="22px"/></NavLink></Box>
+          <Box><NavLink><FaUserAlt color="black" fontSize="20px" /></NavLink></Box>
+          <Box><NavLink><RiCustomerService2Fill color="black" fontSize="22px"/></NavLink></Box>
+          <Box><NavLink><FaShoppingCart color="black" fontSize="22px"/></NavLink></Box>
         </HStack>
       </Flex>
       </Box> : <Box boxShadow='md' width="100%" padding="24px" bg='white' >
@@ -75,15 +121,14 @@ export const Navbar = () => {
           <NavLink to="/"><Image width="100%" src='https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Asset_2_288x-8_5_small.png?v=1661838672' alt='Dan Abramov' /></NavLink>
         </Box>
         <Box width="14%"  display="flex" justifyContent="space-between" alignItems="center">
-          <Box><NavLink><FaUserAlt fontSize="20px" /></NavLink></Box>
-          <Box><NavLink><RiCustomerService2Fill fontSize="22px"/></NavLink></Box>
-          <Box><NavLink><FaUserAlt fontSize="22px" /></NavLink></Box>
-          <Box><NavLink><FaShoppingCart fontSize="22px"/></NavLink></Box>
+          <Box><NavLink><FaUserAlt  color="black" fontSize="20px" /></NavLink></Box>
+          <Box><NavLink><RiCustomerService2Fill color="black" fontSize="22px"/></NavLink></Box>
+          <Box><NavLink><FaUserAlt color="black" fontSize="22px" /></NavLink></Box>
+          <Box><NavLink><FaShoppingCart  color="black" fontSize="22px"/></NavLink></Box>
         </Box>
       </Flex>
     </Box>}
     </>
-    
   );
 };
 
