@@ -15,7 +15,7 @@ function  reducer ( state=initState, {type , payload } ){
             }
         }
         case SUCCESS:{
-            localStorage.setItem("isAuth",true);
+        
             return{
                 loading:false,
                 error:false,

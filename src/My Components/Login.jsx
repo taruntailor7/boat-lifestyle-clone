@@ -19,11 +19,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { get_error, get_loading, get_suceess } from '../Redux App/action';
 
 
+
 const InitState={
     email:"",
     password:"",
 }
 const SignUp=()=>{
+    
     const [show, setShow] = useState(false)
     const showClick= () => setShow(!show)
      const [values,setValues]=useState(InitState);
@@ -34,10 +36,9 @@ const SignUp=()=>{
      }
      const { loading , error , isAuth  }=useSelector((state)=>state)
      const dispatch=useDispatch();
+     const [nav,setNav]=useState(false);
 
-           
-
-     const login = useGoogleLogin({
+        const login = useGoogleLogin({
       onSuccess: async tokenResponse =>{
                   try{
                     const res=  await fetch ("https://www.googleapis.com/oauth2/v3/userinfo",{
@@ -66,6 +67,8 @@ const SignUp=()=>{
                      }
                    })
                    dispatch(get_suceess(true));
+                   setNav(true);
+                   localStorage.setItem("isAuth",true);
                    localStorage.setItem("name",res2.name)
                    toast({
                     title: 'Logged in  sucess.',
@@ -75,7 +78,9 @@ const SignUp=()=>{
                     isClosable: true,
                   })
                   }else{
+                    setNav(true);
                     dispatch(get_suceess(true));
+                    localStorage.setItem("isAuth",true);
                     localStorage.setItem("name",res2.name)
                     toast({
                       title: 'Logged in  sucess.',
@@ -106,6 +111,8 @@ const SignUp=()=>{
         })
         if(flag){
            dispatch(get_suceess(true));
+           setNav(true);
+           localStorage.setItem("isAuth",true);
            toast({
             title: 'Logged in  sucess.',
             description: "Keep sailing ",
@@ -125,6 +132,10 @@ const SignUp=()=>{
           }
        }
 
+       
+       if(nav){
+        return <NavLink to='/' />
+      }
 
     return (
 
@@ -162,10 +173,11 @@ const SignUp=()=>{
             {show ? 'Hide' : 'Show'}
             </Button>
             </Box>
+            <Box  textAlign='right' >  <NavLink  style={{color:'red' }} className='hover-underline-animation' to='/forgot_password' > <Text style={{ textUnderlinePosition:'under' }}>forgot password?</Text> </NavLink> </Box>  
         <Button isLoading={loading}
           type='submit' height='50px' style={{ backgroundColor:"red", padding:"20px", textAlign:"center" }}
         variant="contained" color='#ffff' >LOGIN</Button>
-       <Text fontSize='lg'>New Customer <NavLink to='/signup' > Create an account  </NavLink></Text> 
+       <Text fontSize='lg'>New Customer <NavLink style={{color:'red' }} color='red' to='/signup' className='hover-underline-animation' > Create an account  </NavLink></Text> 
         </Stack>
       </form>
     </Box>
@@ -213,3 +225,17 @@ onError={() => {
 //     // ...
 //   });
 // }
+
+{/* <Box position='relative' >
+<MDBInput
+ label="Password"
+ id='typePassword'
+ size='lg'
+ name='password'
+ type='password'
+ value={values.password}
+ onChange={handleChange}
+ maxLength='8'
+/>
+<Box position='absolute' right='2' top='2' >  <NavLink  > <Text style={{ textUnderlinePosition:'under' }}>forgot password?</Text> </NavLink> </Box>  
+</Box> */}

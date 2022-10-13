@@ -31,9 +31,12 @@ const SignUp=()=>{
         setValues({...values,[name]:value})
      }
     const [nav,setNav]=useState(false);
+        
+    const [show, setShow] = useState(false)
+    const showClick= () => setShow(!show)
      
     if(nav){
-      <Navigate to='/login' />
+     return  <Navigate to='/login' />
     }
 
      const handleClick=async(e)=>{
@@ -82,6 +85,7 @@ const SignUp=()=>{
                 status: 'error',
                 duration: 4000,
                 isClosable: true,
+          
               })
               setValues(InitState);
               return;
@@ -152,7 +156,7 @@ const SignUp=()=>{
          required
          
         />
-        <MDBInput
+        <MDBInput 
           label="Phone Number"
           value={values.phone_number}
          size='lg'
@@ -160,25 +164,29 @@ const SignUp=()=>{
          id='typeNumber' type='number'
          onChange={handleChange}
          required
+         
         />
-        <Box position='relative' >
-         <MDBInput
-          label="Password"
-          id='typePassword'
-          size='lg'
-          name='password'
-          type='password'
-          value={values.password}
-          onChange={handleChange}
-          maxLength='8'
-        />
-     <Box position='absolute' right='2' top='2' >  <NavLink  > <Text style={{ textUnderlinePosition:'under' }}>forgot password?</Text> </NavLink> </Box>  
-        </Box>
+             <Box width='100%' position='relative' >
+                <MDBInput 
+                width='100%'               
+                 label="Password"
+                id='typePassword'
+                size='lg'
+                name='password'
+                type={show ? 'text' : 'password'}
+                value={values.password}
+                onChange={handleChange}
+                maxLength='8'
+                /> 
+            <Button h='1.75rem' size='sm' right='2' top='2' position='absolute' onClick={showClick}>
+            {show ? 'Hide' : 'Show'}
+            </Button>
+            </Box>
         <Box width='100%' id='recaptcha-container' ></Box>
         <Button width='100%' isLoading={loading}
           type='submit' height='60px' style={{ backgroundColor:"red", padding:"20px", textAlign:"center" }}
         variant="contained" color='#ffff' >CREATE ACCOUNT</Button>
-       <Text fontSize='lg'>Already have an account <NavLink to='/login' >Login</NavLink> </Text>
+       <Text fontSize='lg'>Already have an account <NavLink style={{ color:'red'}} className='hover-underline-animation' to='/login' >Login</NavLink> </Text>
         </Stack>
       </form>
     </Box>
