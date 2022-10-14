@@ -5,7 +5,7 @@ import Axios from 'axios';
 import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { AiFillStar, AiFillThunderbolt } from 'react-icons/ai';
-import { useParams } from 'react-router-dom';
+import { useParams, useSearchParams } from 'react-router-dom';
 import { Filter } from './Filter';
 import { Sorting } from './Sorting';
 
@@ -13,12 +13,17 @@ export const IndivisualCategory = () => {
     const [bannerImg, setBannerImg] = useState("")
     const [heading, setHeading] = useState("")
     const [products, setProducts] = useState([])
+    const [searchParam, setSearchParam] = useSearchParams();
 
     const [sortByAlpha, setSortByAlpha] = useState("")
     const [sortByAlphaName, setSortByAlphaName] = useState("")
 
-    const [sortByPrice, setSortByPrice] = useState("")
-    const [sortByPriceName, setSortByPriceName] = useState("")
+    const [sortByPrice, setSortByPrice] = useState(searchParam.get("sortByPrice"))
+    const [sortByPriceName, setSortByPriceName] = useState(searchParam.get("sortByPriceName"))
+
+    const [minValue, setMinValue] = useState(searchParam.get("minValue"))
+    const [maxValue, setMaxValue] = useState(searchParam.get("maxValue"))
+
 
     const {url} = useParams();
     const {id} = useParams();
@@ -60,10 +65,11 @@ export const IndivisualCategory = () => {
     //     fetchUrl = "http://localhost:3001/shopByCategory"
     // }
 
+    // http://localhost:3001/allProducts?original_price_gte=3000&original_price_lte=5000
 
-    const getData = ({_sort, _order }) => {
+    const getData = ({_sort, _order, original_price_gte, original_price_lte  }) => {
         Axios.get(fetchUrl, {
-            params: { _sort, _order }
+            params: { _sort, _order, original_price_gte, original_price_lte}
         })
         .then((res) =>{
             setProducts(res.data)
@@ -82,6 +88,13 @@ export const IndivisualCategory = () => {
         setSortByPrice(e.target.value)
         setSortByPriceName(e.target.name)
     }
+
+    const handleFilter = (sliderValue)=>{
+        setMinValue(sliderValue[0]);
+        setMaxValue(sliderValue[1]);
+        console.log(sliderValue);
+     }
+ 
  
     // const getData = ()=>{
     //     fetch(fetchUrl)
@@ -100,36 +113,48 @@ export const IndivisualCategory = () => {
     // console.log(updatedProducts)
 
     useEffect(()=>{
-        if(sortByAlpha !== "" && sortByPrice !== ""){
+        if(minValue!=="" && maxValue!=="" && sortByPrice !== "" ){
            getData({
-            _sort : sortByPriceName,
-            _order : sortByPrice
+               _sort : sortByPriceName,
+               _order : sortByPrice,
+               original_price_gte:minValue,
+               original_price_lte:maxValue
            });
         }
-        else if(sortByAlpha !== ""){
-            getData({
-             _sort : sortByAlphaName,
-             _order : sortByAlpha
-            });
-         }
+        // else if(sortByAlpha !== ""){
+        //     getData({
+        //      _sort : sortByAlphaName,
+        //      _order : sortByAlpha
+        //     });
+        //  }
          else if(sortByPrice !== ""){
             getData({
-             _sort : sortByPriceName,
-             _order :sortByPrice
+             __sort : sortByPriceName,
+             _order : sortByPrice,
+             original_price_gte:399,
+             original_price_lte:10000
+            });
+        }
+        else if(minValue!=="" && maxValue!=="" ){
+            getData({
+                _sort:"",
+                _order:"",
+                original_price_gte:minValue,
+                original_price_lte:maxValue
             });
         }
         else{
             getData({
                 _sort:"",
-                _order:""
+                _order:"",
+                original_price_gte:399,
+                original_price_lte:10000
             });
         }
-        // getData({
-        //     _sort:"",
-        //     _order:""
-        // });
-    },[products])
+        setSearchParam({sortByPrice, sortByPriceName,minValue,maxValue})
+    },[products,sortByPrice,sortByPriceName,minValue,maxValue])
 
+   
     let price = 0;
     
     return (
@@ -140,7 +165,7 @@ export const IndivisualCategory = () => {
             <Box width="95%" margin="auto" marginTop="30px">
                 <Text fontWeight="500" fontSize="55px">{heading}</Text>
                 <Box mt={8} display="flex" justifyContent="space-between" >
-                    <Filter /> 
+                    <Filter handleFilter={handleFilter} /> 
                     <Sorting handleChangeForAlpha={handleChangeForAlpha} handleChangeForPrice={handleChangeForPrice} />
                     {/* <Box  display="flex" justifyContent="space-between" width="14%">
                             <Text fontSize="17px" display="flex" alignItems="center" width="30%">Sort by</Text>
