@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Accordion,
   Box,
+  Button,
+  Flex,
   HStack,
   Image,
   Input,
@@ -9,14 +11,12 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import ProdFaq from "./ProdFaq";
-// import {
-//     Accordion,
-//     AccordionButton,
-//     AccordionIcon,
-//     AccordionItem,
-//     AccordionPanel,
-//     Box,
-//   } from "@chakra-ui/react";
+import BottomNav from "./BottomNav";
+import ProductsStars from "./ProductsStars";
+import UsersReviews from "./UsersReviews";
+import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons";
+import ProdSpecification from "./ProdSpecification";
+
 const svg = [
   {
     src: "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/icon-1b.png?v=1654855622",
@@ -70,7 +70,45 @@ const faqs = [
     ans: "Yes, it has a call reject feature.",
   },
 ];
+const req = (page) => {
+  return fetch(
+    `https://boat-reviews.herokuapp.com/reviews?_sort=id&_order=desc&_page=${page}&_limit=5`
+  ).then((res) => {
+    return res.json();
+  });
+};
+
 const ProductDisc = () => {
+  let [comment, setComment] = useState([]);
+  const [page, setPage] = useState(1);
+  useEffect(() => {
+    showRev(page);
+  }, [page]);
+  const showRev = (page) => {
+    req(page).then((res) => {
+      setComment(res);
+    });
+  };
+
+  const [review, setReview] = useState({
+    name: "",
+    comment: "",
+  });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setReview({ ...review, [name]: value });
+  };
+  const handleClick = () => {
+    fetch(`https://boat-reviews.herokuapp.com/reviews`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(review),
+    }).then(() => {
+      showRev(1);
+    });
+  };
   return (
     <>
       <HStack w="full" h="70px" spacing="5%" justifyContent="center">
@@ -81,73 +119,8 @@ const ProductDisc = () => {
           </HStack>
         ))}
       </HStack>
-      <HStack
-        w="full"
-        h="60px"
-        border="1px"
-        backgroundColor="black"
-        color="gray"
-        justifyContent="center"
-        spacing="20%"
-      >
-        <Text
-          fontSize="15px"
-          fontWeight="extrabold"
-          color="red"
-          as="u"
-          cursor="default"
-        >
-          DISCRIPTION
-        </Text>
-        <Text fontSize="15px" fontWeight="extrabold" cursor="pointer">
-          SPECIFICATIONS
-        </Text>
-        <Text fontSize="15px" fontWeight="extrabold" cursor="pointer">
-          REVIEWS
-        </Text>
-      </HStack>
-      <VStack w="full" h="300px" justifyContent="center">
-        <Text fontSize="48px" fontWeight="700">
-          Wave Call - Best Bluetooth Calling Smartwatch for Everyone
-        </Text>
-        <Text fontSize="15px" px="50px">
-          Make way for boAt Wave Call! A smart watch built to help you on your
-          journey to becoming the best version of yourself. With our Bluetooth
-          calling feature, you can stay connected with your loved ones while on
-          the go. The 1.69" HD curved display gives you a clear view of every
-          health insight as you get unstoppable with 10 days of battery life.
-          Packed with a heart-rate & SpO2 monitor, sedentary & hydration alerts,
-          and more, boAt Wave Call is the perfect companion for anyone looking
-          to create their own path to wellness.
-        </Text>
-      </VStack>
-      <HStack w="full" h="470px" border="1px" backgroundColor="black">
-        <VStack
-          w="50%"
-          h="full"
-          justifyContent="center"
-          align="left"
-          spacing="10px"
-          pl="30px"
-        >
-          <Text fontSize="30px" fontWeight="700" color="white" textAlign="left">
-            All Things Bright
-          </Text>
-          <Text fontSize="15px" color="White" textAlign="left">
-            With its 1.69" HD curved display and 70% RGB colour gamut, get an
-            enhanced colour resolution. Experience vivid and dynamic graphics
-            with a 160-degree display and a sleek body. Moreover with 150+ watch
-            faces, customize and personalise your boAt Wave Call according to
-            your OOTD!
-          </Text>
-        </VStack>
-        <Image
-          h="100%"
-          w="500px"
-          src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Untitled-5_1e1c266d-0efb-46d9-ad91-c2c26c5f352a.png?v=1658295658"
-        ></Image>
-      </HStack>
-      <VStack w="full" h="400px" mt={5}>
+      <ProdSpecification />
+      <VStack w="full" h="400px" mb={10} mt={5}>
         <Box w="800px">
           <Text
             fontSize="30px"
@@ -165,14 +138,88 @@ const ProductDisc = () => {
           ))}
         </Accordion>
       </VStack>
-      {/* <VStack border="1px" w="full" h="700px" mt={5}>
-        <Box border="1px" w="900px">
+      <hr />
+      <BottomNav />
+      <VStack w="full" h="700px" mt={5}>
+        <Box w="900px">
           <Text fontSize="30px" fontWeight="800" textAlign="left">
             what boAtheads are saying:
           </Text>
         </Box>
-        <Input></Input>
-      </VStack> */}
+        <HStack w="900px">
+          <VStack w="400px">
+            <Box>
+              <Text fontSize="12px" textAlign="left" mb={1}>
+                Name (displayed publicly like)
+              </Text>
+              <Input
+                w="400px"
+                h="35px"
+                name="name"
+                value={review.name}
+                placeholder="Enter Your Name"
+                focusBorderColor="gray.300"
+                borderColor="gray.200"
+                onChange={handleChange}
+              ></Input>
+            </Box>
+            <Box>
+              <Text fontSize="12px" textAlign="left" mb={1}>
+                Review Title
+              </Text>
+              <Input
+                name="comment"
+                value={review.comment}
+                w="400px"
+                h="35px"
+                placeholder="Comment"
+                focusBorderColor="gray.300"
+                borderColor="gray.200"
+                onChange={handleChange}
+              ></Input>
+            </Box>
+            <Box flex w="400px" alignContent="left">
+              <Button
+                color="white"
+                colorScheme="red"
+                fontWeight="700"
+                onClick={handleClick}
+              >
+                Submit Review
+              </Button>
+            </Box>
+          </VStack>
+          <Box w="full" h="full">
+            <ProductsStars />
+            <Text fontSize="16px" color="gray" textAlign="left" ml={2}>
+              5.0 | Based On 22 Review
+            </Text>
+          </Box>
+        </HStack>
+        <Box w="900px" h="full">
+          {comment.map((item) => (
+            <UsersReviews name={item.name} comment={item.comment} />
+          ))}
+        </Box>
+        <HStack w="900px" h="full" justifyContent="center">
+          <ArrowLeftIcon
+            cursor="pointer"
+            onClick={() => {
+              if (page > 1) {
+                setPage(page - 1);
+              }
+            }}
+          />
+          <Text px={7}>{page}</Text>
+
+          <ArrowRightIcon
+            cursor="pointer"
+            onClick={() => {
+              setPage(page + 1);
+            }}
+          />
+        </HStack>
+      </VStack>
     </>
   );
 };
