@@ -11,10 +11,10 @@ export const Sorting = ({handleChangeForAlpha,handleChangeForPrice}) => {
                 <option value='ASC'>Alphabetically, A-Z</option>
                 <option value='DESC'>Alphabetically, Z-A</option>
             </Select>
-            <Select focusBorderColor="red.500"  width="55%" mt={4} name="original_price" onChange={handleChangeForPrice}>
+            <Select focusBorderColor="red.500"  width="55%" mt={4} name="price" onChange={handleChangeForPrice}>
                 <option  value=''>Sort by Price</option>
                 <option value='ASC'>Price, low to high</option>
-                <option value='DESC'>Price, high to low</option>
+                <option value='DESC'>Price, high to low</option>    
             </Select>
         </Box>
     )

@@ -62,7 +62,7 @@ export const HomeBestOfBoat = () => {
                     <Text display="flex" alignItems="center" my={2}><AiFillStar color="#ff0000" margin="10px"/> {data.rating} | {data.reviews} reviews</Text>
                     <hr />
                     <Box display="flex" >
-                      <Text color="#ff0000" fontWeight='500'> ₹ { price = Math.ceil(data.original_price - data.original_price*(data.discount/100)) }</Text>
+                      <Text color="#ff0000" fontWeight='500'> ₹ { data.price }</Text>
                       <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                     </Box>
                     <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
@@ -87,7 +87,7 @@ export const HomeBestOfBoat = () => {
                       <Text display="flex" alignItems="center" my={2}><AiFillStar color="#ff0000" margin="10px"/> {data.rating} | {data.reviews} reviews</Text>
                       <hr />
                       <Box display="flex" >
-                        <Text color="#ff0000" fontWeight='500'> ₹ { price = Math.ceil(data.original_price - data.original_price*(data.discount/100)) }</Text>
+                        <Text color="#ff0000" fontWeight='500'> ₹ { data.price }</Text>
                         <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                       </Box>
                       <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
@@ -112,7 +112,7 @@ export const HomeBestOfBoat = () => {
                       <Text display="flex" alignItems="center" my={2}><AiFillStar color="#ff0000" margin="10px"/> {data.rating} | {data.reviews} reviews</Text>
                       <hr />
                       <Box display="flex" >
-                        <Text color="#ff0000" fontWeight='500'> ₹ { price = Math.ceil(data.original_price - data.original_price*(data.discount/100)) }</Text>
+                        <Text color="#ff0000" fontWeight='500'> ₹ { data.price }</Text>
                         <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                       </Box>
                       <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
@@ -137,7 +137,7 @@ export const HomeBestOfBoat = () => {
                       <Text display="flex" alignItems="center" my={2}><AiFillStar color="#ff0000" margin="10px"/> {data.rating} | {data.reviews} reviews</Text>
                       <hr />
                       <Box display="flex" >
-                        <Text color="#ff0000" fontWeight='500'> ₹ { price = Math.ceil(data.original_price - data.original_price*(data.discount/100)) }</Text>
+                        <Text color="#ff0000" fontWeight='500'> ₹ { data.price }</Text>
                         <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                       </Box>
                       <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
@@ -162,7 +162,7 @@ export const HomeBestOfBoat = () => {
                       <Text display="flex" alignItems="center" my={2}><AiFillStar color="#ff0000" margin="10px"/> {data.rating} | {data.reviews} reviews</Text>
                       <hr />
                       <Box display="flex" >
-                        <Text color="#ff0000" fontWeight='500'> ₹ { price = Math.ceil(data.original_price - data.original_price*(data.discount/100)) }</Text>
+                        <Text color="#ff0000" fontWeight='500'> ₹ { data.price }</Text>
                         <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                       </Box>
                       <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
