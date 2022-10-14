@@ -1,10 +1,8 @@
 import { RecaptchaVerifier, signInWithPhoneNumber } from 'firebase/auth';
 import { auth } from '../firebase';
-import { getAuth } from "firebase/auth";
-import { Box, Input, Textarea,Button ,Text,useToast,
+import { Box, Input, Button ,Text,useToast,
     Stack,
-    VStack,
-    AlertDialog,
+    AlertDialog, 
     AlertDialogBody,
     AlertDialogFooter,
     AlertDialogHeader,
@@ -30,7 +28,7 @@ const InitState={
 const SignUpPage=()=>{
   const { isOpen, onOpen, onClose } = useDisclosure()
   const cancelRef = useRef()
-   const { loading , error , token  }=useSelector((state)=>state)
+   const { loading }=useSelector((state)=>state)
     const dispatch=useDispatch();
      const [values,setValues]=useState(InitState);
      const toast = useToast();
@@ -44,15 +42,15 @@ const SignUpPage=()=>{
     const [otp,setOtp]=useState("");
     const showClick= () => setShow(!show)
     const [code,setRes]=useState(""); 
-     const [refresh,setRefresh]=useState(false);
+    //  const [refresh,setRefresh]=useState(false);
 
     if(nav){
      return  <Navigate to='/login' />
     }
 
-    if(refresh){
-      return <Navigate to='/signup' />
-    }
+    // if(refresh){
+    //   return <Navigate to='/signup' />
+    // }
 
     const handleChangeotp=(e)=>{
       setOtp(e.target.value);
@@ -65,12 +63,20 @@ const SignUpPage=()=>{
         let res1=await fetch(' http://localhost:3001/users')
         let res2=await res1.json();
         let flag=false;
-        res2.map((elem)=>{
-         if(elem.email===values.email || elem.phone_number==values.phone_number ){
-           flag=true;
-         }
+
+        res2.forEach((elem)=>{
+          if(elem.email===values.email || elem.phone_number===values.phone_number ){
+            flag=true;
+          }
         })
-        if(flag==false){
+
+        // res2.map((elem)=>{
+        //   if(elem.email===values.email || elem.phone_number===values.phone_number ){
+        //     flag=true;
+        //   }
+        // })
+
+        if(flag===false){
           let recaptcha=new RecaptchaVerifier('recaptcha-container', {}, auth);
           recaptcha.render();
           let number=`+91${values.phone_number}`
@@ -110,13 +116,13 @@ const SignUpPage=()=>{
             })
             dispatch(get_suceess(false));
             setNav(true);          //for navigation
-          toast({                                // for sucess
-             title: 'Account created.',
-             description: "We've created your account for you.",
-             status: 'success',
-             duration: 4000,
-             isClosable: true,
-           })
+            toast({                                // for sucess
+              title: 'Account created.',
+              description: "We've created your account for you.",
+              status: 'success',
+              duration: 4000,
+              isClosable: true,
+            })
         }).catch((err)=>{
           dispatch(get_error())
           console.log(err)
@@ -128,7 +134,7 @@ const SignUpPage=()=>{
             isClosable: true,
       
           })
-          setRefresh(true);
+          // setRefresh(true);
           setValues(InitState);
           return;
          })

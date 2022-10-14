@@ -17,7 +17,9 @@ const images = [
     "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/web_1_2000x.png?v=1665644267",
     "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/diwali-banner_2000x.gif?v=1664442921",
     "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/SN-Desktop-Banner-Wave-Style_1_2000x.jpg?v=1663914840",
-    "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/DESKTOP-Banner-WB_4_2000x.gif?v=1664782144"
+    "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/DESKTOP-Banner-WB_4_2000x.gif?v=1664782144",
+    "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/web_3_2000x.png?v=1665752361",
+    "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/web_2_2_2000x.png?v=1665727855"
 ]
 
 const responsive = {

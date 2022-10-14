@@ -12,12 +12,12 @@ import { store } from "./Redux App/store";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-  <ChakraProvider>
-    <BrowserRouter>
-    <GoogleOAuthProvider clientId="329753716905-d2nbvmp8oij1h9bb17ahglleicodf9mm.apps.googleusercontent.com">
-      <App />
-      </GoogleOAuthProvider>
-    </BrowserRouter>
-  </ChakraProvider>
+    <ChakraProvider>
+      <BrowserRouter>
+      <GoogleOAuthProvider clientId="329753716905-d2nbvmp8oij1h9bb17ahglleicodf9mm.apps.googleusercontent.com">
+        <App />
+        </GoogleOAuthProvider>
+      </BrowserRouter>
+    </ChakraProvider>
   </Provider>
 );

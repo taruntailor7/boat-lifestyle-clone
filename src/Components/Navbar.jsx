@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex,Box,HStack,InputGroup, Text} from '@chakra-ui/react'
+import { Flex,Box,HStack,InputGroup, Text, Button} from '@chakra-ui/react'
 import { Image } from '@chakra-ui/react'
 import { NavLink } from "react-router-dom";
 import { Input } from '@chakra-ui/react'
@@ -107,12 +107,25 @@ export const Navbar = () => {
               <Input placeholder='Search here...' color="black" size='lg' />
             </InputGroup>
           </Box>
-          <Box><NavLink><FaUserAlt color="black" fontSize="20px" /></NavLink></Box>
+          <Box>
+            <NavLink>
+                <Menu>
+                  <MenuButton as={Text} fontSize="20px" fontWeight="500" colorScheme="white" bg="white">
+                  <FaUserAlt color="black" fontSize="20px" />
+                  </MenuButton>
+                  <MenuList mt={6} colorScheme="white" bg="white">
+                    <MenuItem  _focus={{bg:"white"}} >
+                      <Button><NavLink to="/login">Login</NavLink></Button>
+                    </MenuItem>
+                  </MenuList>
+                </Menu>
+                  {/* <FaUserAlt color="black" fontSize="20px" /> */}
+            </NavLink></Box>
           <Box><NavLink><RiCustomerService2Fill color="black" fontSize="22px"/></NavLink></Box>
           <Box><NavLink><FaShoppingCart color="black" fontSize="22px"/></NavLink></Box>
         </HStack>
       </Flex>
-      </Box> : <Box boxShadow='md' width="100%" padding="24px" bg='white' >
+      </Box> : <Box boxShadow='md' width="100%" padding="24px" bg='white' > 
       <Flex color='black' width="98%" margin="auto" justifyContent="space-between">
         <Box width="12%"  display="flex" justifyContent="space-between" alignItems="center">
           <HiOutlineMenuAlt1 fontSize="30px"/>

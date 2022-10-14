@@ -7,7 +7,8 @@ import { SailWithBoat } from "../Pages/SailWithBoat";
 import ChangePassword from "../Pages/ChangePassword";
 import ForgotPassword from "../Pages/ForgotPassword";
 import LoginPage from "../Pages/Login";
-import SignUpPage from "../Pages/signup"
+import SignUpPage from "../Pages/Signup";
+
 
 export const AllRoutes = () => {
   return(
