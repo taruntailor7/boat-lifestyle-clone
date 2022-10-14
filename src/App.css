@@ -4,13 +4,13 @@
 }
 
 /* For Underline */
-.hover-underline-animation {
+.hover-underline-animation,.hover-underline-banner {
     display: inline-block;
     position: relative;
     color: black;
   }
   
-  .hover-underline-animation:after {
+  .hover-underline-animation:after,.hover-underline-banner:after {
     content: '';
     position: absolute;
     width: 100%;
@@ -23,10 +23,18 @@
     transition: transform 0.25s ease-out;
   }
   
-  .hover-underline-animation:hover:after {
+  .hover-underline-animation:hover:after,.hover-underline-banner:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+
+  .hover-underline-banner:after{
+    background-color:red;
+    height: 3px;
+  }
+
+
+
 
 /* For Carousel Arrows */
 .owl-theme{
@@ -44,15 +52,17 @@
   font-size: 90px;
   position: absolute;
   left:0;
-  top:250px;
-  color:crimson
+  top:230px;
+  color:crimson;
+  display: none;
 }
 .next{
   font-size: 90px;
   position: absolute;
-  top:250px;
+  top:230px;
   right:0;
-  color:crimson
+  color:crimson;
+  display: none;
 }
 .prev:hover {
   color:red;

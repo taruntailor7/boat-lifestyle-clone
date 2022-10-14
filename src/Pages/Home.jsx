@@ -56,7 +56,7 @@ export const Home = () => {
     <Box width="95%" margin="auto" marginTop="60px" zIndex="-1">
         <OwlCarousel {...responsive} className="owl-theme" >
         {images.map((img)=>(
-            <Box key={img} width="100%" margin="auto" mt={10} borde>
+            <Box key={img} className='hover-underline-banner' width="100%" margin="auto" mt={10} >
                 <Image w="100%"  src={img} />
             </Box>
         ))}

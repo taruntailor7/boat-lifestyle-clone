@@ -1,6 +1,6 @@
 import { Box, Button, Grid, GridItem, Image, Text } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
-import { AiFillStar } from 'react-icons/ai'
+import { AiFillStar, AiFillThunderbolt } from 'react-icons/ai'
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 
 export const HomeBestOfBoat = () => {
@@ -53,6 +53,7 @@ export const HomeBestOfBoat = () => {
             <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop="50px">
               {first.map((data)=>(
                 <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
+                  {data.isSuperSaver?<Button bg="#F7C20A" colorScheme="#F7C20A" color="black" position="absolute" px={1}> <AiFillThunderbolt /> Super Saver</Button>:""}
                   <Box width="100%" p={5}> 
                     <Image width="100%" src={data.image[0]} alt="image" />
                   </Box>
@@ -62,10 +63,10 @@ export const HomeBestOfBoat = () => {
                     <hr />
                     <Box display="flex" >
                       <Text color="#ff0000" fontWeight='500'> ₹ { price = Math.ceil(data.original_price - data.original_price*(data.discount/100)) }</Text>
-                      <Text ml={2}> ₹ {data.original_price}</Text>
+                      <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                     </Box>
                     <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
-                    <Button w="100%" colorScheme='#F7C20A' bg="#F7C20A" size='md'>
+                    <Button w="100%" colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
                       ADD TO CART
                     </Button>
                   </Box>
@@ -77,6 +78,7 @@ export const HomeBestOfBoat = () => {
               <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop="60px">
                 {second.map((data)=>(
                   <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
+                    {data.isSuperSaver?<Button bg="#F7C20A" colorScheme="#F7C20A" color="black" position="absolute" px={1}> <AiFillThunderbolt /> Super Saver</Button>:""}
                     <Box width="100%" p={5}> 
                       <Image width="100%" src={data.image[0]} alt="image" />
                     </Box>
@@ -86,10 +88,10 @@ export const HomeBestOfBoat = () => {
                       <hr />
                       <Box display="flex" >
                         <Text color="#ff0000" fontWeight='500'> ₹ { price = Math.ceil(data.original_price - data.original_price*(data.discount/100)) }</Text>
-                        <Text ml={2}> ₹ {data.original_price}</Text>
+                        <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                       </Box>
                       <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
-                      <Button w="100%" colorScheme='#F7C20A' bg="#F7C20A" size='md'>
+                      <Button w="100%"colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
                         ADD TO CART
                       </Button>
                     </Box>
@@ -101,6 +103,7 @@ export const HomeBestOfBoat = () => {
               <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop="60px">
                 {third.map((data)=>(
                   <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
+                    {data.isSuperSaver?<Button bg="#F7C20A" colorScheme="#F7C20A" color="black" position="absolute" px={1}> <AiFillThunderbolt /> Super Saver</Button>:""}
                     <Box width="100%" p={5}> 
                       <Image width="100%" src={data.image[0]} alt="image" />
                     </Box>
@@ -110,10 +113,10 @@ export const HomeBestOfBoat = () => {
                       <hr />
                       <Box display="flex" >
                         <Text color="#ff0000" fontWeight='500'> ₹ { price = Math.ceil(data.original_price - data.original_price*(data.discount/100)) }</Text>
-                        <Text ml={2}> ₹ {data.original_price}</Text>
+                        <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                       </Box>
                       <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
-                      <Button w="100%" colorScheme='#F7C20A' bg="#F7C20A" size='md'>
+                      <Button w="100%" colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
                         ADD TO CART
                       </Button>
                     </Box>
@@ -125,6 +128,7 @@ export const HomeBestOfBoat = () => {
               <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop="60px">
                 {fourth.map((data)=>(
                   <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
+                    {data.isSuperSaver?<Button bg="#F7C20A" colorScheme="#F7C20A" color="black" position="absolute" px={1}> <AiFillThunderbolt /> Super Saver</Button>:""}
                     <Box width="100%" p={5}> 
                       <Image width="100%" src={data.image[0]} alt="image" />
                     </Box>
@@ -134,10 +138,10 @@ export const HomeBestOfBoat = () => {
                       <hr />
                       <Box display="flex" >
                         <Text color="#ff0000" fontWeight='500'> ₹ { price = Math.ceil(data.original_price - data.original_price*(data.discount/100)) }</Text>
-                        <Text ml={2}> ₹ {data.original_price}</Text>
+                        <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                       </Box>
                       <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
-                      <Button w="100%" colorScheme='#F7C20A' bg="#F7C20A" size='md'>
+                      <Button w="100%" colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
                         ADD TO CART
                       </Button>
                     </Box>
@@ -149,6 +153,7 @@ export const HomeBestOfBoat = () => {
               <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop="60px">
                 {fifth.map((data)=>(
                   <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
+                    {data.isSuperSaver?<Button bg="#F7C20A" colorScheme="#F7C20A" color="black" position="absolute" px={1}> <AiFillThunderbolt /> Super Saver</Button>:""}
                     <Box width="100%" p={5}> 
                       <Image width="100%" src={data.image[0]} alt="image" />
                     </Box>
@@ -158,10 +163,10 @@ export const HomeBestOfBoat = () => {
                       <hr />
                       <Box display="flex" >
                         <Text color="#ff0000" fontWeight='500'> ₹ { price = Math.ceil(data.original_price - data.original_price*(data.discount/100)) }</Text>
-                        <Text ml={2}> ₹ {data.original_price}</Text>
+                        <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                       </Box>
                       <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
-                      <Button w="100%" colorScheme='#F7C20A' bg="#F7C20A" size='md'>
+                      <Button w="100%" colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
                         ADD TO CART
                       </Button>
                     </Box>
