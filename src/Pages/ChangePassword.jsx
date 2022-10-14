@@ -57,7 +57,7 @@ export default function ChangePassword() {
       dispatch(get_error());
       toast({
         title: "Alert",               //for wrong otp
-        description: "Password and Password Confirmation Should be Same",
+        description: "Password and Confirm Password Should be Same",
         status: 'error',
         duration: 4000,
         isClosable: true,

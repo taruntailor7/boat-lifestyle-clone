@@ -14,7 +14,7 @@ import { Box, Input, Textarea,Button ,Text,useToast,
 
 import { useState } from 'react';
 import { MDBInput } from 'mdb-react-ui-kit';
-import { NavLink } from 'react-router-dom';
+import { Navigate, NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { get_error, get_loading, get_suceess } from '../Redux App/action';
 
@@ -24,7 +24,7 @@ const InitState={
     email:"",
     password:"",
 }
-const SignUp=()=>{
+const LoginPage=()=>{
     
     const [show, setShow] = useState(false)
     const showClick= () => setShow(!show)
@@ -134,7 +134,7 @@ const SignUp=()=>{
 
        
        if(nav){
-        return <NavLink to='/' />
+        return <Navigate to='/' />
       }
 
     return (
@@ -184,7 +184,7 @@ const SignUp=()=>{
   )
 }
 
-export default SignUp
+export default LoginPage
 
 
 

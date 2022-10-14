@@ -1,6 +1,5 @@
 import "./App.css";
 import { AllRoutes } from "./Components/AllRoutes";
-import SignUp from "./My Components/signup";
 
 
 function App() {

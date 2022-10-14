@@ -27,7 +27,7 @@ const InitState={
     phone_number:""
 
 }
-const SignUp=()=>{
+const SignUpPage=()=>{
   const { isOpen, onOpen, onClose } = useDisclosure()
   const cancelRef = useRef()
    const { loading , error , token  }=useSelector((state)=>state)
@@ -243,4 +243,4 @@ const SignUp=()=>{
     </>
   )
 }
-export default SignUp
+export default SignUpPage
