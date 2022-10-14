@@ -53,10 +53,10 @@ export const Navbar = () => {
     <>
       {isLargerThan1144 ? <Box boxShadow='md' width="100%" padding="24px" bg='white' position="fixed" top="0" zIndex="1000">
       <Flex display="flex" color='white' width="98%" margin="auto" justifyContent="space-between" >
-        <Box width="6%" >
-          <NavLink to="/"><Image width="100%" src='https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Asset_2_288x-8_5_small.png?v=1661838672' alt='Dan Abramov' /></NavLink>
+        <Box width="10%">
+          <NavLink to="/"><Image width="100%" src='https://cdn.shopify.com/s/files/1/0057/8938/4802/files/logo_gif_160x40.gif?v=1665553354' alt='Dan Abramov' /></NavLink>
         </Box>
-        <HStack width="57%" spacing={8}  color="black"  display='flex' justifyContent="center">
+        <HStack width="55%" spacing={8}  color="black"  display='flex' justifyContent="center">
             <Menu isOpen={isOpen} >
                   <MenuButton 
                       fontSize="20px" 
@@ -100,7 +100,7 @@ export const Navbar = () => {
             </MenuList>
           </Menu>
         </HStack>
-        <HStack width="37%" spacing={6}  color="black"  display='flex' justifyContent="flex-end">
+        <HStack width="35%" spacing={6}  color="black"  display='flex' justifyContent="flex-end">
           <Box> 
             <InputGroup bg="#eaeaea" borderRadius="25px" variant="unstyled" width="300px" height="45px" padding="10px">
               <AiOutlineSearch  fontSize="25px"/>
