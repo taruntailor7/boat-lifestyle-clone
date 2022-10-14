@@ -3567,6 +3567,7 @@
       "category": "WIRELESS EARBUDS",
       "rating": 4.8,
       "reviews": 915,
+      "price":987,
       "original_price": 2990,
       "discount": 67,
       "isAvailable": true,
@@ -3590,6 +3591,7 @@
       "category": "SMART WATCHES",
       "rating": 4.8,
       "reviews": 108,
+      "price":3196,
       "original_price": 7990,
       "discount": 60,
       "isAvailable": true,
@@ -3614,6 +3616,7 @@
       "category": "BLUETOOTH EARPHONES",
       "rating": 4.8,
       "reviews": 258,
+      "price":1495,
       "original_price": 2990,
       "discount": 50,
       "isAvailable": true,
@@ -3638,6 +3641,7 @@
       "category": "SMART WATCHES",
       "rating": 5.0,
       "reviews": 10,
+      "price":3286,
       "original_price": 6990,
       "discount": 53,
       "isAvailable": true,
@@ -3654,6 +3658,7 @@
       "category": "BLUETOOTH EARPHONES",
       "rating": 4.0,
       "reviews": 90,
+      "price":1197,
       "original_price": 3990,
       "discount": 70,
       "isAvailable": true,
@@ -3665,6 +3670,8 @@
       "color": ["Active Black", "Teal Green", "Cherry Black"]
     }
   ],
+
+  
 
   "airdopesTrueWireless" : [
     {
