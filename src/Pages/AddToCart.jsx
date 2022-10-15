@@ -1,10 +1,10 @@
-import {Box, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Text, useDisclosure } from '@chakra-ui/react'
+import { Box, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Text, useDisclosure } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
-import { FaShoppingCart } from 'react-icons/fa'
-import { Navigate } from 'react-router-dom'
-import { CartProduct } from './CartProduct'
+import { Navigate } from 'react-router-dom';
+import { CartProduct } from './CartProduct';
 
-export const Cart = () => {
+
+export const AddToCart = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [navigate,setNavigate] = useState(0)
     const [cartProduct, setCartProduct] = useState([])
@@ -37,9 +37,10 @@ export const Cart = () => {
     }
 
     return (
+
         <>
         <Text onClick={() => handleClick()}>
-            <FaShoppingCart color="black" fontSize="22px"/>
+            ADD TO CART
         </Text>
 
         <Drawer onClose={onClose}  isOpen={isOpen} size="sm" border="1px solid black">

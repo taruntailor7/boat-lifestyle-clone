@@ -1,5 +1,5 @@
-import React from "react";
-import { Flex,Box,HStack,InputGroup, Text, Button} from '@chakra-ui/react'
+// import React, { useEffect, useState } from "react";
+import { Flex,Box,HStack,InputGroup, Text} from '@chakra-ui/react'
 import { Image } from '@chakra-ui/react'
 import { NavLink } from "react-router-dom";
 import { Input } from '@chakra-ui/react'
@@ -17,12 +17,9 @@ import {
 } from "@chakra-ui/react"
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import { NavbarCategory } from "../Pages/NavbarCategory";
+import { Cart } from "../Pages/Cart";
 
 const links = [
-    // {
-    //   to:"/collections",
-    //   title:"CATEGORIES"
-    // },
     {
       to:"/collections/sail-with-boat",
       title:"SAIL WITH BOAT"
@@ -31,11 +28,8 @@ const links = [
       to:"/collections/offer-zone",
       title:"OFFER ZONE"
     },
-    // {
-    //   to:"/collections/offer-zone#",
-    //   title:"MORE"
-    // }
 ]
+
 
 const defaultStyle = {
   color:"black",
@@ -46,9 +40,19 @@ const activetStyle = {
   borderBottom:"1px solid black",
 }
 
-export const Navbar = () => {
+export const Navbar = ({name,handleLogout}) => {
+
   const [isLargerThan1144] = useMediaQuery('(min-width: 1144px)')
   const { isOpen, onOpen, onClose } = useDisclosure()
+
+  let isAuth = localStorage.getItem('isAuth');
+  
+  if(isAuth===null){
+    localStorage.setItem('isAuth',false)
+  }
+
+
+
   return (
     <>
       {isLargerThan1144 ? <Box boxShadow='md' width="100%" padding="24px" bg='white' position="fixed" top="0" zIndex="1000">
@@ -109,20 +113,47 @@ export const Navbar = () => {
           </Box>
           <Box>
             <NavLink>
+              {isAuth ==="false" || undefined ?
                 <Menu>
                   <MenuButton as={Text} fontSize="20px" fontWeight="500" colorScheme="white" bg="white">
                   <FaUserAlt color="black" fontSize="20px" />
                   </MenuButton>
                   <MenuList mt={6} colorScheme="white" bg="white">
+                    <MenuItem _focus={{bg:"white"}} >
+                      <Text color="red">Hi boAthead!</Text>
+                    </MenuItem>
                     <MenuItem  _focus={{bg:"white"}} >
-                      <Button><NavLink to="/login">Login</NavLink></Button>
+                      <Box textAlign="center" p={2}  width="100%" colorScheme="#ea2127" bg="#ea2127" color="white"><NavLink  to="/login"><Text color="white">Login</Text></NavLink></Box>
                     </MenuItem>
                   </MenuList>
+                </Menu> : <Menu>
+                    <MenuButton as={Text} fontSize="20px" fontWeight="500" colorScheme="white" bg="white">
+                    <FaUserAlt color="black" fontSize="20px" />
+                    </MenuButton>
+                    <MenuList mt={6} colorScheme="white" bg="white">
+                      <MenuItem _focus={{bg:"white"}} >
+                        <Text color="red">Hi {name}</Text>
+                      </MenuItem>
+                      <MenuItem _focus={{bg:"white"}} >
+                        <Text color="black">Manage Your Order</Text>
+                      </MenuItem>
+                      <MenuItem _focus={{bg:"white"}} >
+                        <Text color="black">Account</Text>
+                      </MenuItem>
+                      <MenuItem  _focus={{bg:"white"}} >
+                        <Box textAlign="center" p={2} onClick={handleLogout}  width="100%" colorScheme="#ea2127" bg="#ea2127" color="white"><Text color="white">Logout</Text></Box>
+                      </MenuItem>
+                    </MenuList>
                 </Menu>
-                  {/* <FaUserAlt color="black" fontSize="20px" /> */}
+              }         
             </NavLink></Box>
           <Box><NavLink><RiCustomerService2Fill color="black" fontSize="22px"/></NavLink></Box>
-          <Box><NavLink><FaShoppingCart color="black" fontSize="22px"/></NavLink></Box>
+          <Box>
+            <NavLink>
+              {/* <FaShoppingCart color="black" fontSize="22px"/> */}
+              <Cart />
+            </NavLink>
+          </Box>
         </HStack>
       </Flex>
       </Box> : <Box boxShadow='md' width="100%" padding="24px" bg='white' > 

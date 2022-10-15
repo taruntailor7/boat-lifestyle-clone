@@ -1,6 +1,14 @@
 {
   "users": [
     {
+      "first_name": "Nikki",
+      "last_name": "Kukky",
+      "email": "nikitagupta1709@gmail.com",
+      "password": "kukky",
+      "phone_number": "8429354194",
+      "id": 1
+    },
+    {
       "sub": "107503373734305371770",
       "name": "Tarun tailor",
       "given_name": "Tarun",
@@ -9,15 +17,108 @@
       "email": "goldenhearten7@gmail.com",
       "email_verified": true,
       "locale": "en",
+      "id": 2
+    },
+    {
+      "sub": "110112495402728870754",
+      "name": "T E C H - T R I D E N T",
+      "given_name": "T E C H",
+      "family_name": "- T R I D E N T",
+      "picture": "https://lh3.googleusercontent.com/a/ALm5wu39WvefaeKZFtUD2jqic-GeKmP2qUZevdY2V5HWFw=s96-c",
+      "email": "taruntailor7@gmail.com",
+      "email_verified": true,
+      "locale": "en",
+      "id": 3
+    }
+  ],
+  "cart": [
+    {
+      "name": "‌boAt Watch Xtend‌",
+      "category": "SMART WATCHES",
+      "rating": 4.8,
+      "reviews": 108,
+      "price": 3196,
+      "original_price": 7990,
+      "discount": 60,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/xtend_black_600x.png?v=1650387008",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_529ecf13-c993-4fe7-a2d6-9357f1a47db4_600x.png?v=1650387008",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_600x.png?v=1650386995"
+      ],
+      "color": [
+        "Charcoal Black",
+        "Pitch Black",
+        "Olive Green"
+      ],
+      "userId": "1",
       "id": 1
     },
     {
-      "first_name": "Nikki",
-      "last_name": "Kukky",
-      "email": "nikitagupta1709@gmail.com",
-      "password": "kukky",
-      "phone_number": "8429354194",
+      "name": "boAt Rockerz 330",
+      "category": "BLUETOOTH EARPHONES",
+      "rating": 4.8,
+      "reviews": 258,
+      "price": 1495,
+      "original_price": 2990,
+      "discount": 50,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_a08fff6a-7c3d-4663-9499-3421df127e94_600x.png?v=1641801688",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_15634ca0-9f81-4d11-b891-9a1496f709b1_600x.png?v=1641801688",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_12f5e240-7eec-4b32-8121-29594cae6e84_600x.png?v=1641801688"
+      ],
+      "color": [
+        "Active Black",
+        "Raging Red",
+        "Blazing Yellow"
+      ],
+      "userId": "1",
       "id": 2
+    },
+    {
+      "name": "boAt Airdopes 131 - Wireless",
+      "category": "WIRELESS EARBUDS",
+      "rating": 4.8,
+      "reviews": 915,
+      "price": 987,
+      "original_price": 2990,
+      "discount": 67,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/32011675-2ad8-4b99-9787-895caf201d28_600x.png?v=1642405569",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/cream_600x.png?v=1642405569",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_600x.png?v=1642405569"
+      ],
+      "color": [
+        "Lightpink",
+        "Black",
+        "CrimsonCream"
+      ],
+      "userId": "1",
+      "id": 3
+    },
+    {
+      "name": "boAt Watch Wave Pro",
+      "category": "SMART WATCHES",
+      "rating": 5,
+      "reviews": 10,
+      "price": 3286,
+      "original_price": 6990,
+      "discount": 53,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_4d128bbd-a1e7-4045-a5c5-25c744f3133f_600x.png?v=1647765303",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_0ae2597d-dee4-42fd-9a18-eb4ae0b3bc43_600x.png?v=1647765304",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_eaf60560-3afb-4dda-b4c0-598078f7ce72_600x.png?v=1647767874"
+      ],
+      "color": [
+        "Blue",
+        "Black",
+        "Maroon"
+      ],
+      "userId": "1",
+      "id": 4
     }
   ],
   "shopByCategory": [

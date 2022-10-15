@@ -1,3 +1,4 @@
+/* eslint-disable no-lone-blocks */
 //import React from 'react'
 import { useGoogleLogin } from '@react-oauth/google';
 import { Box,Button ,Text,useToast,   Stack, Img
@@ -46,10 +47,13 @@ const LoginPage=()=>{
                   let flag=false;
                   res4.map((elem)=>{
                    if(elem.email===res2.email){
+                     localStorage.setItem('userId',elem.id)
+                     localStorage.setItem('name',elem.name)
                      flag=true;
                    }
                   })
-                  if(flag==false){
+
+                  if(flag===false){
                   await fetch(' http://localhost:3001/users',{
                      method:'POST',
                      body: JSON.stringify(res2),
@@ -57,22 +61,35 @@ const LoginPage=()=>{
                          'content-type': 'application/json'
                      }
                    })
+                   dispatch( get_loading() );
+                  let getRes=await fetch(' http://localhost:3001/users')
+                  let users=await getRes.json();
+                  users.map((elem)=>{
+                    if(elem.email===res2.email){
+                      localStorage.setItem("name",elem.name)
+                      localStorage.setItem('userId',elem.id)
+                    }
+                   })
+                  
                    dispatch(get_suceess(true));
                    setNav(true);
                    localStorage.setItem("isAuth",true);
-                   localStorage.setItem("name",res2.name)
+                  //  localStorage.setItem("name",res2.name)
+                  //  localStorage.setItem('userId',res2.id)
                    toast({
-                    title: 'Logged in  sucess.',
-                    description: "Keep sailing ",
+                    title: 'Logged in Sucessfully!',
+                    description: "Keep Sailing ",
                     status: 'success',
                     duration: 4000,
                     isClosable: true,
                   })
-                  }else{
+                  }
+                  else{
                     setNav(true);
                     dispatch(get_suceess(true));
                     localStorage.setItem("isAuth",true);
-                    localStorage.setItem("name",res2.name)
+                    // localStorage.setItem("name",res2.name)
+                    // localStorage.setItem('userId',res2.id)
                     toast({
                       title: 'Logged in  sucess.',
                       description: "Keep sailing ",
@@ -95,9 +112,10 @@ const LoginPage=()=>{
         let res4=await res3.json();
         let flag=false;
         res4.map((elem)=>{
-         if(elem.email===values.email && elem.password==values.password ){
+         if(elem.email===values.email && elem.password===values.password ){
            flag=true;
            localStorage.setItem("name",elem.first_name+" "+elem.last_name)
+           localStorage.setItem('userId',elem.id)
          }
         })
         if(flag){

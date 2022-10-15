@@ -2,7 +2,8 @@ import { ERROR, LOADING, SUCCESS } from "./action";
 const initState={
     loading:false,
     error:false,
-    isAuth: localStorage.getItem("isAuth") || false
+    isAuth: localStorage.getItem("isAuth") || false,
+    openCart:false
 }
 
 function  reducer ( state=initState, {type , payload } ){
@@ -15,15 +16,12 @@ function  reducer ( state=initState, {type , payload } ){
             }
         }
         case SUCCESS:{
-        
             return{
                 loading:false,
                 error:false,
                 isAuth:payload
             }
-            
         }
-
         case ERROR:{
             return{
                 loading:false,

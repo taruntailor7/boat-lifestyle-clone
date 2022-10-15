@@ -10,6 +10,7 @@ import LoginPage from "../Pages/Login";
 import SignUpPage from "../Pages/Signup";
 
 
+
 export const AllRoutes = () => {
   return(
     <Routes>
@@ -21,7 +22,7 @@ export const AllRoutes = () => {
       <Route path="/collections/:id/" element={<Collections />}></Route>
       <Route path="/collections/sail-with-boat" element={<SailWithBoat />}></Route>
       <Route path="/collections/:id/:url" element={<IndivisualCategory />}></Route>
-
+      
     </Routes>
   );
 };
