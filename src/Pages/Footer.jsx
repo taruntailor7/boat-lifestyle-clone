@@ -1,5 +1,4 @@
 import React from "react";
-import "./Styles/footer.css";
 import {
    FaFacebookF,
    FaTwitter,
@@ -13,7 +12,7 @@ const Footer = () => {
    return (
       <Box>
          <Box bg='rgb(0,0,0)'  >
-            <Text w={{sm:'95%' ,sm:'95%' ,md:'70%',lg:'70%' }} margin='auto' fontSize='15px' color='white' padding={2} >
+            <Text w={{sm:'95%',md:'70%',lg:'70%' }} margin='auto' fontSize='15px' color='white' padding={2} >
             India's fastest growing audio & wearables brand. The most incredible range of wireless earphones, earbuds, headphones, smart watches, and home audio. From workouts to adventures, boAt will get you sailing!
             </Text>
          </Box>
