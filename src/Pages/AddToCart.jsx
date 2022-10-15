@@ -49,14 +49,12 @@ export const AddToCart = () => {
             <DrawerCloseButton color="white" _hover={{ bg: "red" }} _active={{ bg: "red" }}fontSize="14px" />
             <DrawerHeader bg="red" color="white" p={2}>Your Cart(Cart)</DrawerHeader>
             <Text bg="black" p={2} color="white" fontSize="15px">Free Shipping sitewide | Cash On Delivery available for order value upto ₹3000</Text>
-            <DrawerBody border="1px solid red" p={0}>
+            <DrawerBody border="1px solid red" p={0} scrollbar-width="thin">
                 <CartProduct cartProduct={cartProduct}/>
             </DrawerBody>
-            <DrawerBody border="1px solid red">
-                <Box width="100%" border="1px solid black">
-
-                </Box>
-            </DrawerBody>
+            <Box height="235px">
+                ok
+            </Box>
             </DrawerContent>
         </Drawer>
         </>

@@ -119,6 +119,72 @@
       ],
       "userId": "1",
       "id": 4
+    },
+    {
+      "name": "boAt Airdopes 131 - Wireless",
+      "category": "WIRELESS EARBUDS",
+      "rating": 4.8,
+      "reviews": 915,
+      "price": 987,
+      "original_price": 2990,
+      "discount": 67,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/32011675-2ad8-4b99-9787-895caf201d28_600x.png?v=1642405569",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/cream_600x.png?v=1642405569",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_600x.png?v=1642405569"
+      ],
+      "color": [
+        "Lightpink",
+        "Black",
+        "CrimsonCream"
+      ],
+      "userId": "2",
+      "id": 5
+    },
+    {
+      "name": "boAt Airdopes 131 - Wireless",
+      "category": "WIRELESS EARBUDS",
+      "rating": 4.8,
+      "reviews": 915,
+      "price": 987,
+      "original_price": 2990,
+      "discount": 67,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/32011675-2ad8-4b99-9787-895caf201d28_600x.png?v=1642405569",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/cream_600x.png?v=1642405569",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_600x.png?v=1642405569"
+      ],
+      "color": [
+        "Lightpink",
+        "Black",
+        "CrimsonCream"
+      ],
+      "userId": "2",
+      "id": 6
+    },
+    {
+      "name": "‌boAt Watch Xtend‌",
+      "category": "SMART WATCHES",
+      "rating": 4.8,
+      "reviews": 108,
+      "price": 3196,
+      "original_price": 7990,
+      "discount": 60,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/xtend_black_600x.png?v=1650387008",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_529ecf13-c993-4fe7-a2d6-9357f1a47db4_600x.png?v=1650387008",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_600x.png?v=1650386995"
+      ],
+      "color": [
+        "Charcoal Black",
+        "Pitch Black",
+        "Olive Green"
+      ],
+      "userId": "2",
+      "id": 7
     }
   ],
   "shopByCategory": [
