@@ -2,9 +2,15 @@ import { Box, Button, Grid, GridItem, Image, Text } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import { AiFillStar, AiFillThunderbolt } from 'react-icons/ai'
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
+import { AddToCart } from './AddToCart'
+import { useDispatch, useSelector } from 'react-redux';
+import { get_loading, get_suceess } from '../Redux App/action';
+import { Navigate } from 'react-router-dom'
 
 export const HomeBestOfBoat = () => {
   const [bestOfBoat, setBestOfBoat] = useState([]);
+  const { loading  }=useSelector((state)=>state)
+  const dispatch = useDispatch();
 
   const getData = ()=>{
     fetch(`http://localhost:3001/bestOfBoat`)
@@ -32,6 +38,51 @@ export const HomeBestOfBoat = () => {
   useEffect(() =>{
     getData();
   },[])
+
+  let isAuth = localStorage.getItem('isAuth') || false;
+  let userId = localStorage.getItem("userId") || false;
+
+  
+  const addToCart = (product)=>{
+    let prod = {
+         cartId: product.id,
+         name: product.name,
+         category: product.category,
+         rating: product.rating,
+         reviews: product.reviews,
+         price: product.price,
+         original_price: product.original_price,
+         discount: product.discount,
+         isAvailable: product.isAvailable,
+         image: [
+           product.image[0],
+           product.image[1],
+           product.image[2]
+         ],
+         color: [
+           product.color[0],
+           product.color[1],
+           product.color[2]
+         ]
+       }
+     if(isAuth==="false"){
+       // alert("please login")
+       return <Navigate to='/login'/>
+     }
+     else{
+       dispatch(get_loading());
+       fetch(`http://localhost:3001/users/${userId}/cart`,{
+         method: 'POST',
+         body: JSON.stringify(prod),
+         headers : {
+             'content-type': 'application/json'
+         }
+       })
+       dispatch(get_suceess())
+ 
+     }
+   }
+ 
 
   // eslint-disable-next-line no-unused-vars
   let price = 0;
@@ -66,8 +117,8 @@ export const HomeBestOfBoat = () => {
                       <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                     </Box>
                     <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
-                    <Button w="100%" colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
-                      ADD TO CART
+                    <Button isLoading={loading} w="100%" onClick={()=>addToCart(data)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
+                      <AddToCart />
                     </Button>
                   </Box>
                 </GridItem>
@@ -91,8 +142,8 @@ export const HomeBestOfBoat = () => {
                         <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                       </Box>
                       <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
-                      <Button w="100%"colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
-                        ADD TO CART
+                      <Button isLoading={loading} w="100%" onClick={()=>addToCart(data)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
+                        <AddToCart />
                       </Button>
                     </Box>
                   </GridItem>
@@ -116,8 +167,8 @@ export const HomeBestOfBoat = () => {
                         <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                       </Box>
                       <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
-                      <Button w="100%" colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
-                        ADD TO CART
+                      <Button isLoading={loading} w="100%" onClick={()=>addToCart(data)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
+                        <AddToCart />
                       </Button>
                     </Box>
                   </GridItem>
@@ -141,8 +192,8 @@ export const HomeBestOfBoat = () => {
                         <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                       </Box>
                       <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
-                      <Button w="100%" colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
-                        ADD TO CART
+                      <Button isLoading={loading} w="100%" onClick={()=>addToCart(data)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
+                        <AddToCart />
                       </Button>
                     </Box>
                   </GridItem>
@@ -166,8 +217,8 @@ export const HomeBestOfBoat = () => {
                         <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                       </Box>
                       <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
-                      <Button w="100%" colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
-                        ADD TO CART
+                      <Button isLoading={loading} w="100%" onClick={()=>addToCart(data)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
+                      <AddToCart />
                       </Button>
                     </Box>
                   </GridItem>
