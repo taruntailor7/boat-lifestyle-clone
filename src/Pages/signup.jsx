@@ -155,7 +155,7 @@ const SignUpPage=()=>{
 
     return (
 <>
-    <Box width={ {base:"90%", sm:"90%" , md:"60%",lg:"30%"} } margin='auto' marginTop="100px">
+    <Box width={ {base:"90%", sm:"90%" , md:"60%",lg:"30%"} } margin='auto' marginTop="100px" mb={10}>
     <Stack marginBottom='30px' >
        <Text textAlign="center" fontSize='5xl'>Register</Text>
        <Text textAlign="center" fontSize='xl'>Please fill in the fields </Text>

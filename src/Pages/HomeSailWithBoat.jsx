@@ -32,7 +32,10 @@ export const HomeSailWithBoat = () => {
   },[])
   let isAuth = localStorage.getItem('isAuth') || false;
   let userId = localStorage.getItem("userId") || false;
-  
+
+  if(loading){
+    return <Image src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/preloader_50x.gif?v=1649585765"/>
+  }
 
   const addToCart = (product)=>{
    let prod = {
@@ -70,7 +73,6 @@ export const HomeSailWithBoat = () => {
         }
       })
       dispatch(get_suceess())
-
     }
   }
 
@@ -88,9 +90,9 @@ export const HomeSailWithBoat = () => {
   // {base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}
 
   if(loading){
-    return <Image src=""/>
+    return <Image src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/preloader_50x.gif?v=1649585765"/>
   }
-  console.log(loading,"loading...");
+  // console.log(loading,"loading...");
 
   return (
     <Box width="100%" margin="auto" marginTop="50px">

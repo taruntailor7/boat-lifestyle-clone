@@ -33,6 +33,7 @@ export const IndivisualCategory = () => {
 
     const {url} = useParams();
     const {id} = useParams();
+
     let fetchUrl = "http://localhost:3001/shopByCategory"
     if(url==="true-wireless-earbuds"){
         fetchUrl = "http://localhost:3001/airdopesTrueWireless"
@@ -73,9 +74,9 @@ export const IndivisualCategory = () => {
 
     // http://localhost:3001/allProducts?original_price_gte=3000&original_price_lte=5000
 
-    const getData = ({_sort, _order, original_price_gte, original_price_lte  }) => {
+    const getData = ({_sort, _order, price_gte, price_lte  }) => {
         Axios.get(fetchUrl, {
-            params: { _sort, _order, original_price_gte, original_price_lte}
+            params: { _sort, _order, price_gte, price_lte}
         })
         .then((res) =>{
             setProducts(res.data)
@@ -143,7 +144,7 @@ export const IndivisualCategory = () => {
         setMinValue(sliderValue[0]);
         setMaxValue(sliderValue[1]);
         console.log(sliderValue);
-     }
+    }
  
  
     // const getData = ()=>{
@@ -167,8 +168,8 @@ export const IndivisualCategory = () => {
            getData({
                _sort : sortByPriceName,
                _order : sortByPrice,
-               original_price_gte:minValue,
-               original_price_lte:maxValue
+               price_gte:minValue,
+               price_lte:maxValue
            });
         }
         // else if(sortByAlpha !== ""){
@@ -181,24 +182,24 @@ export const IndivisualCategory = () => {
             getData({
              __sort : sortByPriceName,
              _order : sortByPrice,
-             original_price_gte:399,
-             original_price_lte:10000
+             price_gte:399,
+             price_lte:10000
             });
         }
         else if(minValue!=="" && maxValue!=="" ){
             getData({
                 _sort:"",
                 _order:"",
-                original_price_gte:minValue,
-                original_price_lte:maxValue
+                price_gte:minValue,
+                price_lte:maxValue
             });
         }
         else{
             getData({
                 _sort:"",
                 _order:"",
-                original_price_gte:399,
-                original_price_lte:10000
+                price_gte:399,
+                price_lte:10000
             });
         }
         setSearchParam({sortByPrice, sortByPriceName,minValue,maxValue})
@@ -208,7 +209,7 @@ export const IndivisualCategory = () => {
     let price = 0;
     
     return (
-        <Box>
+        <Box mb={10}>
             <Box>
                 <Image marginTop="90px" src={bannerImg}  />
             </Box>

@@ -23,6 +23,10 @@ import { AuthContext } from '../AuthContextProvider/AuthContextProvider';
 
 const links = [
     {
+      to:"/collections/all-products",
+      title:"ALL PRODUCTS"
+    },
+    {
       to:"/collections/sail-with-boat",
       title:"SAIL WITH BOAT"
     },
@@ -74,13 +78,13 @@ export const Navbar = () => {
     <>
       {isLargerThan1144 ? <Box boxShadow='md' width="100%" padding="24px" bg='white' position="fixed" top="0" zIndex="1000">
       <Flex display="flex" color='white' width="98%" margin="auto" justifyContent="space-between" >
-        <Box width="10%">
+        <Box width="10%" >
           <NavLink to="/"><Image width="100%" src='https://cdn.shopify.com/s/files/1/0057/8938/4802/files/logo_gif_160x40.gif?v=1665553354' alt='Dan Abramov' /></NavLink>
         </Box>
-        <HStack width="55%" spacing={8}  color="black"  display='flex' justifyContent="center">
+        <HStack width="60%" spacing={8}  color="black"  display='flex' justifyContent="center" >
             <Menu isOpen={isOpen} >
                   <MenuButton 
-                      fontSize="20px" 
+                      fontSize="17px" 
                       variant="ghost"
                       mx={1}
                       py={[1, 2, 2]}
@@ -93,6 +97,7 @@ export const Navbar = () => {
                       color="black"
                       marginRight="-20px"
                       className='hover-underline-animation'
+                      
                   >
                       CATEGORIES {isOpen ? <ChevronDownIcon fontSize="23px" mt={-1.5}/> : <ChevronDownIcon fontSize="23px" mt={-1.5}/>}
                   </MenuButton>
@@ -101,7 +106,7 @@ export const Navbar = () => {
                 </MenuList>
             </Menu>
           {links.map((link)=>(
-            <Box fontSize="20px" fontWeight="500" color="black" key={link.to}>
+            <Box fontSize="17px" fontWeight="500" color="black" key={link.to}>
               <NavLink className='hover-underline-animation' style={({isActive})=>(isActive ? activetStyle : defaultStyle)} to={link.to} end>
                 {link.title} 
                 {/* <Text color="black">{link.title}</Text> */}
@@ -109,7 +114,7 @@ export const Navbar = () => {
             </Box>
           ))}
           <Menu>
-            <MenuButton as={Text}fontSize="20px" fontWeight="500"  bg="white" className='hover-underline-animation'>
+            <MenuButton as={Text}fontSize="17px" fontWeight="500"  bg="white" className='hover-underline-animation'>
               MORE <ChevronDownIcon fontSize="23px" mt={-1.5}/>
             </MenuButton>
             <MenuList mt={6}>
@@ -121,7 +126,7 @@ export const Navbar = () => {
             </MenuList>
           </Menu>
         </HStack>
-        <HStack width="35%" spacing={6}  color="black"  display='flex' justifyContent="flex-end">
+        <HStack width="30%" spacing={6}  color="black"  display='flex' justifyContent="flex-end">
           <Box> 
             <InputGroup bg="#eaeaea" borderRadius="25px" variant="unstyled" width="300px" height="45px" padding="10px">
               <AiOutlineSearch  fontSize="25px"/>

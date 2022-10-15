@@ -113,7 +113,7 @@ export default function ForgotPassword() {
 
   return (
     <>
-    <Box width={ {base:"90%", sm:"90%" , md:"60%",lg:"30%"} } margin='auto' marginTop="100px">
+    <Box width={ {base:"90%", sm:"90%" , md:"60%",lg:"30%"} } margin='auto' marginTop="100px" mb={10}>
         <Stack gap='1px'>
         <Text textAlign="center" fontSize={ {base:"25px", sm:"30px" , md:'35px',lg:"4xl"} } > Recover Password </Text>
         <Text textAlign="center" marginTop='15px' marginBottom='10px' >Please Enter Your Phone Number</Text>

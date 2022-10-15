@@ -80,7 +80,7 @@ export const HomeCatchMeAll = () => {
     let price = 0;
 
     return (
-        <Box width="100%" margin="auto" marginTop="40px">
+      <Box width="100%" margin="auto" marginTop="40px" mb={10}>
         <Text fontSize="25px" fontWeight="500">CATCH'EM ALL</Text>
         <Tabs colorScheme="red" isFitted="true" variant="line"  mt={6}>
           <TabList>
