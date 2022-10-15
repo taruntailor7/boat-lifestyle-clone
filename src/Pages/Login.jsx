@@ -10,6 +10,7 @@ import { Navigate, NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { get_error, get_loading, get_suceess } from '../Redux App/action';
 
+let isAuth = localStorage.getItem('isAuth')
 
 
 const InitState={
@@ -17,7 +18,6 @@ const InitState={
     password:"",
 }
 const LoginPage=()=>{
-    
     const [show, setShow] = useState(false)
     const showClick= () => setShow(!show)
      const [values,setValues]=useState(InitState);
@@ -82,6 +82,7 @@ const LoginPage=()=>{
                     status: 'success',
                     duration: 4000,
                     isClosable: true,
+                    position:"top"
                   })
                   }
                   else{
@@ -91,11 +92,12 @@ const LoginPage=()=>{
                     // localStorage.setItem("name",res2.name)
                     // localStorage.setItem('userId',res2.id)
                     toast({
-                      title: 'Logged in  sucess.',
+                      title: 'Logged in Sucessfully!',
                       description: "Keep sailing ",
                       status: 'success',
                       duration: 4000,
                       isClosable: true,
+                      position:"top"
                     })
                   }
                 }catch(err){
@@ -123,11 +125,12 @@ const LoginPage=()=>{
            setNav(true);
            localStorage.setItem("isAuth",true);
            toast({
-            title: 'Logged in  sucess.',
+            title: 'Logged in Sucessfully!',
             description: "Keep sailing ",
             status: 'success',
             duration: 4000,
             isClosable: true,
+            position:"top"
           })
           }else{
             dispatch(get_error());
@@ -137,10 +140,14 @@ const LoginPage=()=>{
               status: 'error',
               duration: 4000,
               isClosable: true,
+              position:"top"
             })
           }
        }
 
+       if(isAuth==="true"){
+        return <Navigate to='/'/>
+        }
        
        if(nav){
         return <Navigate to='/' />

@@ -18,6 +18,8 @@ import {
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import { NavbarCategory } from "../Pages/NavbarCategory";
 import { Cart } from "../Pages/Cart";
+import { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../AuthContextProvider/AuthContextProvider';
 
 const links = [
     {
@@ -40,18 +42,33 @@ const activetStyle = {
   borderBottom:"1px solid black",
 }
 
-export const Navbar = ({name,handleLogout}) => {
+let userId = localStorage.getItem("userId")
+
+export const Navbar = () => {
+  const {handleLogout} = useContext(AuthContext);
+
+  const [userState, setUserState] = useState({})
 
   const [isLargerThan1144] = useMediaQuery('(min-width: 1144px)')
   const { isOpen, onOpen, onClose } = useDisclosure()
+
+  useEffect(() =>{
+    getUser();
+  },[userState])
+
+  const getUser = ()=>{
+    fetch(`http://localhost:3001/users/${userId}`)
+    .then(res=>res.json())
+    .then(res=>setUserState(res))
+    .catch(err=>console.log(err))
+  }
+ 
 
   let isAuth = localStorage.getItem('isAuth');
   
   if(isAuth===null){
     localStorage.setItem('isAuth',false)
   }
-
-
 
   return (
     <>
@@ -132,7 +149,7 @@ export const Navbar = ({name,handleLogout}) => {
                     </MenuButton>
                     <MenuList mt={6} colorScheme="white" bg="white">
                       <MenuItem _focus={{bg:"white"}} >
-                        <Text color="red">Hi {name}</Text>
+                        <Text color="red">Hi User!</Text>
                       </MenuItem>
                       <MenuItem _focus={{bg:"white"}} >
                         <Text color="black">Manage Your Order</Text>

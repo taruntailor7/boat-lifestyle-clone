@@ -8,6 +8,7 @@ import ChangePassword from "../Pages/ChangePassword";
 import ForgotPassword from "../Pages/ForgotPassword";
 import LoginPage from "../Pages/Login";
 import SignUpPage from "../Pages/Signup";
+import { NotFound } from "../Pages/NotFound";
 
 
 
@@ -22,7 +23,7 @@ export const AllRoutes = () => {
       <Route path="/collections/:id/" element={<Collections />}></Route>
       <Route path="/collections/sail-with-boat" element={<SailWithBoat />}></Route>
       <Route path="/collections/:id/:url" element={<IndivisualCategory />}></Route>
-      
+      <Route path="*" element={<NotFound />}></Route>
     </Routes>
   );
 };

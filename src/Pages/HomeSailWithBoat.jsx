@@ -15,9 +15,14 @@ export const HomeSailWithBoat = () => {
 
 
   const getData = ()=>{
+    dispatch(get_loading());
+    console.log(loading,"loading inside");
     fetch(`http://localhost:3001/sailWithBoatOnHome`)
     .then((res)=>res.json())
-    .then((res)=>setSailWithBoat(res))
+    .then((res)=>{
+      setSailWithBoat(res)
+      dispatch(get_suceess())
+    })
     .catch((err)=>console.log(err))
   }
   
@@ -31,6 +36,7 @@ export const HomeSailWithBoat = () => {
 
   const addToCart = (product)=>{
    let prod = {
+        cartId: product.id,
         name: product.name,
         category: product.category,
         rating: product.rating,
@@ -64,7 +70,7 @@ export const HomeSailWithBoat = () => {
         }
       })
       dispatch(get_suceess())
-      
+
     }
   }
 
@@ -80,6 +86,11 @@ export const HomeSailWithBoat = () => {
   // }
   // const theme = extendTheme({ breakpoints,mdlg:'50em'})
   // {base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}
+
+  if(loading){
+    return <h1>Loading...</h1>
+  }
+  console.log(loading,"loading...");
 
   return (
     <Box width="100%" margin="auto" marginTop="50px">

@@ -12,7 +12,6 @@ import 'owl.carousel/dist/assets/owl.carousel.min.css'
 import 'owl.carousel/dist/assets/owl.theme.default.min.css'
 import { HomeCatchMeAll } from './HomeCatchMeAll';
 
-
 const images = [
     "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/web_1_2000x.png?v=1665644267",
     "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/diwali-banner_2000x.gif?v=1664442921",
@@ -54,6 +53,7 @@ const responsive = {
 
 
 export const Home = () => {
+
   return (
     <Box width="95%" margin="auto" marginTop="60px" zIndex="-1">
         <OwlCarousel {...responsive} className="owl-theme" >

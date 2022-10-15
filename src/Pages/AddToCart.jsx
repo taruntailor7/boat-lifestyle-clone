@@ -21,7 +21,7 @@ export const AddToCart = () => {
     useEffect(() =>{
         getProducts();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[])
+    },[cartProduct])
     let isAuth = localStorage.getItem('isAuth') || false;
     const handleClick = () => {
         if(isAuth==="false"){

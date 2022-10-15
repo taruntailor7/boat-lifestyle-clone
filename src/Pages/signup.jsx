@@ -117,11 +117,12 @@ const SignUpPage=()=>{
             dispatch(get_suceess(false));
             setNav(true);          //for navigation
             toast({                                // for sucess
-              title: 'Account created.',
+              title: 'Account Created.',
               description: "We've created your account for you.",
               status: 'success',
               duration: 4000,
               isClosable: true,
+              position:"top"
             })
         }).catch((err)=>{
           dispatch(get_error())
@@ -132,7 +133,7 @@ const SignUpPage=()=>{
             status: 'error',
             duration: 4000,
             isClosable: true,
-      
+            position:"top"
           })
           // setRefresh(true);
           setValues(InitState);

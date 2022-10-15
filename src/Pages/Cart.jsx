@@ -1,12 +1,10 @@
 import {Box, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Text, useDisclosure } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import { FaShoppingCart } from 'react-icons/fa'
-import { Navigate } from 'react-router-dom'
 import { CartProduct } from './CartProduct'
 
 export const Cart = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const [navigate,setNavigate] = useState(0)
     const [cartProduct, setCartProduct] = useState([])
 
     let userId = localStorage.getItem("userId");
@@ -21,19 +19,10 @@ export const Cart = () => {
     useEffect(() =>{
         getProducts();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[])
-    let isAuth = localStorage.getItem('isAuth') || false;
-    const handleClick = () => {
-        if(isAuth==="false"){
-            setNavigate(1)
-        }
-        else{
-            onOpen()
-        }
-    }
+    },[cartProduct])
 
-    if(navigate===1){
-        return <Navigate to='/login'/>
+    const handleClick = () => {
+        onOpen();
     }
 
     return (

@@ -29,10 +29,65 @@
       "email_verified": true,
       "locale": "en",
       "id": 3
+    },
+    {
+      "sub": "101343199558930200736",
+      "name": "Tarun Tailor",
+      "given_name": "Tarun",
+      "family_name": "Tailor",
+      "picture": "https://lh3.googleusercontent.com/a/ALm5wu0k0-M9mfEQ8D2XnC17aMiMnYLRs8Wp1kVpgsc6=s96-c",
+      "email": "tailortarun77@gmail.com",
+      "email_verified": true,
+      "locale": "en-GB",
+      "id": 4
+    },
+    {
+      "sub": "118169607451280246211",
+      "name": "TARUN TAILOR",
+      "given_name": "TARUN",
+      "family_name": "TAILOR",
+      "picture": "https://lh3.googleusercontent.com/a/ALm5wu3bspdQJhEE5RVAAWYXSDX53h7GRIJZ0vz-MZ72=s96-c",
+      "email": "18etccs089@technonjr.org",
+      "email_verified": true,
+      "locale": "en",
+      "hd": "technonjr.org",
+      "id": 5
+    },
+    {
+      "first_name": "Shakti",
+      "last_name": "Singh",
+      "email": "shakti@test.com",
+      "password": "123",
+      "phone_number": "8093482747",
+      "id": 6
     }
   ],
   "cart": [
     {
+      "cartId": 25,
+      "name": "boAt Airdopes 131 - Wireless",
+      "category": "WIRELESS EARBUDS",
+      "rating": 4.8,
+      "reviews": 915,
+      "price": 987,
+      "original_price": 2990,
+      "discount": 67,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/32011675-2ad8-4b99-9787-895caf201d28_600x.png?v=1642405569",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/cream_600x.png?v=1642405569",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_600x.png?v=1642405569"
+      ],
+      "color": [
+        "Lightpink",
+        "Black",
+        "CrimsonCream"
+      ],
+      "userId": "3",
+      "id": 1
+    },
+    {
+      "cartId": 26,
       "name": "‌boAt Watch Xtend‌",
       "category": "SMART WATCHES",
       "rating": 4.8,
@@ -51,10 +106,11 @@
         "Pitch Black",
         "Olive Green"
       ],
-      "userId": "1",
-      "id": 1
+      "userId": "3",
+      "id": 2
     },
     {
+      "cartId": 27,
       "name": "boAt Rockerz 330",
       "category": "BLUETOOTH EARPHONES",
       "rating": 4.8,
@@ -73,10 +129,57 @@
         "Raging Red",
         "Blazing Yellow"
       ],
-      "userId": "1",
-      "id": 2
+      "userId": "3",
+      "id": 3
     },
     {
+      "cartId": 29,
+      "name": "boAt Rockerz 333",
+      "category": "BLUETOOTH EARPHONES",
+      "rating": 4,
+      "reviews": 90,
+      "price": 1197,
+      "original_price": 3990,
+      "discount": 70,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img-R333-1_600x.png?v=1641801662",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img-R333_600x.png?v=1641801662",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img-R333-2_600x.png?v=1626336060"
+      ],
+      "color": [
+        "Active Black",
+        "Teal Green",
+        "Cherry Black"
+      ],
+      "userId": "3",
+      "id": 4
+    },
+    {
+      "cartId": 29,
+      "name": "boAt Rockerz 333",
+      "category": "BLUETOOTH EARPHONES",
+      "rating": 4,
+      "reviews": 90,
+      "price": 1197,
+      "original_price": 3990,
+      "discount": 70,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img-R333-1_600x.png?v=1641801662",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img-R333_600x.png?v=1641801662",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img-R333-2_600x.png?v=1626336060"
+      ],
+      "color": [
+        "Active Black",
+        "Teal Green",
+        "Cherry Black"
+      ],
+      "userId": "3",
+      "id": 5
+    },
+    {
+      "cartId": 25,
       "name": "boAt Airdopes 131 - Wireless",
       "category": "WIRELESS EARBUDS",
       "rating": 4.8,
@@ -95,10 +198,241 @@
         "Black",
         "CrimsonCream"
       ],
-      "userId": "1",
-      "id": 3
+      "userId": "3",
+      "id": 6
     },
     {
+      "cartId": 25,
+      "name": "boAt Airdopes 131 - Wireless",
+      "category": "WIRELESS EARBUDS",
+      "rating": 4.8,
+      "reviews": 915,
+      "price": 987,
+      "original_price": 2990,
+      "discount": 67,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/32011675-2ad8-4b99-9787-895caf201d28_600x.png?v=1642405569",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/cream_600x.png?v=1642405569",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_600x.png?v=1642405569"
+      ],
+      "color": [
+        "Lightpink",
+        "Black",
+        "CrimsonCream"
+      ],
+      "userId": "3",
+      "id": 7
+    },
+    {
+      "cartId": 25,
+      "name": "boAt Airdopes 131 - Wireless",
+      "category": "WIRELESS EARBUDS",
+      "rating": 4.8,
+      "reviews": 915,
+      "price": 987,
+      "original_price": 2990,
+      "discount": 67,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/32011675-2ad8-4b99-9787-895caf201d28_600x.png?v=1642405569",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/cream_600x.png?v=1642405569",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_600x.png?v=1642405569"
+      ],
+      "color": [
+        "Lightpink",
+        "Black",
+        "CrimsonCream"
+      ],
+      "userId": "3",
+      "id": 8
+    },
+    {
+      "cartId": 25,
+      "name": "boAt Airdopes 131 - Wireless",
+      "category": "WIRELESS EARBUDS",
+      "rating": 4.8,
+      "reviews": 915,
+      "price": 987,
+      "original_price": 2990,
+      "discount": 67,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/32011675-2ad8-4b99-9787-895caf201d28_600x.png?v=1642405569",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/cream_600x.png?v=1642405569",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_600x.png?v=1642405569"
+      ],
+      "color": [
+        "Lightpink",
+        "Black",
+        "CrimsonCream"
+      ],
+      "userId": "3",
+      "id": 9
+    },
+    {
+      "cartId": 25,
+      "name": "boAt Airdopes 131 - Wireless",
+      "category": "WIRELESS EARBUDS",
+      "rating": 4.8,
+      "reviews": 915,
+      "price": 987,
+      "original_price": 2990,
+      "discount": 67,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/32011675-2ad8-4b99-9787-895caf201d28_600x.png?v=1642405569",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/cream_600x.png?v=1642405569",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_600x.png?v=1642405569"
+      ],
+      "color": [
+        "Lightpink",
+        "Black",
+        "CrimsonCream"
+      ],
+      "userId": "3",
+      "id": 10
+    },
+    {
+      "cartId": 27,
+      "name": "boAt Rockerz 330",
+      "category": "BLUETOOTH EARPHONES",
+      "rating": 4.8,
+      "reviews": 258,
+      "price": 1495,
+      "original_price": 2990,
+      "discount": 50,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_a08fff6a-7c3d-4663-9499-3421df127e94_600x.png?v=1641801688",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_15634ca0-9f81-4d11-b891-9a1496f709b1_600x.png?v=1641801688",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_12f5e240-7eec-4b32-8121-29594cae6e84_600x.png?v=1641801688"
+      ],
+      "color": [
+        "Active Black",
+        "Raging Red",
+        "Blazing Yellow"
+      ],
+      "userId": "2",
+      "id": 11
+    },
+    {
+      "cartId": 27,
+      "name": "boAt Rockerz 330",
+      "category": "BLUETOOTH EARPHONES",
+      "rating": 4.8,
+      "reviews": 258,
+      "price": 1495,
+      "original_price": 2990,
+      "discount": 50,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_a08fff6a-7c3d-4663-9499-3421df127e94_600x.png?v=1641801688",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_15634ca0-9f81-4d11-b891-9a1496f709b1_600x.png?v=1641801688",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_12f5e240-7eec-4b32-8121-29594cae6e84_600x.png?v=1641801688"
+      ],
+      "color": [
+        "Active Black",
+        "Raging Red",
+        "Blazing Yellow"
+      ],
+      "userId": "5",
+      "id": 12
+    },
+    {
+      "cartId": 27,
+      "name": "boAt Rockerz 330",
+      "category": "BLUETOOTH EARPHONES",
+      "rating": 4.8,
+      "reviews": 258,
+      "price": 1495,
+      "original_price": 2990,
+      "discount": 50,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_a08fff6a-7c3d-4663-9499-3421df127e94_600x.png?v=1641801688",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_15634ca0-9f81-4d11-b891-9a1496f709b1_600x.png?v=1641801688",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_12f5e240-7eec-4b32-8121-29594cae6e84_600x.png?v=1641801688"
+      ],
+      "color": [
+        "Active Black",
+        "Raging Red",
+        "Blazing Yellow"
+      ],
+      "userId": "5",
+      "id": 13
+    },
+    {
+      "cartId": 27,
+      "name": "boAt Rockerz 330",
+      "category": "BLUETOOTH EARPHONES",
+      "rating": 4.8,
+      "reviews": 258,
+      "price": 1495,
+      "original_price": 2990,
+      "discount": 50,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_a08fff6a-7c3d-4663-9499-3421df127e94_600x.png?v=1641801688",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_15634ca0-9f81-4d11-b891-9a1496f709b1_600x.png?v=1641801688",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_12f5e240-7eec-4b32-8121-29594cae6e84_600x.png?v=1641801688"
+      ],
+      "color": [
+        "Active Black",
+        "Raging Red",
+        "Blazing Yellow"
+      ],
+      "userId": "4",
+      "id": 14
+    },
+    {
+      "cartId": 27,
+      "name": "boAt Rockerz 330",
+      "category": "BLUETOOTH EARPHONES",
+      "rating": 4.8,
+      "reviews": 258,
+      "price": 1495,
+      "original_price": 2990,
+      "discount": 50,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_a08fff6a-7c3d-4663-9499-3421df127e94_600x.png?v=1641801688",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_15634ca0-9f81-4d11-b891-9a1496f709b1_600x.png?v=1641801688",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_12f5e240-7eec-4b32-8121-29594cae6e84_600x.png?v=1641801688"
+      ],
+      "color": [
+        "Active Black",
+        "Raging Red",
+        "Blazing Yellow"
+      ],
+      "userId": "4",
+      "id": 15
+    },
+    {
+      "cartId": 27,
+      "name": "boAt Rockerz 330",
+      "category": "BLUETOOTH EARPHONES",
+      "rating": 4.8,
+      "reviews": 258,
+      "price": 1495,
+      "original_price": 2990,
+      "discount": 50,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_a08fff6a-7c3d-4663-9499-3421df127e94_600x.png?v=1641801688",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_15634ca0-9f81-4d11-b891-9a1496f709b1_600x.png?v=1641801688",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_12f5e240-7eec-4b32-8121-29594cae6e84_600x.png?v=1641801688"
+      ],
+      "color": [
+        "Active Black",
+        "Raging Red",
+        "Blazing Yellow"
+      ],
+      "userId": "4",
+      "id": 16
+    },
+    {
+      "cartId": 28,
       "name": "boAt Watch Wave Pro",
       "category": "SMART WATCHES",
       "rating": 5,
@@ -117,10 +451,11 @@
         "Black",
         "Maroon"
       ],
-      "userId": "1",
-      "id": 4
+      "userId": "4",
+      "id": 17
     },
     {
+      "cartId": 25,
       "name": "boAt Airdopes 131 - Wireless",
       "category": "WIRELESS EARBUDS",
       "rating": 4.8,
@@ -140,51 +475,7 @@
         "CrimsonCream"
       ],
       "userId": "2",
-      "id": 5
-    },
-    {
-      "name": "boAt Airdopes 131 - Wireless",
-      "category": "WIRELESS EARBUDS",
-      "rating": 4.8,
-      "reviews": 915,
-      "price": 987,
-      "original_price": 2990,
-      "discount": 67,
-      "isAvailable": true,
-      "image": [
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/32011675-2ad8-4b99-9787-895caf201d28_600x.png?v=1642405569",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/cream_600x.png?v=1642405569",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_600x.png?v=1642405569"
-      ],
-      "color": [
-        "Lightpink",
-        "Black",
-        "CrimsonCream"
-      ],
-      "userId": "2",
-      "id": 6
-    },
-    {
-      "name": "‌boAt Watch Xtend‌",
-      "category": "SMART WATCHES",
-      "rating": 4.8,
-      "reviews": 108,
-      "price": 3196,
-      "original_price": 7990,
-      "discount": 60,
-      "isAvailable": true,
-      "image": [
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/xtend_black_600x.png?v=1650387008",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_529ecf13-c993-4fe7-a2d6-9357f1a47db4_600x.png?v=1650387008",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_600x.png?v=1650386995"
-      ],
-      "color": [
-        "Charcoal Black",
-        "Pitch Black",
-        "Olive Green"
-      ],
-      "userId": "2",
-      "id": 7
+      "id": 18
     }
   ],
   "shopByCategory": [
