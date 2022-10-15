@@ -8,6 +8,7 @@ import { RiCustomerService2Fill } from 'react-icons/ri'
 import { AiOutlineSearch } from 'react-icons/ai'
 import { HiOutlineMenuAlt1 } from 'react-icons/hi'
 import { useMediaQuery } from '@chakra-ui/react'
+import Typed from 'react-typed'
 import {
   useDisclosure,
   MenuItem,
@@ -124,8 +125,9 @@ export const Navbar = () => {
         <HStack width="35%" spacing={6}  color="black"  display='flex' justifyContent="flex-end">
           <Box> 
             <InputGroup bg="#eaeaea" borderRadius="25px" variant="unstyled" width="300px" height="45px" padding="10px">
-              <AiOutlineSearch  fontSize="25px"/>
-              <Input placeholder='Search here...' color="black" size='lg' />
+              <Text fontSize='20px' ><AiOutlineSearch /></Text>
+             <Text fontSize='15px'   marginLeft='20px' pos='absolute' width='100%' > <Typed  strings={["Search Speakers","Search Neckbands","Search Smartwatches","Search Earphones"]}  typeSpeed={150} backSpeed={100} loop  /></Text>
+              <Input color="black" size='lg' />
             </InputGroup>
           </Box>
           <Box>
