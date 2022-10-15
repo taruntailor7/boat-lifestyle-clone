@@ -140,7 +140,7 @@ export const Navbar = () => {
                       <Text color="red">Hi boAthead!</Text>
                     </MenuItem>
                     <MenuItem  _focus={{bg:"white"}} >
-                      <Box textAlign="center" p={2}  width="100%" colorScheme="#ea2127" bg="#ea2127" color="white"><NavLink  to="/login"><Text color="white">Login</Text></NavLink></Box>
+                      <Box textAlign="center" p={2}  width="100%" colorScheme="#ea2127" bg="#ea2127" color="white"> <NavLink  to="/login"><Text color="white">Login</Text></NavLink></Box>
                     </MenuItem>
                   </MenuList>
                 </Menu> : <Menu>

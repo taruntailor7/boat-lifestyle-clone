@@ -23,7 +23,6 @@ const InitState={
     email:"",
     password:"",
     phone_number:""
-
 }
 const SignUpPage=()=>{
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -156,10 +155,10 @@ const SignUpPage=()=>{
 
     return (
 <>
-    <Box width={ {base:"90%", sm:"90%" , md:"60%",lg:"30%"} } margin='auto'>
+    <Box width={ {base:"90%", sm:"90%" , md:"60%",lg:"30%"} } margin='auto' marginTop="100px">
     <Stack marginBottom='30px' >
-       <Text fontSize='5xl'>Register</Text>
-       <Text fontSize='xl'>Please fill in the fields </Text>
+       <Text textAlign="center" fontSize='5xl'>Register</Text>
+       <Text textAlign="center" fontSize='xl'>Please fill in the fields </Text>
     </Stack>
 
          <form onSubmit={handleClick} >
@@ -218,9 +217,9 @@ const SignUpPage=()=>{
             </Box>
         <Box width='100%' id='recaptcha-container' ></Box>
         <Button width='100%' isLoading={loading}
-          type='submit' height='60px' style={{ backgroundColor:"red", padding:"20px", textAlign:"center" }}
+          type='submit' height='50px' style={{ backgroundColor:"red", padding:"20px", textAlign:"center" }}
         variant="contained" color='#ffff' >CREATE ACCOUNT</Button>
-       <Text fontSize='lg'>Already have an account <NavLink style={{ color:'red'}} className='hover-underline-animation' to='/login' >Login</NavLink> </Text>
+       <Text textAlign="center" fontSize='lg'>Already have an account <NavLink style={{ color:'red'}} className='hover-underline-animation' to='/login' >Login</NavLink> </Text>
         </Stack>
       </form>
     </Box>
