@@ -1,10 +1,8 @@
 import { RecaptchaVerifier, signInWithPhoneNumber } from 'firebase/auth';
 import { auth } from '../firebase';
-import { getAuth } from "firebase/auth";
-import { Box, Input, Textarea,Button ,Text,useToast,
+import { Box, Input, Button ,Text,useToast,
     Stack,
-    VStack,
-    AlertDialog,
+    AlertDialog, 
     AlertDialogBody,
     AlertDialogFooter,
     AlertDialogHeader,
@@ -25,12 +23,11 @@ const InitState={
     email:"",
     password:"",
     phone_number:""
-
 }
 const SignUpPage=()=>{
   const { isOpen, onOpen, onClose } = useDisclosure()
   const cancelRef = useRef()
-   const { loading , error , token  }=useSelector((state)=>state)
+   const { loading }=useSelector((state)=>state)
     const dispatch=useDispatch();
      const [values,setValues]=useState(InitState);
      const toast = useToast();
@@ -44,15 +41,15 @@ const SignUpPage=()=>{
     const [otp,setOtp]=useState("");
     const showClick= () => setShow(!show)
     const [code,setRes]=useState(""); 
-     const [refresh,setRefresh]=useState(false);
+    //  const [refresh,setRefresh]=useState(false);
 
     if(nav){
      return  <Navigate to='/login' />
     }
 
-    if(refresh){
-      return <Navigate to='/signup' />
-    }
+    // if(refresh){
+    //   return <Navigate to='/signup' />
+    // }
 
     const handleChangeotp=(e)=>{
       setOtp(e.target.value);
@@ -62,15 +59,23 @@ const SignUpPage=()=>{
       
         e.preventDefault();
         dispatch( get_loading() );
-        let res1=await fetch(' http://localhost:3000/users')
+        let res1=await fetch(' http://localhost:3001/users')
         let res2=await res1.json();
         let flag=false;
-        res2.map((elem)=>{
-         if(elem.email===values.email || elem.phone_number==values.phone_number ){
-           flag=true;
-         }
+
+        res2.forEach((elem)=>{
+          if(elem.email===values.email || elem.phone_number===values.phone_number ){
+            flag=true;
+          }
         })
-        if(flag==false){
+
+        // res2.map((elem)=>{
+        //   if(elem.email===values.email || elem.phone_number===values.phone_number ){
+        //     flag=true;
+        //   }
+        // })
+
+        if(flag===false){
           let recaptcha=new RecaptchaVerifier('recaptcha-container', {}, auth);
           recaptcha.render();
           let number=`+91${values.phone_number}`
@@ -101,7 +106,7 @@ const SignUpPage=()=>{
         if(code==null) return;
         code.confirm(otp).then(function(res){
           console.log(res.user,'user');        
-            fetch(' http://localhost:3000/users',{
+            fetch(' http://localhost:3001/users',{
               method:'POST',
               body: JSON.stringify(values),
               headers : {
@@ -110,13 +115,14 @@ const SignUpPage=()=>{
             })
             dispatch(get_suceess(false));
             setNav(true);          //for navigation
-          toast({                                // for sucess
-             title: 'Account created.',
-             description: "We've created your account for you.",
-             status: 'success',
-             duration: 4000,
-             isClosable: true,
-           })
+            toast({                                // for sucess
+              title: 'Account Created.',
+              description: "We've created your account for you.",
+              status: 'success',
+              duration: 4000,
+              isClosable: true,
+              position:"top"
+            })
         }).catch((err)=>{
           dispatch(get_error())
           console.log(err)
@@ -126,9 +132,9 @@ const SignUpPage=()=>{
             status: 'error',
             duration: 4000,
             isClosable: true,
-      
+            position:"top"
           })
-          setRefresh(true);
+          // setRefresh(true);
           setValues(InitState);
           return;
          })
@@ -149,10 +155,10 @@ const SignUpPage=()=>{
 
     return (
 <>
-    <Box width={ {base:"90%", sm:"90%" , md:"60%",lg:"30%"} } margin='auto'>
+    <Box width={ {base:"90%", sm:"90%" , md:"60%",lg:"30%"} } margin='auto' marginTop="100px" mb={10}>
     <Stack marginBottom='30px' >
-       <Text fontSize='5xl'>Register</Text>
-       <Text fontSize='xl'>Please fill in the fields </Text>
+       <Text textAlign="center" fontSize='5xl'>Register</Text>
+       <Text textAlign="center" fontSize='xl'>Please fill in the fields </Text>
     </Stack>
 
          <form onSubmit={handleClick} >
@@ -211,9 +217,9 @@ const SignUpPage=()=>{
             </Box>
         <Box width='100%' id='recaptcha-container' ></Box>
         <Button width='100%' isLoading={loading}
-          type='submit' height='60px' style={{ backgroundColor:"red", padding:"20px", textAlign:"center" }}
+          type='submit' height='50px' style={{ backgroundColor:"red", padding:"20px", textAlign:"center" }}
         variant="contained" color='#ffff' >CREATE ACCOUNT</Button>
-       <Text fontSize='lg'>Already have an account <NavLink style={{ color:'red'}} className='hover-underline-animation' to='/login' >Login</NavLink> </Text>
+       <Text textAlign="center" fontSize='lg'>Already have an account <NavLink style={{ color:'red'}} className='hover-underline-animation' to='/login' >Login</NavLink> </Text>
         </Stack>
       </form>
     </Box>

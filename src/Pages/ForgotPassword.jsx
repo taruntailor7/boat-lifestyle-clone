@@ -20,7 +20,7 @@ export default function ForgotPassword() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const cancelRef = useRef()
     const [values,setValues]=useState({phone_number:""});
-    const { loading , error , isAuth  }=useSelector((state)=>state)
+    const { loading }=useSelector((state)=>state)
     const toast = useToast();
     const [refresh,setRefresh]=useState(false);
     const [otp,setOtp]=useState("");
@@ -42,7 +42,7 @@ export default function ForgotPassword() {
 
     const handleSubmit=async(e)=>{
             dispatch( get_loading() );
-            let res3=await fetch(' http://localhost:3000/users')
+            let res3=await fetch(' http://localhost:3001/users')
             let res4=await res3.json();
             let flag=false;
             res4.map((elem)=>{
@@ -113,10 +113,10 @@ export default function ForgotPassword() {
 
   return (
     <>
-    <Box width={ {base:"90%", sm:"90%" , md:"60%",lg:"30%"} } margin='auto' >
+    <Box width={ {base:"90%", sm:"90%" , md:"60%",lg:"30%"} } margin='auto' marginTop="100px" mb={10}>
         <Stack gap='1px'>
-        <Text fontSize={ {base:"25px", sm:"30px" , md:'35px',lg:"4xl"} } > Recover Password </Text>
-        <Text marginTop='15px' marginBottom='10px' >Please Enter Your Phone Number</Text>
+        <Text textAlign="center" fontSize={ {base:"25px", sm:"30px" , md:'35px',lg:"4xl"} } > Recover Password </Text>
+        <Text textAlign="center" marginTop='15px' marginBottom='10px' >Please Enter Your Phone Number</Text>
         <MDBInput 
           label="Phone Number"
           value={values.phone}

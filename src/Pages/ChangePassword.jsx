@@ -33,7 +33,7 @@ export default function ChangePassword() {
         password:confirmPassword
       }
         try{
-          fetch(`http://localhost:3000/users/${id}`,{
+          fetch(`http://localhost:3001/users/${id}`,{
             method:'PATCH',
             body: JSON.stringify(initState),
             headers : {
