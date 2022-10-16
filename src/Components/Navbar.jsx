@@ -60,16 +60,17 @@ export const Navbar = () => {
   const [isLargerThan1144] = useMediaQuery('(min-width: 1144px)')
   const { isOpen, onOpen, onClose } = useDisclosure()
 
+  const [cartVal, setCartVal] = useState(0);
+
   const handleMouseTyped=()=>{
     useType.current.typed.reset();
     useType.current.typed.stop();
   }
 
-
-
   useEffect(() =>{
     getUser();
-  },[userState])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[userState, cartVal])
 
   const getUser = ()=>{
     fetch(`http://localhost:3001/users/${userId}`)
@@ -84,7 +85,7 @@ export const Navbar = () => {
   if(isAuth===null){
     localStorage.setItem('isAuth',false)
   }
-
+  
   return (
     <>
       {isLargerThan1144 ? <Box boxShadow='md' width="100%" padding="24px" bg='white' position="fixed" top="0" zIndex="1000">
@@ -184,8 +185,9 @@ export const Navbar = () => {
           <Box><NavLink><RiCustomerService2Fill color="black" fontSize="22px"/></NavLink></Box>
           <Box>
             <NavLink>
+              <Text position="absolute" top="6" right="8" fontSize="14px" w="22px" textAlign="center" h="22px" color="white" bg="red" colorScheme="red" borderRadius="50%">{cartVal}</Text>
               {/* <FaShoppingCart color="black" fontSize="22px"/> */}
-              <Cart />
+              <Cart setCartVal={setCartVal}/>
             </NavLink>
           </Box>
         </HStack>

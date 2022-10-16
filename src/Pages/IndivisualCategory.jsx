@@ -207,7 +207,7 @@ export const IndivisualCategory = () => {
     
     return (
         <Box mb={10}>
-            <Box marginTop={{base:"-85px",sm:"-85px",md:"-85px",lg:"100px"}}>
+            <Box marginTop={{base:"-85px",sm:"-85px",md:"-85px",lg:"90px"}}>
                 <Image marginTop="90px" src={bannerImg}  /> 
             </Box>
             <Box width="95%" margin="auto" marginTop={{base:"10px",sm:"10px",md:"10px",lg:"30px"}}>

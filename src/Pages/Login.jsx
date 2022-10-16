@@ -10,7 +10,7 @@ import { Navigate, NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { get_error, get_loading, get_suceess } from '../Redux App/action';
 
-let isAuth = localStorage.getItem('isAuth')
+// let isAuth = localStorage.getItem('isAuth')
 
 
 const InitState={
@@ -145,9 +145,9 @@ const LoginPage=()=>{
           }
        }
 
-       if(isAuth==="true"){
-        return <Navigate to='/'/>
-        }
+      //  if(isAuth==="true"){
+      //   return <Navigate to='/'/>
+      //   }
        
        if(nav){
         return <Navigate to='/' />
