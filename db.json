@@ -706,6 +706,167 @@
       ],
       "userId": "5",
       "id": 28
+    },
+    {
+      "cartId": 26,
+      "name": "‌boAt Watch Xtend‌",
+      "category": "SMART WATCHES",
+      "rating": 4.8,
+      "reviews": 108,
+      "price": 3196,
+      "original_price": 7990,
+      "discount": 60,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/xtend_black_600x.png?v=1650387008",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main2_529ecf13-c993-4fe7-a2d6-9357f1a47db4_600x.png?v=1650387008",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_600x.png?v=1650386995"
+      ],
+      "color": [
+        "Charcoal Black",
+        "Pitch Black",
+        "Olive Green"
+      ],
+      "userId": "2",
+      "id": 29
+    },
+    {
+      "cartId": 141,
+      "name": "Rockerz 450 - Batman DC Edition",
+      "category": "BLUETOOTH HEADPHONES",
+      "rating": 5,
+      "reviews": 4,
+      "price": 2277,
+      "original_price": 5990,
+      "discount": 62,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/2_3_f3ee5c27-4f14-4159-9fb2-dc60e7d6ec66_600x.png?v=1655536230",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/05_3883bbea-582e-419f-a477-7dd4b7935489_700x.jpg?v=1656102086",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/03_8f2830b2-b6af-45ee-b127-d17ffaba68ab_700x.jpg?v=1656102087"
+      ],
+      "color": [
+        "Knight Black",
+        null,
+        null
+      ],
+      "userId": "2",
+      "id": 30
+    },
+    {
+      "cartId": 142,
+      "name": "boAt Rockerz 450 DC Edition",
+      "category": "BLUETOOTH HEADPHONES",
+      "rating": 5,
+      "reviews": 3,
+      "price": 1357,
+      "original_price": 3990,
+      "discount": 66,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1_5_600x.png?v=1655534211",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/02-3_700x.jpg?v=1656101712",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/03-3_700x.jpg?v=1656101712"
+      ],
+      "color": [
+        "Amazonian Red",
+        "Knight Black",
+        "Knight Black"
+      ],
+      "userId": "2",
+      "id": 31
+    },
+    {
+      "cartId": 144,
+      "name": "Stone 190 Wonder Woman DC Edition",
+      "category": "BLUETOOTH SPEAKERS",
+      "rating": 5,
+      "reviews": 12,
+      "price": 1286,
+      "original_price": 2990,
+      "discount": 57,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-image-3_55f3214a-ec1f-4764-9efe-1369c6668755_600x.png?v=1655542199",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S190-FI-DC_WW02_a7ba0e48-779c-4625-acb9-2f79310b4c8b_700x.png?v=1656101346",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/S190-FI-DC_WW03_faea534e-ac48-45ee-a949-3747bfcf3138_700x.png?v=1656101347"
+      ],
+      "color": [
+        "Amazonian Red",
+        null,
+        null
+      ],
+      "userId": "2",
+      "id": 32
+    },
+    {
+      "cartId": 131,
+      "name": "boAt Airdopes 190",
+      "category": "WIRELESS EARBUDS",
+      "rating": 5,
+      "reviews": 1,
+      "price": 1295,
+      "original_price": 3499,
+      "discount": 63,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/2_85232e56-016f-4201-8612-d70525d301b5_600x.png?v=1663821109",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/1_eebd7966-a481-44a9-91a2-bef06d4c0f05_600x.png?v=1663821109",
+        null
+      ],
+      "color": [
+        "Black",
+        "White",
+        null
+      ],
+      "userId": "2",
+      "id": 33
+    },
+    {
+      "cartId": 130,
+      "name": "boAt Aavante Orion ",
+      "category": "HOME THEATRE & SOUND BARS",
+      "rating": 4.8,
+      "reviews": 91,
+      "price": 6997,
+      "original_price": 19990,
+      "discount": 65,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/orion_600x.png?v=1664177169",
+        null,
+        null
+      ],
+      "color": [
+        "Black",
+        null,
+        null
+      ],
+      "userId": "2",
+      "id": 34
+    },
+    {
+      "cartId": 133,
+      "name": "boAt Rockerz 245 Pro",
+      "category": "WIRELESS EARBUDS",
+      "rating": 5,
+      "reviews": 2,
+      "price": 1000,
+      "original_price": 2499,
+      "discount": 60,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/245pro3_700x.png?v=1663584969",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/245pro4_700x.png?v=1663584969",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/245pro-2_700x.png?v=1663584346"
+      ],
+      "color": [
+        "Cool Blue",
+        "Fusion Black",
+        "Red"
+      ],
+      "userId": "2",
+      "id": 35
     }
   ],
   "shopByCategory": [
@@ -4046,6 +4207,7 @@
       ]
     }
   ],
+  
   "allProducts": [
     {
       "id": 1,

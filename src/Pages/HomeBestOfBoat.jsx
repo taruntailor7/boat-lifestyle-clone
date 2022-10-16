@@ -88,20 +88,20 @@ export const HomeBestOfBoat = () => {
   let price = 0;
 
   return (
-    <Box width="100%" margin="auto" marginTop="60px">
-      <Text fontSize="25px" fontWeight="500">BEST OF boAt</Text>
+    <Box width="100%" margin="auto" marginTop={{base:"50px",sm:"20px",md:"30px",lg:"50px"}}>
+      <Text fontSize={{base:"25px",sm:"20px",md:"25px",lg:"25px"}} fontWeight="500">BEST OF boAt</Text>
       <Tabs colorScheme="red" isFitted="true"  mt={6}>
         <TabList>
-          <Tab fontSize="22px" fontWeight="500" color="#979696">Best Sellers</Tab>
-          <Tab fontSize="22px" fontWeight="500" color="#979696">Top Earbuds</Tab>
-          <Tab fontSize="22px" fontWeight="500" color="#979696">Smart Watches</Tab>
-          <Tab fontSize="22px" fontWeight="500" color="#979696">Trending Wireless</Tab>
-          <Tab fontSize="22px" fontWeight="500" color="#979696">Trending ANC</Tab>
+          <Tab fontSize={{base:"22px",sm:"10px",md:"12px",lg:"22px"}} fontWeight="500" color="#979696">Best Sellers</Tab>
+          <Tab fontSize={{base:"22px",sm:"10px",md:"12px",lg:"22px"}} fontWeight="500" color="#979696">Top Earbuds</Tab>
+          <Tab fontSize={{base:"22px",sm:"10px",md:"12px",lg:"22px"}} fontWeight="500" color="#979696">Smart Watches</Tab>
+          <Tab fontSize={{base:"22px",sm:"10px",md:"12px",lg:"22px"}} fontWeight="500" color="#979696">Trending Wireless</Tab>
+          <Tab fontSize={{base:"22px",sm:"10px",md:"12px",lg:"22px"}} fontWeight="500" color="#979696">Trending ANC</Tab>
         </TabList>
 
         <TabPanels>
           <TabPanel>
-            <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop="50px">
+            <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop={{base:"50px",sm:"25px",md:"30px",lg:"50px"}}>
               {first.map((data)=>(
                 <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
                   {data.isSuperSaver?<Button bg="#F7C20A" colorScheme="#F7C20A" color="black" position="absolute" px={1}> <AiFillThunderbolt /> Super Saver</Button>:""}
@@ -126,7 +126,7 @@ export const HomeBestOfBoat = () => {
             </Grid>
           </TabPanel>
           <TabPanel>
-              <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop="60px">
+              <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop={{base:"50px",sm:"25px",md:"30px",lg:"50px"}}>
                 {second.map((data)=>(
                   <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
                     {data.isSuperSaver?<Button bg="#F7C20A" colorScheme="#F7C20A" color="black" position="absolute" px={1}> <AiFillThunderbolt /> Super Saver</Button>:""}
@@ -151,7 +151,7 @@ export const HomeBestOfBoat = () => {
               </Grid>
             </TabPanel>
           <TabPanel>
-              <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop="60px">
+              <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop={{base:"50px",sm:"25px",md:"30px",lg:"50px"}}>
                 {third.map((data)=>(
                   <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
                     {data.isSuperSaver?<Button bg="#F7C20A" colorScheme="#F7C20A" color="black" position="absolute" px={1}> <AiFillThunderbolt /> Super Saver</Button>:""}
@@ -176,7 +176,7 @@ export const HomeBestOfBoat = () => {
               </Grid>
           </TabPanel>
           <TabPanel>
-              <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop="60px">
+              <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop={{base:"50px",sm:"25px",md:"30px",lg:"50px"}}>
                 {fourth.map((data)=>(
                   <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
                     {data.isSuperSaver?<Button bg="#F7C20A" colorScheme="#F7C20A" color="black" position="absolute" px={1}> <AiFillThunderbolt /> Super Saver</Button>:""}
@@ -201,7 +201,7 @@ export const HomeBestOfBoat = () => {
               </Grid>
           </TabPanel>
           <TabPanel>
-              <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop="60px">
+              <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop={{base:"50px",sm:"25px",md:"30px",lg:"50px"}}>
                 {fifth.map((data)=>(
                   <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
                     {data.isSuperSaver?<Button bg="#F7C20A" colorScheme="#F7C20A" color="black" position="absolute" px={1}> <AiFillThunderbolt /> Super Saver</Button>:""}

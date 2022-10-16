@@ -84,8 +84,10 @@ export const IndivisualCategory = () => {
             setHeading(res.data[1].heading)
         });
     };
-    // setBannerImg(products[0].bannerImg)
-    // setHeading(products[1].heading)
+    const updatedProducts = products.filter((elem)=>{
+        return elem.id !==1001 && elem.id !==1002;
+    })
+    // console.log(updatedProducts)
 
     let isAuth = localStorage.getItem('isAuth') || false;
     let userId = localStorage.getItem("userId") || false;
@@ -143,7 +145,7 @@ export const IndivisualCategory = () => {
     const handleFilter = (sliderValue)=>{
         setMinValue(sliderValue[0]);
         setMaxValue(sliderValue[1]);
-        console.log(sliderValue);
+        // console.log(sliderValue);
     }
  
  
@@ -157,11 +159,6 @@ export const IndivisualCategory = () => {
     //     })
     //     .catch(err=>console.log(err))
     // }
-
-    const updatedProducts = products.filter((elem)=>{
-        return elem.id !==1001 && elem.id !==1002;
-    })
-    // console.log(updatedProducts)
 
     useEffect(()=>{
         if(minValue!=="" && maxValue!=="" && sortByPrice !== "" ){
