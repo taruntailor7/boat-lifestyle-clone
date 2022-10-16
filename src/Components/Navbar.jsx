@@ -137,11 +137,7 @@ export const Navbar = () => {
             </MenuList>
           </Menu>
         </HStack>
-<<<<<<< HEAD
         <HStack width="35%" spacing={6}  color="black"  display='flex' justifyContent="flex-end"  >
-=======
-        <HStack width="30%" spacing={6}  color="black"  display='flex' justifyContent="flex-end">
->>>>>>> 724940132232da7233fabb4556af45d66441ebc0
           <Box> 
             <InputGroup bg="#eaeaea" borderRadius="25px" variant="unstyled" width="300px" height="45px" padding="10px">
               <Text fontSize='25px' ><AiOutlineSearch /></Text>

@@ -76,7 +76,7 @@ export const SailWithBoat = () => {
   return (
     <Box width="95%" margin="auto" marginTop="50px">
       <Text fontSize="45px" fontWeight="500" marginTop="100px">SAIL WITH boAt</Text>
-      <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(4, 1fr)"}} gap={6} marginTop="60px">
+      <Grid width="100%"  overflowX='auto' gridAutoColumns= "minmax(300px,1fr) " gridAutoFlow={{ base:'column',sm:'column',md:'row',lg:'row' }} margin="auto" templateColumns={{base:"repeat(auto-fill,minmax(300px,1fr))", sm:"repeat(auto-fill,minmax(300px,1fr))", md:"repeat(3, 1fr)", lg:"repeat(4, 1fr)"}} gap={6} marginTop="60px">
         {sailWithBoat.map((data)=>(
           <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
             {data.isSuperSaver?<Button bg="#F7C20A" colorScheme="#F7C20A" color="black" position="absolute" px={1}> <AiFillThunderbolt /> Super Saver</Button>:""}

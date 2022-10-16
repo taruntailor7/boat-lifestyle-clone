@@ -97,7 +97,7 @@ export const HomeSailWithBoat = () => {
   return (
     <Box width="100%" margin="auto" marginTop={{base:"50px",sm:"20px",md:"30px",lg:"50px"}}>
       <Text fontSize={{base:"25px",sm:"20px",md:"25px",lg:"25px"}} fontWeight="500">SAIL WITH boAt</Text>
-      <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop={{base:"60px",sm:"30px",md:"40px",lg:"60px"}}>
+      <Grid width="100%" margin="auto" gap='20px'  marginTop={{base:"60px",sm:"30px",md:"40px",lg:"60px"}} overflowX='auto' gridAutoColumns= "minmax(300px,1fr) " gridAutoFlow={{ base:'column',sm:'column',md:'row',lg:'row' }} templateColumns={{base:"repeat(auto-fill,minmax(300px,1fr))", sm:"repeat(auto-fill,minmax(300px,1fr))", md:"repeat(3, 1fr)", lg:"repeat(4, 1fr)"}}>
         {sailWithBoat.map((data)=>(
           <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
             {data.isSuperSaver?<Button bg="#F7C20A" colorScheme="#F7C20A" color="black" position="absolute" px={1}> <AiFillThunderbolt /> Super Saver</Button>:""}
