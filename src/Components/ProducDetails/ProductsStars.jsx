@@ -1,10 +1,10 @@
 import { Box, HStack, Image } from "@chakra-ui/react";
 import React from "react";
 
-const ProductsStars = ({ size }) => {
+const ProductsStars = ({ size, mtt }) => {
   return (
     <>
-      <HStack mt={10} ml={2}>
+      <HStack mt={mtt} ml={2}>
         <Box display="flex" align="left">
           <Image
             w={size}

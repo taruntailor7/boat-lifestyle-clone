@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { extendTheme } from "@chakra-ui/react";
 import {
   Accordion,
   Box,
@@ -70,6 +71,7 @@ const faqs = [
     ans: "Yes, it has a call reject feature.",
   },
 ];
+
 const req = (page) => {
   return fetch(
     `https://boat-reviews.herokuapp.com/reviews?_sort=id&_order=desc&_page=${page}&_limit=5`
@@ -109,14 +111,24 @@ const ProductDisc = () => {
       showRev(1);
     });
   };
+
+  // const breakpoints = {
+  //   sm: "320px",
+  //   md: "768px",
+  //   lg: "960px",
+  //   xl: "1200px",
+  //   "2xl": "1536px",
+  // };
+  // const theme = extendTheme({ breakpoints });
+
   return (
     <>
-      <HStack w="full" h="70px" spacing="5%" justifyContent="center">
+      <HStack w="full" h="70px" spacing="1%" justifyContent="space-between">
         {svg.map((item) => (
-          <HStack>
+          <Flex direction={["column", "column", "row", "row"]}>
             <Image src={item.src} w="50px" h="50px"></Image>
-            <Text>{item.text}</Text>
-          </HStack>
+            <Text mt={2}>{item.text}</Text>
+          </Flex>
         ))}
       </HStack>
       <ProdSpecification />
@@ -128,11 +140,12 @@ const ProductDisc = () => {
             color="black"
             textAlign="left"
             pl={2}
+            ml={[4, 4, 24, 0]}
           >
             FAQs
           </Text>
         </Box>
-        <Accordion allowToggle w="800px">
+        <Accordion allowToggle w={["400px", "500px", "600px", "900px"]}>
           {faqs.map((items) => (
             <ProdFaq ans={items.ans} question={items.question} />
           ))}
@@ -141,12 +154,12 @@ const ProductDisc = () => {
       <hr />
       <BottomNav />
       <VStack w="full" h="700px" mt={5}>
-        <Box w="900px">
+        <Box w={["300px", "400px", "600px", "900px"]}>
           <Text fontSize="30px" fontWeight="800" textAlign="left">
             what boAtheads are saying:
           </Text>
         </Box>
-        <HStack w="900px">
+        <HStack w={["300px", "400px", "600px", "900px"]}>
           <VStack w="400px">
             <Box>
               <Text fontSize="12px" textAlign="left" mb={1}>
@@ -196,7 +209,7 @@ const ProductDisc = () => {
             </Text>
           </Box>
         </HStack>
-        <Box w="900px" h="full">
+        <Box w={["300px", "400px", "600px", "900px"]} h="full">
           {comment.map((item) => (
             <UsersReviews name={item.name} comment={item.comment} />
           ))}

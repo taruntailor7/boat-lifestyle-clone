@@ -1,7 +1,7 @@
 // import { Input } from "@chakra-ui/react";
-import { Box, HStack, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, HStack, Image, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
-// // use chakra ui
+// import { Navbar } from "../Navbar";
 import ProdImages from "./ProdImages";
 import ProdName from "./ProdName";
 import ProductDisc from "./ProductDisc";
@@ -40,27 +40,34 @@ const ProductDetails = () => {
 
   return (
     <>
-      <Box>
-        <Box w={1300} h={50} color="#111111" fontWeight="300">
-          <Text fontSize="13px" pt="15px" pl="10" textAlign="left">
-            Home / boAt Wave Call | Bluetooth Calling Smartwatch with 1.69" HD
-            Curved Display, 150+ Watch Faces, Heart Rate & SPO2 Monitoring
-          </Text>
-        </Box>
-        <Box h={625} w="full" bg="#F5F5F5">
-          <ProdImages
-            imgesData={imgesData}
-            bgColor={bgColor}
-            img={img}
-            setImge={setImge}
-          />
-          <Box h={625} w={700} float="right">
+      {/* <Navbar /> */}
+      <Box w="full" h="auto">
+        <Flex
+          w="full"
+          direction={["column", "column", "column", "row"]}
+          // border="1px"
+          bg="#F5F5F5"
+        >
+          <Box
+            h={625}
+            w="full"
+            // border="1px"
+            bg="#F5F5F5"
+          >
+            <ProdImages
+              imgesData={imgesData}
+              bgColor={bgColor}
+              img={img}
+              setImge={setImge}
+            />
+          </Box>
+          <Box h={625}>
             <ProdName bgColor={bgColor} colors={colors} setImge={setImge} />
           </Box>
-        </Box>
+        </Flex>
+        <br />
+        <ProductDisc />
       </Box>
-      <br />
-      <ProductDisc />
     </>
   );
 };

@@ -1,11 +1,11 @@
-import { Box, HStack, Image, VStack } from "@chakra-ui/react";
+import { Box, Flex, HStack, Image, VStack } from "@chakra-ui/react";
 import React, { useState } from "react";
 
 const ProdImages = ({ imgesData, img, setImge }) => {
   // console.log({ imgesData, bgColor, img });
   return (
-    <Box pl={5} h={625} w={550} float="left">
-      <HStack mt={10}>
+    <Box ml={[15, 50, "10%", 1]} pl={5} h={625} w={550} float="left">
+      <Flex mt={10}>
         <VStack align="left" pl={2} mr={5} cursor="pointer">
           {imgesData.map(({ img }) => (
             <Box
@@ -20,10 +20,15 @@ const ProdImages = ({ imgesData, img, setImge }) => {
             </Box>
           ))}
         </VStack>
-        <Box h={450} w={400} borderRadius="20">
-          <Image boxSize="450px" borderRadius="20" src={img} boxShadow="2xl" />
+        <Box
+          border="1px"
+          // h={[12000, 1200, 1200, 450]}
+          // w={[600, 700, 1200, 400]}
+          borderRadius="20"
+        >
+          <Image boxSize="400px" borderRadius="20" src={img} boxShadow="2xl" />
         </Box>
-      </HStack>
+      </Flex>
     </Box>
   );
 };

@@ -28,26 +28,7 @@ const BottomNav = () => {
         <Text color="Black" fontSize="15px" fontWeight="700" mt={5} ml="10px">
           boAt Watch Xtend‌ with Alexa Built Rs. 2,699.00
         </Text>
-        {/* </BottomNavigationItem> */}
-        {/* <BottomNavigationItem value="value">
-          <BottomNavigationIcon as={EditIcon} />
-          <BottomNavigationLabel>Label 2</BottomNavigationLabel>
-        </BottomNavigationItem> */}
-        {/* <BottomNavigationItem> */}
-        {/* <BottomNavigationIcon as={BellIcon} />
-          <BottomNavigationLabel>Label 3</BottomNavigationLabel>
-           */}
-        <Button
-          w="150px"
-          mt={2}
-          m={2}
-          ml="400px"
-          border="1px"
-          borderColor="black"
-          color="black"
-        >
-          Color: Black
-        </Button>
+
         <Button
           backgroundColor="red"
           color="white"

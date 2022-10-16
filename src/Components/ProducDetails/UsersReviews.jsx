@@ -16,7 +16,7 @@ const UsersReviews = ({ name, comment }) => {
             ></Image>
           </Box>
           <VStack ml={2}>
-            <ProductsStars size="15px" />
+            <ProductsStars size="15px" mtt="10" />
             <Text mt={-5}>{name}</Text>
           </VStack>
         </Flex>
