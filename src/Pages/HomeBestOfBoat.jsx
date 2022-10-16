@@ -92,18 +92,18 @@ export const HomeBestOfBoat = () => {
       <Text fontSize={{base:"25px",sm:"20px",md:"25px",lg:"25px"}} fontWeight="500">BEST OF boAt</Text>
       <Tabs colorScheme="red" isFitted="true"  mt={6}>
         <TabList>
-          <Tab fontSize={{base:"22px",sm:"10px",md:"12px",lg:"22px"}} fontWeight="500" color="#979696">Best Sellers</Tab>
-          <Tab fontSize={{base:"22px",sm:"10px",md:"12px",lg:"22px"}} fontWeight="500" color="#979696">Top Earbuds</Tab>
-          <Tab fontSize={{base:"22px",sm:"10px",md:"12px",lg:"22px"}} fontWeight="500" color="#979696">Smart Watches</Tab>
-          <Tab fontSize={{base:"22px",sm:"10px",md:"12px",lg:"22px"}} fontWeight="500" color="#979696">Trending Wireless</Tab>
-          <Tab fontSize={{base:"22px",sm:"10px",md:"12px",lg:"22px"}} fontWeight="500" color="#979696">Trending ANC</Tab>
+          <Tab fontSize={{base:"12px",sm:"12px",md:"12px",lg:"22px"}} fontWeight="500" color="#979696">Best Sellers</Tab>
+          <Tab fontSize={{base:"12px",sm:"12px",md:"12px",lg:"22px"}} fontWeight="500" color="#979696">Top Earbuds</Tab>
+          <Tab fontSize={{base:"12px",sm:"12px",md:"12px",lg:"22px"}} fontWeight="500" color="#979696">Smart Watches</Tab>
+          <Tab fontSize={{base:"12px",sm:"12px",md:"12px",lg:"22px"}} fontWeight="500" color="#979696">Trending Wireless</Tab>
+          <Tab fontSize={{base:"12px",sm:"12px",md:"12px",lg:"22px"}} fontWeight="500" color="#979696">Trending ANC</Tab>
         </TabList>
 
         <TabPanels>
           <TabPanel>
-            <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop={{base:"50px",sm:"25px",md:"30px",lg:"50px"}}>
+            <Grid width="100%" margin="auto" overflowX={{base:"auto",sm:"auto",md:"auto"}} templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop={{base:"50px",sm:"25px",md:"30px",lg:"50px"}}>
               {first.map((data)=>(
-                <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
+                <GridItem key={data.id} grid-auto-flow="column" grid-auto-columns="72vw" w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
                   {data.isSuperSaver?<Button bg="#F7C20A" colorScheme="#F7C20A" color="black" position="absolute" px={1}> <AiFillThunderbolt /> Super Saver</Button>:""}
                   <Box width="100%" p={5}> 
                     <Image width="100%" src={data.image[0]} alt="image" />

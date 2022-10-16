@@ -207,11 +207,11 @@ export const IndivisualCategory = () => {
     
     return (
         <Box mb={10}>
-            <Box>
+            <Box marginTop={{base:"-85px",sm:"-85px",md:"-85px",lg:"100px"}}>
                 <Image marginTop="90px" src={bannerImg}  />
             </Box>
-            <Box width="95%" margin="auto" marginTop="30px">
-                <Text fontWeight="500" fontSize="55px">{heading}</Text>
+            <Box width="95%" margin="auto" marginTop={{base:"10px",sm:"10px",md:"10px",lg:"30px"}}>
+                <Text fontWeight="500" fontSize={{base:"35px",sm:"35px",md:"45px",lg:"55px"}}>{heading}</Text>
                 <Box mt={8} display="flex" justifyContent="space-between" >
                     <Filter handleFilter={handleFilter} /> 
                     <Sorting handleChangeForAlpha={handleChangeForAlpha} handleChangeForPrice={handleChangeForPrice} />
@@ -224,7 +224,7 @@ export const IndivisualCategory = () => {
                             </Select>
                         </Box> */}
                     </Box>
-                <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(4, 1fr)"}} gap={6} marginTop="30px">
+                <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(4, 1fr)"}} gap={6} marginTop={{base:"50px",sm:"25px",md:"30px",lg:"50px"}}>
                     {updatedProducts.map((data)=>(
                         <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
                         {data.isSuperSaver?<Button bg="#F7C20A" colorScheme="#F7C20A" color="black" position="absolute" px={1}> <AiFillThunderbolt /> Super Saver</Button>:""}
