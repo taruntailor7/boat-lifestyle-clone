@@ -4,7 +4,7 @@ import React from 'react'
 export const Sorting = ({handleChangeForAlpha,handleChangeForPrice}) => {
 
     return (
-        <Box display="flex" justifyContent="flex-end" width="40%">
+        <Box width={{ base:'100%' , sm:'100%' ,md:'40%' , lg:'40%' }} display="flex" justifyContent={{ base:'center', sm:'center' ,md:'flex-end',lg:'flex-end'  }}>
             {/* <Text fontSize="17px" display="flex" alignItems="center" width="30%">Sort by</Text> */}
             {/* <Select focusBorderColor="red.500" width="55%" mt={4} name="name" onChange={handleChangeForAlpha}>
                 <option  value=''>Sort by Alphabetically</option>

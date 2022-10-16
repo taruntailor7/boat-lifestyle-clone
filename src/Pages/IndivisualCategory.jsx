@@ -208,12 +208,12 @@ export const IndivisualCategory = () => {
     return (
         <Box mb={10}>
             <Box marginTop={{base:"-85px",sm:"-85px",md:"-85px",lg:"100px"}}>
-                <Image marginTop="90px" src={bannerImg}  />
+                <Image marginTop="90px" src={bannerImg}  /> 
             </Box>
             <Box width="95%" margin="auto" marginTop={{base:"10px",sm:"10px",md:"10px",lg:"30px"}}>
-                <Text fontWeight="500" fontSize={{base:"35px",sm:"35px",md:"45px",lg:"55px"}}>{heading}</Text>
-                <Box mt={8} display="flex" justifyContent="space-between" >
-                    <Filter handleFilter={handleFilter} /> 
+                <Text fontWeight="500" fontSize={{base:"30px",sm:"35px",md:"45px",lg:"55px"}}>{heading}</Text>
+                <Box width='100%' mt={8} display={{ base:'block' ,sm:'block' ,md:'flex' ,lg:'flex' }} justifyContent="space-between" >
+                    <Filter  handleFilter={handleFilter} /> 
                     <Sorting handleChangeForAlpha={handleChangeForAlpha} handleChangeForPrice={handleChangeForPrice} />
                     {/* <Box  display="flex" justifyContent="space-between" width="14%">
                             <Text fontSize="17px" display="flex" alignItems="center" width="30%">Sort by</Text>
@@ -224,9 +224,10 @@ export const IndivisualCategory = () => {
                             </Select>
                         </Box> */}
                     </Box>
-                <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(4, 1fr)"}} gap={6} marginTop={{base:"50px",sm:"25px",md:"30px",lg:"50px"}}>
+                <Grid width="100%" margin="auto"  gridAutoColumns= "minmax(270px,1fr)" gridAutoFlow={{ base:'column',sm:'column',md:'row',lg:'row' }} overflowX='auto'
+                templateColumns={{base:"repeat(auto-fill,minmax(300px,1fr))",   sm:"repeat(auto-fill,minmax(300px,1fr))", md:"repeat(3, 1fr)", lg:"repeat(4, 1fr)"}} gap={6} marginTop={{base:"50px",sm:"25px",md:"30px",lg:"50px"}}>
                     {updatedProducts.map((data)=>(
-                        <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
+                        <GridItem position='relative' key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
                         {data.isSuperSaver?<Button bg="#F7C20A" colorScheme="#F7C20A" color="black" position="absolute" px={1}> <AiFillThunderbolt /> Super Saver</Button>:""}
                         <Box width="100%" p={5}> 
                             <Image width="100%" src={data.image[0]} alt="img" />
