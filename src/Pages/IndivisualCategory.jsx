@@ -96,6 +96,7 @@ export const IndivisualCategory = () => {
     const addToCart = (product)=>{
      let prod = {
           cartId: product.id,
+          count:1,
           name: product.name,
           category: product.category,
           rating: product.rating,

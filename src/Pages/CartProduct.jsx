@@ -1,23 +1,16 @@
 import { Box, Image, Text,Button } from '@chakra-ui/react'
+// import { useEffect, useState } from 'react';
 import { BiPlus } from 'react-icons/bi'; 
 import { BiMinus } from 'react-icons/bi'; 
 import { MdOutlineDelete } from 'react-icons/md'; 
+// import { useSearchParams } from 'react-router-dom';
 
-export const CartProduct = ({getProducts,cartProduct}) => {
-    // const [deleteProd, setDeleteProd] = useState(0)
+export const CartProduct = ({handleDecrease,handleIncrease,cartProduct,handleDelete}) => {
 
-    const handleDelete = (id)=>{
-        console.log(id,"delete id")
-        console.log("delete called")
-        fetch(`http://localhost:3001/cart/${id}`,{
-            method: 'DELETE'
-        })
-        // getProducts();
-    }
 
     return (
         <>
-        {cartProduct.map((elem)=>(
+        {cartProduct.map((elem,index)=>(
             <Box width="100%" display="flex" bg="white" justifyContent="space-between" borderBottom="1px solid gray" p={3}>
                 <Box width="30%">
                     <Image width="80%" margin="auto"  src={elem.image[0]} />
@@ -30,16 +23,15 @@ export const CartProduct = ({getProducts,cartProduct}) => {
                     </Box>
                     <Box width="100%" height=""display="flex"  alignItems="center" justifyContent="space-between" mt={2} >
                         <Box display="flex" alignItems="center">
-                            <Text borderRadius="50%" p={1} bg="white" colorScheme="white" border="1px solid black" color="red"><BiMinus /></Text>
-                            <Text fontWeight="bold" mx={4}>1</Text>
-                            <Text borderRadius="50%" p={1} bg="white" colorScheme="white" border="1px solid black" color="red"><BiPlus /></Text>
+                            <Text onClick={()=>handleDecrease(elem.id,elem.cartId,elem.price,elem.count)} borderRadius="50%" p={1} bg="white" colorScheme="white" border="1px solid black" color="red"><BiMinus /></Text>
+                            <Text fontWeight="bold" mx={4}>{elem.count}</Text>
+                            <Text onClick={()=>handleIncrease(elem.id,elem.cartId,elem.price,elem.count)} borderRadius="50%" p={1} bg="white" colorScheme="white" border="1px solid black" color="red"><BiPlus /></Text>
                         </Box>
                         <Button height="30px" fontSize="12px" fontWeight="400" px={1}  bg="white" colorSheme="white" border="1px solid black">{elem.color[0]}</Button>
                         <Box>
-                        <MdOutlineDelete onClick={()=>handleDelete(elem.id)} color="black" fontSize="25px"/>
+                            <MdOutlineDelete onClick={()=>handleDelete(elem.id)} color="black" fontSize="25px"/>
                         </Box>
                     </Box>
-
                 </Box>
             </Box>
         ))

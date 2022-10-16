@@ -43,6 +43,69 @@ export const Cart = ({setCartVal}) => {
         onOpen();
     }
 
+    const handleDelete = (id)=>{
+        console.log(id,"delete id")
+        console.log("delete called")
+        fetch(`http://localhost:3001/cart/${id}`,{
+            method: 'DELETE'
+        })
+        // getProducts();
+    }
+
+    const handleIncrease = (id,cartId,ProductPrice,count) => {
+        let OrgPrice = 0;
+        let obj = {
+            price:0,
+            count:1,
+        }
+        fetch(`http://localhost:3001/mainProducts/${cartId}`)
+        .then(res=>res.json())
+        .then(res=>{
+            OrgPrice = res.price;
+            console.log(res.price,"rrr")
+            obj = {
+                price:ProductPrice+OrgPrice,
+                count:count+1
+            }
+        })
+       .then (()=>fetch(`http://localhost:3001/cart/${id}`,{
+            method: 'PATCH',
+            body: JSON.stringify(obj),
+            headers : {
+                'Content-Type': 'application/json'
+            }
+        }))
+    }
+    const handleDecrease = (id,cartId,ProductPrice,count) => {
+        if(count===1){
+            handleDelete(id);
+            return
+        }
+        let OrgPrice = 0;
+        let obj = {
+            price:0,
+            count:1,
+        }
+        fetch(`http://localhost:3001/mainProducts/${cartId}`)
+        .then(res=>res.json())
+        .then(res=>{
+            OrgPrice = res.price;
+            console.log(res.price,"rrr")
+            obj = {
+                price:ProductPrice-OrgPrice,
+                count:count-1
+            }
+        })
+       .then (()=>fetch(`http://localhost:3001/cart/${id}`,{
+            method: 'PATCH',
+            body: JSON.stringify(obj),
+            headers : {
+                'Content-Type': 'application/json'
+            }
+        }))
+    }
+
+
     return (
         <>
         <Text onClick={() => handleClick()}>
@@ -59,7 +122,7 @@ export const Cart = ({setCartVal}) => {
             cartItems!==0 ?
             <>
                 <DrawerBody  bg="#ececec" p={0} scrollbar-width="thin">
-                    <CartProduct getProducts={getProducts} cartProduct={cartProduct}/>
+                    <CartProduct  handleDecrease={handleDecrease} handleIncrease={handleIncrease}  cartProduct={cartProduct} handleDelete={handleDelete}/>
                 </DrawerBody>
                 <Box height="235px"p={5}>
                     <Box display="flex" justifyContent="space-between">
