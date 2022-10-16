@@ -9,6 +9,7 @@ import { AiOutlineSearch } from 'react-icons/ai'
 import { HiOutlineMenuAlt1 } from 'react-icons/hi'
 import { useMediaQuery } from '@chakra-ui/react'
 import Typed from 'react-typed'
+
 import {
   useDisclosure,
   MenuItem,
@@ -19,7 +20,7 @@ import {
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import { NavbarCategory } from "../Pages/NavbarCategory";
 import { Cart } from "../Pages/Cart";
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import { AuthContext } from '../AuthContextProvider/AuthContextProvider';
 
 const links = [
@@ -46,12 +47,21 @@ const activetStyle = {
 let userId = localStorage.getItem("userId")
 
 export const Navbar = () => {
+  const useType = useRef();
+
   const {handleLogout} = useContext(AuthContext);
 
   const [userState, setUserState] = useState({})
 
   const [isLargerThan1144] = useMediaQuery('(min-width: 1144px)')
   const { isOpen, onOpen, onClose } = useDisclosure()
+
+  const handleMouseTyped=()=>{
+    useType.current.typed.reset();
+    useType.current.typed.stop();
+  }
+
+
 
   useEffect(() =>{
     getUser();
@@ -122,12 +132,12 @@ export const Navbar = () => {
             </MenuList>
           </Menu>
         </HStack>
-        <HStack width="35%" spacing={6}  color="black"  display='flex' justifyContent="flex-end">
+        <HStack width="35%" spacing={6}  color="black"  display='flex' justifyContent="flex-end"  >
           <Box> 
             <InputGroup bg="#eaeaea" borderRadius="25px" variant="unstyled" width="300px" height="45px" padding="10px">
-              <Text fontSize='20px' ><AiOutlineSearch /></Text>
-             <Text fontSize='15px'   marginLeft='20px' pos='absolute' width='100%' > <Typed  strings={["Search Speakers","Search Neckbands","Search Smartwatches","Search Earphones"]}  typeSpeed={150} backSpeed={100} loop  /></Text>
-              <Input color="black" size='lg' />
+              <Text fontSize='25px' ><AiOutlineSearch /></Text>
+           <Typed  ref={useType} fontSize='15px'  strings={["Search Speakers","Search Neckbands","Search Smartwatches","Search Earphones"]}  typeSpeed={150} backSpeed={100}  loop   >
+             <Input type='text' variant='unstyled' color="black" size='lg' onClick={handleMouseTyped} /></Typed>
             </InputGroup>
           </Box>
           <Box>
