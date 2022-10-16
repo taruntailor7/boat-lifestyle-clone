@@ -8,7 +8,7 @@ export const Cart = ({setCartVal}) => {
     const [cartProduct, setCartProduct] = useState([])
     const [cartItems, setCartItems] = useState(0)
     const [cartTotal, setCartTotal] = useState(0)
-
+    
     let userId = localStorage.getItem("userId");
     const getProducts = ()=>{
         fetch(`http://localhost:3001/users/${userId}/cart`)
