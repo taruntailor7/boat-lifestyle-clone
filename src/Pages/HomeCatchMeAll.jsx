@@ -84,14 +84,14 @@ export const HomeCatchMeAll = () => {
         <Text fontSize="25px" fontWeight="500">CATCH'EM ALL</Text>
         <Tabs colorScheme="red" isFitted="true" variant="line"  mt={6}>
           <TabList>
-            <Tab fontSize={{base:"22px",sm:"10px",md:"18px",lg:"22px"}} fontWeight="500" color="#979696">New Launches</Tab>
-            <Tab fontSize={{base:"22px",sm:"10px",md:"18px",lg:"22px"}} fontWeight="500" color="#979696">Marvel products</Tab>
-            <Tab fontSize={{base:"22px",sm:"10px",md:"18px",lg:"22px"}} fontWeight="500" color="#979696">DC products</Tab>
+            <Tab fontSize={{base:"15px",sm:"15px",md:"18px",lg:"22px"}} fontWeight="500" color="#979696">New Launches</Tab>
+            <Tab fontSize={{base:"15px",sm:"15px",md:"18px",lg:"22px"}} fontWeight="500" color="#979696">Marvel products</Tab>
+            <Tab fontSize={{base:"15px",sm:"15px",md:"18px",lg:"22px"}} fontWeight="500" color="#979696">DC products</Tab>
           </TabList>
 
           <TabPanels>
             <TabPanel>
-              <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop={{base:"50px",sm:"25px",md:"30px",lg:"50px"}}>
+              <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop={{base:"20px",sm:"25px",md:"30px",lg:"50px"}}>
                 {first.map((data)=>(
                   <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
                     {data.isSuperSaver?<Button bg="#F7C20A" colorScheme="#F7C20A" color="black" position="absolute" px={1}> <AiFillThunderbolt /> Super Saver</Button>:""}
@@ -116,7 +116,7 @@ export const HomeCatchMeAll = () => {
               </Grid>
             </TabPanel>
             <TabPanel>
-                <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop={{base:"50px",sm:"25px",md:"30px",lg:"50px"}}>
+                <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop={{base:"20px",sm:"25px",md:"30px",lg:"50px"}}>
                   {second.map((data)=>(
                     <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
                       {data.isSuperSaver?<Button bg="#F7C20A" colorScheme="#F7C20A" color="black" position="absolute" px={1}> <AiFillThunderbolt /> Super Saver</Button>:""}
@@ -141,7 +141,7 @@ export const HomeCatchMeAll = () => {
                 </Grid>
               </TabPanel>
             <TabPanel>
-                <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop={{base:"50px",sm:"25px",md:"30px",lg:"50px"}}>
+                <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop={{base:"20px",sm:"25px",md:"30px",lg:"50px"}}>
                   {third.map((data)=>(
                     <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
                       {data.isSuperSaver?<Button bg="#F7C20A" colorScheme="#F7C20A" color="black" position="absolute" px={1}> <AiFillThunderbolt /> Super Saver</Button>:""}

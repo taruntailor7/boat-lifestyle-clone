@@ -878,6 +878,29 @@
       ],
       "userId": "2",
       "id": 35
+    },
+    {
+      "cartId": 29,
+      "name": "boAt Rockerz 333",
+      "category": "BLUETOOTH EARPHONES",
+      "rating": 4,
+      "reviews": 90,
+      "price": 1197,
+      "original_price": 3990,
+      "discount": 70,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img-R333-1_600x.png?v=1641801662",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img-R333_600x.png?v=1641801662",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main-img-R333-2_600x.png?v=1626336060"
+      ],
+      "color": [
+        "Active Black",
+        "Teal Green",
+        "Cherry Black"
+      ],
+      "userId": "2",
+      "id": 36
     }
   ],
   "shopByCategory": [
@@ -4218,7 +4241,6 @@
       ]
     }
   ],
-  
   "allProducts": [
     {
       "id": 1,
