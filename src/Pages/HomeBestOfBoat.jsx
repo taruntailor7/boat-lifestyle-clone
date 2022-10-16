@@ -89,7 +89,7 @@ export const HomeBestOfBoat = () => {
 
   return (
     <Box width="100%" margin="auto" marginTop={{base:"50px",sm:"20px",md:"30px",lg:"50px"}}>
-      <Text fontSize={{base:"25px",sm:"20px",md:"25px",lg:"25px"}} fontWeight="500">BEST OF boAt</Text>
+      <Text fontSize={{base:"25px",sm:"20px",md:"25px",lg:"45px"}} fontWeight="500">BEST OF boAt</Text>
       <Tabs colorScheme="red" isFitted="true"  mt={6}>
         <TabList>
           <Tab fontSize={{base:"12px",sm:"12px",md:"12px",lg:"22px"}} fontWeight="500" color="#979696">Best Sellers</Tab>

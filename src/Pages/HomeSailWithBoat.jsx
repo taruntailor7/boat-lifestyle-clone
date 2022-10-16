@@ -96,7 +96,7 @@ export const HomeSailWithBoat = () => {
 
   return (
     <Box width="100%" margin="auto" marginTop={{base:"20px",sm:"20px",md:"30px",lg:"50px"}}>
-      <Text fontSize={{base:"25px",sm:"25px",md:"25px",lg:"25px"}} fontWeight="500">SAIL WITH boAt</Text>
+      <Text fontSize={{base:"25px",sm:"25px",md:"25px",lg:"45px"}} fontWeight="500">SAIL WITH boAt</Text>
       <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop={{base:"25px",sm:"30px",md:"40px",lg:"60px"}}>
         {sailWithBoat.map((data)=>(
           <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >

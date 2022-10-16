@@ -8,7 +8,7 @@ export const CartProduct = ({cartProduct}) => {
   return (
     <>
     {cartProduct.map((elem)=>(
-        <Box width="100%" display="flex" justifyContent="space-between" borderBottom="1px solid gray" p={3}>
+        <Box width="100%" display="flex" bg="white" justifyContent="space-between" borderBottom="1px solid gray" p={3}>
             <Box width="30%">
                 <Image width="80%" margin="auto"  src={elem.image[0]} />
             </Box>

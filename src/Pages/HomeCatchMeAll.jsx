@@ -81,7 +81,7 @@ export const HomeCatchMeAll = () => {
 
     return (
       <Box width="100%" margin="auto" marginTop="40px" mb={10}>
-        <Text fontSize="25px" fontWeight="500">CATCH'EM ALL</Text>
+        <Text fontSize={{base:"25px",sm:"20px",md:"25px",lg:"45px"}} fontWeight="500">CATCH'EM ALL</Text>
         <Tabs colorScheme="red" isFitted="true" variant="line"  mt={6}>
           <TabList>
             <Tab fontSize={{base:"15px",sm:"15px",md:"18px",lg:"22px"}} fontWeight="500" color="#979696">New Launches</Tab>
