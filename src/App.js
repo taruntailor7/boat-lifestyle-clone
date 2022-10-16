@@ -1,6 +1,7 @@
 import "./App.css";
 import { AllRoutes } from "./Components/AllRoutes";
 import { Navbar } from "./Components/Navbar";
+import { Footer } from "./Pages/Footer";
 
 function App() {
   // let isAuth = localStorage.getItem('isAuth');
@@ -17,6 +18,7 @@ function App() {
     <div className="App">
       <Navbar />
       <AllRoutes />
+      <Footer />
     </div>
   );
 }

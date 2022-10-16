@@ -2,9 +2,15 @@ import { Box, Button, Grid, GridItem, Image, Text } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import { AiFillStar, AiFillThunderbolt } from 'react-icons/ai'
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
+import { useDispatch, useSelector } from 'react-redux';
+import { get_loading, get_suceess } from '../Redux App/action';
+import { Navigate } from 'react-router-dom'
+import { AddToCart } from './AddToCart'
 
 export const HomeCatchMeAll = () => {
     const [bestOfBoat, setBestOfBoat] = useState([]);
+    const { loading  }=useSelector((state)=>state)
+    const dispatch = useDispatch();
 
     const getData = ()=>{
         fetch(`http://localhost:3001/catchMeAll`)
@@ -26,23 +32,66 @@ export const HomeCatchMeAll = () => {
     useEffect(() =>{
         getData();
     },[])
+    let isAuth = localStorage.getItem('isAuth') || false;
+  let userId = localStorage.getItem("userId") || false;
+  
+
+  const addToCart = (product)=>{
+   let prod = {
+        cartId: product.id,
+        name: product.name,
+        category: product.category,
+        rating: product.rating,
+        reviews: product.reviews,
+        price: product.price,
+        original_price: product.original_price,
+        discount: product.discount,
+        isAvailable: product.isAvailable,
+        image: [
+          product.image[0],
+          product.image[1],
+          product.image[2]
+        ],
+        color: [
+          product.color[0],
+          product.color[1],
+          product.color[2]
+        ]
+      }
+    if(isAuth==="false"){
+      // alert("please login")
+      return <Navigate to='/login'/>
+    }
+    else{
+      dispatch(get_loading());
+      fetch(`http://localhost:3001/users/${userId}/cart`,{
+        method: 'POST',
+        body: JSON.stringify(prod),
+        headers : {
+            'content-type': 'application/json'
+        }
+      })
+      dispatch(get_suceess())
+
+    }
+  }
 
     // eslint-disable-next-line no-unused-vars
     let price = 0;
 
     return (
-        <Box width="100%" margin="auto" marginTop="40px">
+      <Box width="100%" margin="auto" marginTop="40px" mb={10}>
         <Text fontSize="25px" fontWeight="500">CATCH'EM ALL</Text>
         <Tabs colorScheme="red" isFitted="true" variant="line"  mt={6}>
           <TabList>
-            <Tab fontSize="22px" fontWeight="500" color="#979696">New Launches</Tab>
-            <Tab fontSize="22px" fontWeight="500" color="#979696">Marvel products</Tab>
-            <Tab fontSize="22px" fontWeight="500" color="#979696">DC products</Tab>
+            <Tab fontSize={{base:"22px",sm:"10px",md:"18px",lg:"22px"}} fontWeight="500" color="#979696">New Launches</Tab>
+            <Tab fontSize={{base:"22px",sm:"10px",md:"18px",lg:"22px"}} fontWeight="500" color="#979696">Marvel products</Tab>
+            <Tab fontSize={{base:"22px",sm:"10px",md:"18px",lg:"22px"}} fontWeight="500" color="#979696">DC products</Tab>
           </TabList>
 
           <TabPanels>
             <TabPanel>
-              <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop="50px">
+              <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop={{base:"50px",sm:"25px",md:"30px",lg:"50px"}}>
                 {first.map((data)=>(
                   <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
                     {data.isSuperSaver?<Button bg="#F7C20A" colorScheme="#F7C20A" color="black" position="absolute" px={1}> <AiFillThunderbolt /> Super Saver</Button>:""}
@@ -58,8 +107,8 @@ export const HomeCatchMeAll = () => {
                         <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                       </Box>
                       <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
-                      <Button w="100%" colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
-                        ADD TO CART
+                      <Button isLoading={loading} w="100%" onClick={()=>addToCart(data)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
+                        <AddToCart />
                       </Button>
                     </Box>
                   </GridItem>
@@ -67,7 +116,7 @@ export const HomeCatchMeAll = () => {
               </Grid>
             </TabPanel>
             <TabPanel>
-                <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop="60px">
+                <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop={{base:"50px",sm:"25px",md:"30px",lg:"50px"}}>
                   {second.map((data)=>(
                     <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
                       {data.isSuperSaver?<Button bg="#F7C20A" colorScheme="#F7C20A" color="black" position="absolute" px={1}> <AiFillThunderbolt /> Super Saver</Button>:""}
@@ -83,8 +132,8 @@ export const HomeCatchMeAll = () => {
                           <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                         </Box>
                         <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
-                        <Button w="100%" colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
-                          ADD TO CART
+                        <Button isLoading={loading} w="100%" onClick={()=>addToCart(data)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
+                          <AddToCart />
                         </Button>
                       </Box>
                     </GridItem>
@@ -92,7 +141,7 @@ export const HomeCatchMeAll = () => {
                 </Grid>
               </TabPanel>
             <TabPanel>
-                <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop="60px">
+                <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop={{base:"50px",sm:"25px",md:"30px",lg:"50px"}}>
                   {third.map((data)=>(
                     <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
                       {data.isSuperSaver?<Button bg="#F7C20A" colorScheme="#F7C20A" color="black" position="absolute" px={1}> <AiFillThunderbolt /> Super Saver</Button>:""}
@@ -108,8 +157,8 @@ export const HomeCatchMeAll = () => {
                           <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                         </Box>
                         <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
-                        <Button w="100%" colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
-                          ADD TO CART
+                        <Button isLoading={loading} w="100%" onClick={()=>addToCart(data)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
+                          <AddToCart />
                         </Button>
                       </Box>
                     </GridItem>

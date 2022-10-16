@@ -8,6 +8,10 @@ import { AiFillStar, AiFillThunderbolt } from 'react-icons/ai';
 import { useParams, useSearchParams } from 'react-router-dom';
 import { Filter } from './Filter';
 import { Sorting } from './Sorting';
+import { AddToCart } from './AddToCart'
+import { useDispatch, useSelector } from 'react-redux';
+import { get_loading, get_suceess } from '../Redux App/action';
+import { Navigate } from 'react-router-dom'
 
 export const IndivisualCategory = () => {
     const [bannerImg, setBannerImg] = useState("")
@@ -24,9 +28,12 @@ export const IndivisualCategory = () => {
     const [minValue, setMinValue] = useState(searchParam.get("minValue"))
     const [maxValue, setMaxValue] = useState(searchParam.get("maxValue"))
 
+    const { loading  }=useSelector((state)=>state)
+    const dispatch = useDispatch();
 
     const {url} = useParams();
     const {id} = useParams();
+
     let fetchUrl = "http://localhost:3001/shopByCategory"
     if(url==="true-wireless-earbuds"){
         fetchUrl = "http://localhost:3001/airdopesTrueWireless"
@@ -67,9 +74,9 @@ export const IndivisualCategory = () => {
 
     // http://localhost:3001/allProducts?original_price_gte=3000&original_price_lte=5000
 
-    const getData = ({_sort, _order, original_price_gte, original_price_lte  }) => {
+    const getData = ({_sort, _order, price_gte, price_lte  }) => {
         Axios.get(fetchUrl, {
-            params: { _sort, _order, original_price_gte, original_price_lte}
+            params: { _sort, _order, price_gte, price_lte}
         })
         .then((res) =>{
             setProducts(res.data)
@@ -77,8 +84,54 @@ export const IndivisualCategory = () => {
             setHeading(res.data[1].heading)
         });
     };
-    // setBannerImg(products[0].bannerImg)
-    // setHeading(products[1].heading)
+    const updatedProducts = products.filter((elem)=>{
+        return elem.id !==1001 && elem.id !==1002;
+    })
+    // console.log(updatedProducts)
+
+    let isAuth = localStorage.getItem('isAuth') || false;
+    let userId = localStorage.getItem("userId") || false;
+    
+  
+    const addToCart = (product)=>{
+     let prod = {
+          cartId: product.id,
+          name: product.name,
+          category: product.category,
+          rating: product.rating,
+          reviews: product.reviews,
+          price: product.price,
+          original_price: product.original_price,
+          discount: product.discount,
+          isAvailable: product.isAvailable,
+          image: [
+            product.image[0],
+            product.image[1],
+            product.image[2]
+          ],
+          color: [
+            product.color[0],
+            product.color[1],
+            product.color[2]
+          ]
+        }
+      if(isAuth==="false"){
+        // alert("please login")
+        return <Navigate to='/login'/>
+      }
+      else{
+        dispatch(get_loading());
+        fetch(`http://localhost:3001/users/${userId}/cart`,{
+          method: 'POST',
+          body: JSON.stringify(prod),
+          headers : {
+              'content-type': 'application/json'
+          }
+        })
+        dispatch(get_suceess())
+  
+      }
+    }
 
     const handleChangeForAlpha = (e) => {
         setSortByAlpha(e.target.value)
@@ -92,8 +145,8 @@ export const IndivisualCategory = () => {
     const handleFilter = (sliderValue)=>{
         setMinValue(sliderValue[0]);
         setMaxValue(sliderValue[1]);
-        console.log(sliderValue);
-     }
+        // console.log(sliderValue);
+    }
  
  
     // const getData = ()=>{
@@ -107,18 +160,13 @@ export const IndivisualCategory = () => {
     //     .catch(err=>console.log(err))
     // }
 
-    const updatedProducts = products.filter((elem)=>{
-        return elem.id !==1001 && elem.id !==1002;
-    })
-    // console.log(updatedProducts)
-
     useEffect(()=>{
         if(minValue!=="" && maxValue!=="" && sortByPrice !== "" ){
            getData({
                _sort : sortByPriceName,
                _order : sortByPrice,
-               original_price_gte:minValue,
-               original_price_lte:maxValue
+               price_gte:minValue,
+               price_lte:maxValue
            });
         }
         // else if(sortByAlpha !== ""){
@@ -131,24 +179,24 @@ export const IndivisualCategory = () => {
             getData({
              __sort : sortByPriceName,
              _order : sortByPrice,
-             original_price_gte:399,
-             original_price_lte:10000
+             price_gte:399,
+             price_lte:10000
             });
         }
         else if(minValue!=="" && maxValue!=="" ){
             getData({
                 _sort:"",
                 _order:"",
-                original_price_gte:minValue,
-                original_price_lte:maxValue
+                price_gte:minValue,
+                price_lte:maxValue
             });
         }
         else{
             getData({
                 _sort:"",
                 _order:"",
-                original_price_gte:399,
-                original_price_lte:10000
+                price_gte:399,
+                price_lte:10000
             });
         }
         setSearchParam({sortByPrice, sortByPriceName,minValue,maxValue})
@@ -158,7 +206,7 @@ export const IndivisualCategory = () => {
     let price = 0;
     
     return (
-        <Box>
+        <Box mb={10}>
             <Box>
                 <Image marginTop="90px" src={bannerImg}  />
             </Box>
@@ -192,8 +240,8 @@ export const IndivisualCategory = () => {
                             <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                         </Box>
                         <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
-                        <Button w="100%" colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
-                            ADD TO CART
+                        <Button isLoading={loading} w="100%" onClick={()=>addToCart(data)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
+                            <AddToCart />
                         </Button>
                         </Box>
                     </GridItem>

@@ -4,13 +4,13 @@ import React from 'react'
 export const Sorting = ({handleChangeForAlpha,handleChangeForPrice}) => {
 
     return (
-        <Box display="flex" justifyContent="space-between" width="40%">
+        <Box display="flex" justifyContent="flex-end" width="40%">
             {/* <Text fontSize="17px" display="flex" alignItems="center" width="30%">Sort by</Text> */}
-            <Select focusBorderColor="red.500" width="55%" mt={4} name="name" onChange={handleChangeForAlpha}>
+            {/* <Select focusBorderColor="red.500" width="55%" mt={4} name="name" onChange={handleChangeForAlpha}>
                 <option  value=''>Sort by Alphabetically</option>
                 <option value='ASC'>Alphabetically, A-Z</option>
                 <option value='DESC'>Alphabetically, Z-A</option>
-            </Select>
+            </Select> */}
             <Select focusBorderColor="red.500"  width="55%" mt={4} name="price" onChange={handleChangeForPrice}>
                 <option  value=''>Sort by Price</option>
                 <option value='ASC'>Price, low to high</option>

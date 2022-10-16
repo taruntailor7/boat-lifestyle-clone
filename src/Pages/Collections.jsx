@@ -20,9 +20,9 @@ export const Collections = () => {
     const filtered = categoryData.filter((cat)=>{
       return cat.id !== 12
     })
-
+    
     return (
-      <Box width="95%" margin="auto" marginTop="100px">
+      <Box width="95%" margin="auto" marginTop="100px" mb={10}>
         <Text fontSize="60px" textAlign="center">Collections</Text>
         <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(6, 1fr)"}} gap={10} marginTop="50px">
             {filtered.map((cat)=>(

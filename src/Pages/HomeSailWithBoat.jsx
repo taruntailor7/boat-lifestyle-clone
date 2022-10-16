@@ -32,7 +32,10 @@ export const HomeSailWithBoat = () => {
   },[])
   let isAuth = localStorage.getItem('isAuth') || false;
   let userId = localStorage.getItem("userId") || false;
-  
+
+  if(loading){
+    return <Image src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/preloader_50x.gif?v=1649585765"/>
+  }
 
   const addToCart = (product)=>{
    let prod = {
@@ -70,7 +73,6 @@ export const HomeSailWithBoat = () => {
         }
       })
       dispatch(get_suceess())
-
     }
   }
 
@@ -88,14 +90,14 @@ export const HomeSailWithBoat = () => {
   // {base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}
 
   if(loading){
-    return <h1>Loading...</h1>
+    return <Image src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/preloader_50x.gif?v=1649585765"/>
   }
-  console.log(loading,"loading...");
+  // console.log(loading,"loading...");
 
   return (
-    <Box width="100%" margin="auto" marginTop="50px">
-      <Text fontSize="25px" fontWeight="500">SAIL WITH boAt</Text>
-      <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop="60px">
+    <Box width="100%" margin="auto" marginTop={{base:"50px",sm:"20px",md:"30px",lg:"50px"}}>
+      <Text fontSize={{base:"25px",sm:"20px",md:"25px",lg:"25px"}} fontWeight="500">SAIL WITH boAt</Text>
+      <Grid width="100%" margin="auto" templateColumns={{base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}} gap={6} marginTop={{base:"60px",sm:"30px",md:"40px",lg:"60px"}}>
         {sailWithBoat.map((data)=>(
           <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
             {data.isSuperSaver?<Button bg="#F7C20A" colorScheme="#F7C20A" color="black" position="absolute" px={1}> <AiFillThunderbolt /> Super Saver</Button>:""}

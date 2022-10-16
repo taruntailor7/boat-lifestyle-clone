@@ -55,14 +55,16 @@ const responsive = {
 export const Home = () => {
 
   return (
-    <Box width="95%" margin="auto" marginTop="60px" zIndex="-1">
-        <OwlCarousel {...responsive} className="owl-theme" >
-        {images.map((img)=>(
-            <Box key={img} className='hover-underline-banner' width="100%" margin="auto" mt={10} >
-                <Image w="100%"  src={img} />
-            </Box>
-        ))}
-        </OwlCarousel>
+    <Box width="95%" margin="auto" marginTop="40px" zIndex="-1">
+        <Box border="1px solid black" width="100%" marginTop={{base:"40px",sm:"-300px", md:"-95px",lg:"40px"}}>
+            <OwlCarousel {...responsive} className="owl-theme" >
+            {images.map((img)=>(
+                <Box key={img} className='hover-underline-banner' width="100%" margin="auto" mt={10} >
+                    <Image w="100%"  src={img} />
+                </Box>
+            ))}
+            </OwlCarousel>
+        </Box>
         <HomeSailWithBoat />
         <ShopByCategory />
         <SlidingImages />
