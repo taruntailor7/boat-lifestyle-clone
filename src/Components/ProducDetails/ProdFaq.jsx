@@ -10,7 +10,7 @@ import React from "react";
 
 const ProdFaq = ({ question, ans }) => {
   return (
-    <AccordionItem>
+    <AccordionItem ml={[20, 20, 0, 0]}>
       <h2>
         <AccordionButton>
           <Box flex="1" textAlign="left" fontWeight="700">

@@ -50,7 +50,7 @@ const PaymetDrawer = ({ isOpen, onClose, btnRef }) => {
           <Text color="black" fontWeight="700">
             Total:
           </Text>
-          <Text color="red" fontWeight="700" mr={5}>
+          <Text color="red" fontWeight="700">
             Rs. 1,799.00
           </Text>
         </HStack>

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const ProdImages = ({ imgesData, img, setImge }) => {
   // console.log({ imgesData, bgColor, img });
   return (
-    <Box ml={[15, 50, "10%", 1]} pl={5} h={625} w={550} float="left">
+    <Box ml={[15, 50, "10%", 1]} pl={5} h={625} float="left">
       <Flex mt={10}>
         <VStack align="left" pl={2} mr={5} cursor="pointer">
           {imgesData.map(({ img }) => (

@@ -123,11 +123,21 @@ const ProductDisc = () => {
 
   return (
     <>
-      <HStack w="full" h="70px" spacing="1%" justifyContent="space-between">
+      <HStack
+        // border="1px"
+        // w="full"
+        w={["550px", "420px", "full", "full"]}
+        h="70px"
+        spacing="1%"
+        mt={[10, 10, 0, 0]}
+        justifyContent="space-between"
+      >
         {svg.map((item) => (
           <Flex direction={["column", "column", "row", "row"]}>
             <Image src={item.src} w="50px" h="50px"></Image>
-            <Text mt={2}>{item.text}</Text>
+            <Text mt={2} mr={2} textAlign="center">
+              {item.text}
+            </Text>
           </Flex>
         ))}
       </HStack>
@@ -145,7 +155,7 @@ const ProductDisc = () => {
             FAQs
           </Text>
         </Box>
-        <Accordion allowToggle w={["400px", "500px", "600px", "900px"]}>
+        <Accordion allowToggle w={["400px", "300px", "600px", "900px"]}>
           {faqs.map((items) => (
             <ProdFaq ans={items.ans} question={items.question} />
           ))}
@@ -153,7 +163,7 @@ const ProductDisc = () => {
       </VStack>
       <hr />
       <BottomNav />
-      <VStack w="full" h="700px" mt={5}>
+      <VStack w="full" h="700px" mt={[28, 28, 5, 5]}>
         <Box w={["300px", "400px", "600px", "900px"]}>
           <Text fontSize="30px" fontWeight="800" textAlign="left">
             what boAtheads are saying:

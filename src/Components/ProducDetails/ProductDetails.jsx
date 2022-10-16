@@ -1,7 +1,7 @@
 // import { Input } from "@chakra-ui/react";
 import { Box, Flex, HStack, Image, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
-// import { Navbar } from "../Navbar";
+
 import ProdImages from "./ProdImages";
 import ProdName from "./ProdName";
 import ProductDisc from "./ProductDisc";
@@ -43,9 +43,8 @@ const ProductDetails = () => {
       {/* <Navbar /> */}
       <Box w="full" h="auto">
         <Flex
-          w="full"
+          w={["550px", "420px", "full", "full"]}
           direction={["column", "column", "column", "row"]}
-          // border="1px"
           bg="#F5F5F5"
         >
           <Box
@@ -61,7 +60,7 @@ const ProductDetails = () => {
               setImge={setImge}
             />
           </Box>
-          <Box h={625}>
+          <Box h={625} w={["550px", "420px", "full", "full"]}>
             <ProdName bgColor={bgColor} colors={colors} setImge={setImge} />
           </Box>
         </Flex>
