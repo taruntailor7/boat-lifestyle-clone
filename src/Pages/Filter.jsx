@@ -32,14 +32,14 @@ export const Filter = ({handleFilter}) => {
     
 
     return (
-       <Box >
+       <Box   textAlign={{ base:'center' , sm:'center' ,md:"left" ,lg:"left" }} >
         {sizes.map((size) => (
-            <Button
+            <Button 
               onClick={() => handleClick(size)}
               key={size}
               m={4}
               
-            ><BsFilterLeft fontSize="40px" />Show filters </Button>
+            ><BsFilterLeft  fontSize="40px" />Show filters </Button>
           ))}
 
       <Drawer placement="left" onClose={onClose} isOpen={isOpen} size={size}>
