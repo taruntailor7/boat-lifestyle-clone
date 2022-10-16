@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import LabTabs from "./Tabs"
 import SimpleAccordion from "./Right_box"
+import "../styles/modal.css"
 const style = {
   position: 'absolute' ,
   top: '50%',
@@ -33,11 +34,11 @@ export default function BasicModal() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box sx={style} className="main_box">
         
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-          <Box style={{display:"flex",justifyContent:"space-around"}}>
-            <Box style={{width:"60%"}}>
+          <Box className='parent_box' >
+            <Box  style={{width:"60%"}}>
                 <Box><img style={{width:"60px"}} src="http://cdn.shopify.com/s/files/1/0057/8938/4802/files/Boat-Logo_2_256x256_7343fcda-46a7-4e67-885d-1ad75a441106.png?v=1647426867" alt="logo"/></Box>
                 <Box >
                     <LabTabs/>

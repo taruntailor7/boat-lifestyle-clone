@@ -17,31 +17,15 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function DirectionStack() {
   return (
     <div>
-      <Stack direction="row" spacing={2} height={90}>
-        <Item>
-            <Box style={{display:"flex"}}>
-              <Box>
-                <p>₹1200</p>
-                <h5>Pay via UPI</h5>
-
-              </Box>
-              <Box>
-    <GroupAvatars/>
-              </Box>
-            </Box>
-        </Item>
-        <Item>
-             <Box style={{display:"flex"}}>
-              <Box>
-                <p>₹1200</p>
-                <h5>Pay via Card</h5>
-
-              </Box>
-              <Box>
+      <Stack direction="row" spacing={2} height={60}>
+         <Box style={{display:"flex",gap:"10px",TextAlign:"center",width:"440px",justifyContent:"space-around",alignItems:"center"}}>
+           <h1>Enter card details</h1 >
+           <GroupAvatar2/>
+           </Box>
+        {/* <Item>
               <GroupAvatar2/>
-              </Box>
-            </Box>
-            </Item>
+           
+            </Item> */}
       
       </Stack>
     </div>

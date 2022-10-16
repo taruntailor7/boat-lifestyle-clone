@@ -24,8 +24,19 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography >
-           <Box >
-            <Box style={{display:"flex",gap:"40px",overflowY:"scroll",height:"90px"}}>
+           <Box style={{overflowY:"scroll",height:"100px"}}>
+            <Box style={{display:"flex",gap:"40px",height:"90px"}}>
+            <img style={{width:"50px",height:"70px"}} src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_e0d541c5-72de-4f54-a19b-1c324082742a.png?v=1654195093"/>
+            <Box className="order_summary_detail">
+            <h6>boAt Rockerz 260-Electronics</h6>
+            <h6>Quantity:1</h6>
+            <h6>Price:₹1600</h6>
+            
+            </Box>
+
+            
+            </Box>
+            <Box style={{display:"flex",gap:"40px",height:"90px",}}>
             <img style={{width:"50px",height:"70px"}} src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_e0d541c5-72de-4f54-a19b-1c324082742a.png?v=1654195093"/>
             <Box className="order_summary_detail">
             <h6>boAt Rockerz 260-Electronics</h6>
@@ -33,6 +44,7 @@ export default function SimpleAccordion() {
             <h6>Price:₹1600</h6>
             </Box>
             </Box>
+            
             
             </Box>
             <Box>
@@ -53,10 +65,7 @@ export default function SimpleAccordion() {
             <Box style={{display:"flex",justifyContent:"space-between"}}>
                 <h3>To Pay</h3>
                 <h3>₹1900</h3>
-            </Box>
-          
-
-          </Typography>
+            </Box> </Typography>
         
      </AccordionDetails>
      </Accordion>
