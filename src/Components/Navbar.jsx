@@ -166,17 +166,19 @@ export const Navbar = () => {
                     <FaUserAlt color="black" fontSize="20px" />
                     </MenuButton>
                     <MenuList mt={6} colorScheme="white" bg="white">
-                      <MenuItem _focus={{bg:"white"}} >
-                        <Text color="red">Hi User!</Text>
-                      </MenuItem>
+                        <MenuItem _focus={{bg:"white"}} >
+                          <Text color="red">Hi User!</Text>
+                        </MenuItem>
                         <NavLink to="/orders">
                           <MenuItem _focus={{bg:"white"}} >
                               <Text color="black">Manage Your Order</Text>
                           </MenuItem>
                         </NavLink>
-                      <MenuItem _focus={{bg:"white"}} >
-                        <Text color="black">Account</Text>
-                      </MenuItem>
+                        {/* <NavLink to="/account"> */}
+                          <MenuItem _focus={{bg:"white"}} >
+                            <Text color="black">Account</Text>
+                          </MenuItem>
+                        {/* </NavLink> */}
                       <MenuItem  _focus={{bg:"white"}} >
                         <Box textAlign="center" p={2} onClick={handleLogout}  width="100%" colorScheme="#ea2127" bg="#ea2127" color="white"><Text color="white">Logout</Text></Box>
                       </MenuItem>

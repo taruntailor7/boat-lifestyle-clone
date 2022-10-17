@@ -11,8 +11,8 @@ import SignUpPage from "../Pages/Signup";
 import { NotFound } from "../Pages/NotFound";
 import { AllProducts } from "../Pages/AllProducts";
 import { Orders } from "../Pages/Orders";
-import ProductDetails from "../ProducDetails/ProductDetails";
 import AccountPage from "../Pages/AccountPage";
+// import ProductDetails from "../ProducDetails/ProductDetails";
 
 
 

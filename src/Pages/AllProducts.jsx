@@ -43,7 +43,9 @@ export const AllProducts = () => {
         .then((res) =>{
             setProducts(res.data)
             dispatch(get_suceess())
-        });
+        })
+        .catch((err)=>console.log(err))
+        // dispatch(get_suceess())
     };
 
     let userId = localStorage.getItem("userId");
@@ -160,12 +162,10 @@ export const AllProducts = () => {
     },[products,sortByPrice,sortByPriceName,minValue,maxValue])
 
 
-
     return (
         <Box mb={10}>
             <Box width="95%" margin="auto" marginTop="120px">
-                <Text fontWeight="500" fontSize="55px">All Products</Text>
-
+                <Text fontWeight="500"fontSize={{base:"30px",sm:"35px",md:"45px",lg:"55px"}}>Products</Text>
                 <Box mt={8} display="flex" justifyContent="space-between" >
                     <Filter handleFilter={handleFilter} /> 
                     <Sorting handleChangeForPrice={handleChangeForPrice} />

@@ -3,8 +3,8 @@ import React, {useState } from 'react'
 import { useEffect } from 'react'
 import {AiFillStar, AiFillThunderbolt} from 'react-icons/ai'
 import { AddToCart } from './AddToCart'
-import { useDispatch, useSelector } from 'react-redux';
-import { get_loading, get_suceess } from '../Redux App/action';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { get_loading, get_suceess } from '../Redux App/action';
 import { Navigate } from 'react-router-dom'
 import { 
   AlertDialog, 
@@ -18,21 +18,22 @@ import {
 
 export const HomeSailWithBoat = () => {
   const [sailWithBoat, setSailWithBoat] = useState([]);
-  const { loading  }=useSelector((state)=>state)
-  const dispatch = useDispatch();
+  // const { loading  }=useSelector((state)=>state)
+  // const dispatch = useDispatch();
   const [cartProduct, setCartProduct] = useState([])
   const { isOpen, onOpen, onClose } = useDisclosure()
 
 
   const getData = ()=>{
-    dispatch(get_loading());
+    // dispatch(get_loading());
     fetch(`http://localhost:3001/sailWithBoatOnHome`)
     .then((res)=>res.json())
     .then((res)=>{
       setSailWithBoat(res)
-      dispatch(get_suceess())
+      // dispatch(get_suceess())
     })
     .catch((err)=>console.log(err))
+    // dispatch(get_suceess())
   }
 
   let userId = localStorage.getItem("userId");
@@ -43,6 +44,7 @@ export const HomeSailWithBoat = () => {
           setCartProduct(res)
       })
       .catch(err=>console.log(err))
+      // dispatch(get_suceess())
   }
   
   useEffect(() =>{
@@ -61,9 +63,9 @@ export const HomeSailWithBoat = () => {
   //   }
   // }
 
-  if(loading){
-    return <Image src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/preloader_50x.gif?v=1649585765"/>
-  }
+  // if(loading){
+  //   return <Image src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/preloader_50x.gif?v=1649585765"/>
+  // }
 
   const addToCart = (product,id)=>{
       getProducts();
@@ -129,9 +131,9 @@ export const HomeSailWithBoat = () => {
   // const theme = extendTheme({ breakpoints,mdlg:'50em'})
   // {base:"repeat(1, 1fr)", sm:"repeat(2, 1fr)", md:"repeat(3, 1fr)", lg:"repeat(5, 1fr)"}
 
-  if(loading){
-    return <Image src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/preloader_50x.gif?v=1649585765"/>
-  }
+  // if(loading){
+  //   return <Image src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/preloader_50x.gif?v=1649585765"/>
+  // }
   // console.log(loading,"loading...");
 
   return (

@@ -75,7 +75,57 @@
   ],
   "cart": [
     {
-      "cartId": 28,
+      "cartId": 6,
+      "count": 1,
+      "name": "boAt Watch Flash",
+      "category": "SMART WATCHES",
+      "rating": 4.8,
+      "reviews": 43,
+      "price": 2517,
+      "original_price": 6990,
+      "discount": 64,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/9e5b8bf2-29bf-4e1c-b24f-f8f4196ac14b_600x.png?v=1625157764",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/9da7e1ae-89f2-42c4-9714-76ac5ec83817_600x.png?v=1625045743",
+        null
+      ],
+      "color": [
+        "Red",
+        "Blue",
+        null
+      ],
+      "userId": "1",
+      "id": 1
+    }
+  ],
+  "orders": [
+    {
+      "cartId": 1,
+      "count": 1,
+      "name": "Airdopes 121 v2",
+      "category": "WIRELESS EARBUDS",
+      "rating": 4.8,
+      "reviews": 915,
+      "price": 1998,
+      "original_price": 2999,
+      "discount": 67,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/cream_600x.png?v=1642405569",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/cream_600x.png?v=1642405569",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_600x.png?v=1642405569"
+      ],
+      "color": [
+        "Lightpink",
+        "Black",
+        "CrimsonCream"
+      ],
+      "userId": "1",
+      "id": 1
+    },
+    {
+      "cartId": 5,
       "count": 1,
       "name": "boAt Watch Wave Pro",
       "category": "SMART WATCHES",
@@ -96,35 +146,10 @@
         "Maroon"
       ],
       "userId": "1",
-      "id": 1
+      "id": 2
     }
   ],
-  "orders": [
-    {
-      "cartId": 1,
-      "count": 1,
-      "name": "boAt Airdopes 131 - Wireless",
-      "category": "WIRELESS EARBUDS",
-      "rating": 4.8,
-      "reviews": 915,
-      "price": 987,
-      "original_price": 2990,
-      "discount": 67,
-      "isAvailable": true,
-      "image": [
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/32011675-2ad8-4b99-9787-895caf201d28_600x.png?v=1642405569",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/cream_600x.png?v=1642405569",
-        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/c2386af9-4349-432f-8ba5-2b6aa06025c8_600x.png?v=1642405569"
-      ],
-      "color": [
-        "Lightpink",
-        "Black",
-        "CrimsonCream"
-      ],
-      "userId": "2",
-      "id": 1
-    }
-  ],
+  "adress": [],
   "shopByCategory": [
     {
       "id": 1,

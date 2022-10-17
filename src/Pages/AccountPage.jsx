@@ -1,5 +1,5 @@
 import { Box , Drawer,Button, DrawerBody,Input,
-DrawerFooter,useDisclosure,useToast,  Menu, MenuButton,   MenuList,   MenuItem, DrawerHeader, DrawerOverlay, DrawerContent,  DrawerCloseButton, Select, Text, Grid, GridItem, InputGroup, InputRightElement, Stack, Image} from '@chakra-ui/react';
+DrawerFooter,useDisclosure,useToast, DrawerHeader, DrawerOverlay, DrawerContent,  DrawerCloseButton, Select, Text, Grid, GridItem, InputGroup, InputRightElement, Stack, Image} from '@chakra-ui/react';
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 import { get_error, get_loading, get_suceess } from '../Redux App/action';
@@ -171,7 +171,7 @@ export default function AccountPage() {
         <Box textAlign='center' ><Text  marginBottom='30px' fontSize='25px' className='hover-underline-animation'> Adresses </Text></Box>  
         <Grid   gridTemplateColumns={{ base:"repeat(1,1fr)", sm:"repeat(1,1fr)" ,md:"repeat(3,1fr)",lg:"repeat(3,1fr)" }}>
             {userAdress.map((elem)=>(
-              <GridItem p={3} border='1px solid #c7c7c7' >
+              <GridItem key={elem.id} p={3} border='1px solid #c7c7c7' >
                <Stack>
                <Text>{elem.street}</Text>
                 <Text>Post Office: {elem.Post_Office}</Text>

@@ -33,6 +33,7 @@ export const SailWithBoat = () => {
       dispatch(get_suceess())
     })
     .catch((err)=>console.log(err))
+    // dispatch(get_suceess())
   }
 
   let userId = localStorage.getItem("userId");
@@ -108,7 +109,7 @@ export const SailWithBoat = () => {
 
   return (
     <Box width="95%" margin="auto" marginTop="50px">
-      <Text fontSize="45px" fontWeight="500" marginTop="100px">SAIL WITH boAt</Text>
+      <Text fontSize={{base:"30px",sm:"35px",md:"45px",lg:"55px"}} fontWeight="500" marginTop="100px">SAIL WITH boAt</Text>
       <Grid width="100%"  overflowX='auto' gridAutoColumns= "minmax(300px,1fr) " gridAutoFlow={{ base:'column',sm:'column',md:'row',lg:'row' }} margin="auto" templateColumns={{base:"repeat(auto-fill,minmax(300px,1fr))", sm:"repeat(auto-fill,minmax(300px,1fr))", md:"repeat(3, 1fr)", lg:"repeat(4, 1fr)"}} gap={6} marginTop="60px">
         {sailWithBoat.map((data)=>(
           <GridItem key={data.id} w='100%' bg='#e3e3e3' borderRadius="10px" p={2} >
@@ -125,7 +126,7 @@ export const SailWithBoat = () => {
                 <Text as="s" ml={2}> ₹ {data.original_price}</Text>
               </Box>
               <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
-              <Button isLoading={loading} w="100%" onClick={()=>addToCart(data,data.id)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
+              <Button w="100%" onClick={()=>addToCart(data,data.id)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
                 <AddToCart />
               </Button>
             </Box>

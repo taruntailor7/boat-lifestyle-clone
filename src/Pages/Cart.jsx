@@ -1,23 +1,30 @@
 import {Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Text, useDisclosure } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import { FaShoppingCart } from 'react-icons/fa'
+import { NavLink } from 'react-router-dom'
 import { MainModal } from '../payment_page1/Main_Modal'
 import { CartProduct } from './CartProduct'
+import { useDispatch, useSelector } from 'react-redux';
+import { get_loading, get_suceess } from '../Redux App/action';
 
 export const Cart = ({setCartVal}) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [cartProduct, setCartProduct] = useState([])
     const [cartItems, setCartItems] = useState(0)
     const [cartTotal, setCartTotal] = useState(0)
+    const { loading  }=useSelector((state)=>state)
+    const dispatch = useDispatch();
     
     let userId = localStorage.getItem("userId");
     const getProducts = ()=>{
+        // dispatch(get_loading());
         fetch(`http://localhost:3001/users/${userId}/cart`)
         .then(res=>res.json())
         .then(res=>{
             setCartProduct(res)
             setCartItems(res.length)
             setCartVal(res.length)
+            // dispatch(get_suceess())
         })
         .catch(err=>console.log(err))
     }
@@ -45,8 +52,6 @@ export const Cart = ({setCartVal}) => {
     }
 
     const handleDelete = (id)=>{
-        // console.log(id,"delete id")
-        // console.log("delete called")
         fetch(`http://localhost:3001/cart/${id}`,{
             method: 'DELETE'
         })
@@ -180,16 +185,20 @@ export const Cart = ({setCartVal}) => {
                     </Box>
                     {/* onClick={()=>handleOrders()} */}
                     <MainModal />
-                    <Button  mt={10} width="100%" height="50px" fontSize="20px" bg="red" color="white" colorScheme="red">Place Order</Button>
+                    <Button onClick={()=>handleOrders()} mt={10} width="100%" height="50px" fontSize="20px" bg="red" color="white" colorScheme="red">Place Order</Button>
                 </Box>
             </> : <Box width="100%" textAlign="center" marginTop="300px">
                     <Text fontSize="20px">Your cart is empty</Text>
-                    <Button bg="red" colorScheme="red" color="white" fontSize="20px" _hover={{color: "black"}} px={10} py={8} mt={10}>Start Shopping</Button>
+                    <NavLink  to="/collections/products" >
+                        <Button onClick={()=>onClose()} bg="red" colorScheme="red" color="white" fontSize="20px" _hover={{color: "black"}} px={10} py={8} mt={10}>Start Shopping</Button>
+                    </NavLink>
                 </Box>
              : 
             <Box width="100%" textAlign="center" marginTop="300px">
                 <Text fontSize="20px">Your cart is empty</Text>
-                <Button bg="red" colorScheme="red" color="white" fontSize="20px" _hover={{color: "black"}} px={10} py={8} mt={10}>Start Shopping</Button>
+                <NavLink  to="/collections/products" >
+                    <Button  onClick={()=>onClose()} bg="red" colorScheme="red" color="white" fontSize="20px" _hover={{color: "black"}} px={10} py={8} mt={10}>Start Shopping</Button>
+                </NavLink>
             </Box>
             }
             </DrawerContent>

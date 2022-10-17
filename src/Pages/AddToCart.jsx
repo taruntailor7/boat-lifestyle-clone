@@ -2,6 +2,8 @@ import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, Draw
 import React, { useEffect, useState } from 'react'
 import { Navigate } from 'react-router-dom';
 import { CartProduct } from './CartProduct';
+import { useDispatch, useSelector } from 'react-redux';
+import { get_loading, get_suceess } from '../Redux App/action';
 
 
 export const AddToCart = () => {
@@ -10,14 +12,19 @@ export const AddToCart = () => {
     const [cartProduct, setCartProduct] = useState([])
     const [cartItems, setCartItems] = useState(0)
     const [cartTotal, setCartTotal] = useState(0)
+    const { loading  }=useSelector((state)=>state)
+    const dispatch = useDispatch();
+    
 
     let userId = localStorage.getItem("userId");
     const getProducts = ()=>{
+        dispatch(get_loading());
         fetch(`http://localhost:3001/users/${userId}/cart`)
         .then(res=>res.json())
         .then(res=>{
             setCartProduct(res)
             setCartItems(res.length)
+            dispatch(get_suceess())
         })
         .catch(err=>console.log(err))
     }
@@ -51,8 +58,6 @@ export const AddToCart = () => {
     }
 
     const handleDelete = (id)=>{
-        console.log(id,"delete id")
-        console.log("delete called")
         fetch(`http://localhost:3001/cart/${id}`,{
             method: 'DELETE'
         })
@@ -193,7 +198,7 @@ export const AddToCart = () => {
                 </Box>
             </> : <Box width="100%" textAlign="center" marginTop="300px">
                     <Text fontSize="20px">Your cart is empty</Text>
-                    <Button bg="red" colorScheme="red" color="white" fontSize="20px" _hover={{color: "black"}} px={10} py={8} mt={10}>Start Shopping</Button>
+                    <Button onClick={()=>onClose()} bg="red" colorScheme="red" color="white" fontSize="20px" _hover={{color: "black"}} px={10} py={8} mt={10}>Start Shopping</Button>
                 </Box>
              : 
             <Box>
