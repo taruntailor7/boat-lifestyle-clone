@@ -3,23 +3,13 @@ import React, { useState } from 'react'
 import { useEffect } from 'react'
 import {AiFillStar, AiFillThunderbolt} from 'react-icons/ai'
 import { AddToCart } from './AddToCart'
-// import { useDispatch, useSelector } from 'react-redux';
-// import { get_loading, get_suceess } from '../Redux App/action';
+import { useDispatch, useSelector } from 'react-redux';
+import { get_loading, get_suceess } from '../Redux App/action';
 import { Navigate } from 'react-router-dom'
 // import { extendTheme } from '@chakra-ui/react'
 
 export const HomeSailWithBoat = () => {
   const [sailWithBoat, setSailWithBoat] = useState([]);
-<<<<<<< HEAD
-  // const { loading  }=useSelector((state)=>state)
-  // const dispatch = useDispatch();
-  const [cartProduct, setCartProduct] = useState([])
-  const { isOpen, onOpen, onClose } = useDisclosure()
-
-
-  const getData = ()=>{
-    // dispatch(get_loading());
-=======
   const { loading  }=useSelector((state)=>state)
   const dispatch = useDispatch();
 
@@ -27,7 +17,6 @@ export const HomeSailWithBoat = () => {
   const getData = ()=>{
     dispatch(get_loading());
     console.log(loading,"loading inside");
->>>>>>> parent of ceab7be (added cart functionalities in all pages)
     fetch(`http://localhost:3001/sailWithBoatOnHome`)
     .then((res)=>res.json())
     .then((res)=>{
@@ -37,20 +26,6 @@ export const HomeSailWithBoat = () => {
     .catch((err)=>console.log(err))
     // dispatch(get_suceess())
   }
-<<<<<<< HEAD
-
-  let userId = localStorage.getItem("userId");
-  const getProducts = ()=>{
-      fetch(`http://localhost:3001/users/${userId}/cart`)
-      .then(res=>res.json())
-      .then(res=>{
-          setCartProduct(res)
-      })
-      .catch(err=>console.log(err))
-      // dispatch(get_suceess())
-  }
-=======
->>>>>>> parent of ceab7be (added cart functionalities in all pages)
   
   useEffect(() =>{
     getData();
