@@ -73,7 +73,32 @@
       "id": 7
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "cartId": 28,
+      "count": 1,
+      "name": "boAt Watch Wave Pro",
+      "category": "SMART WATCHES",
+      "rating": 5,
+      "reviews": 10,
+      "price": 3286,
+      "original_price": 6990,
+      "discount": 53,
+      "isAvailable": true,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_4d128bbd-a1e7-4045-a5c5-25c744f3133f_600x.png?v=1647765303",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main1_0ae2597d-dee4-42fd-9a18-eb4ae0b3bc43_600x.png?v=1647765304",
+        "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_eaf60560-3afb-4dda-b4c0-598078f7ce72_600x.png?v=1647767874"
+      ],
+      "color": [
+        "Blue",
+        "Black",
+        "Maroon"
+      ],
+      "userId": "1",
+      "id": 1
+    }
+  ],
   "orders": [
     {
       "cartId": 1,

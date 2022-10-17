@@ -1,8 +1,8 @@
 import React from "react"
 
 
-import "../Mystyle.css"
-import { Input ,Stack,InputGroup,InputLeftAddon,Box,Checkbox} from '@chakra-ui/react'
+import "../payment_page1/Mystyle.css";
+import { Input ,Stack,InputGroup,InputLeftAddon,Box} from '@chakra-ui/react'
 export function MobileInput(){
     return <>
     <Box sx={{marginBottom:"20px",height:"50px"}}>

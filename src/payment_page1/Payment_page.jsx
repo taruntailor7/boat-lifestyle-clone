@@ -1,5 +1,6 @@
 import {Box,DirectionStack,TextField,Input} from "@chakra-ui/react"
 import { CommonButton } from "./CommonButton"
+import "../payment_page1/Mystyle.css"
 const input_box_style={
     backgroundColor:"#E6E6FA",margin:"  2px 2px 10px",
     height:"60px"

@@ -6,7 +6,7 @@ import {BiHomeAlt} from "react-icons/bi"
 import {HiOutlineShoppingBag} from "react-icons/hi"
 import { WrapItem,Button} from "@chakra-ui/react"
 
-import "../Mystyle.css"
+// import "../Mystyle.css"
 const inputstyle={
     marginBottom:"20px",height:"60px"
 }

@@ -1,6 +1,6 @@
 import {Box,Input} from "@chakra-ui/react"
 import { CommonButton } from "./CommonButton"
-import "../Mystyles.css"
+import "../payment_page1/Mystyle.css"
 const style1={fontSize:"29px",fontWeight:"bolder",marginTop:"40px",textAlign:"center",marginLeft:"-70px"}
 const style2={width:"70%",margin:"40px 58px",marginTop:"20px",color:"#050038",fontSize:"17px",fontWeight:"10"}
 

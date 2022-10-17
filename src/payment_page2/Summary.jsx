@@ -3,7 +3,7 @@ import {AiOutlineUser} from "react-icons/ai"
 import {RiCalendarTodoLine} from "react-icons/ri"
 import {Heading,Image} from "@chakra-ui/react"
 import { MobileInput } from "./inputMobile"
-import "../Mystyle.css"
+// import "../Mystyle.css"
 import { Input ,Button} from '@chakra-ui/react'
 export function Summary(){
     return <Box >

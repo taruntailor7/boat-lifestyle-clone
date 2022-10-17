@@ -1,6 +1,6 @@
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import { AddressPage } from './Address'
-import "../Mystyles.css"
+import "../payment_page1/Mystyle.css"
 import { MobilePage } from './Mobile_box'
 import { Paymentpage } from './Payment_page'
 export const Alltabs=()=>{

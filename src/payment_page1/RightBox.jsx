@@ -8,7 +8,7 @@ import {
     Flex
   } from '@chakra-ui/react'
   import {GiTicket} from "react-icons/gi"
-  import "../Mystyles.css"
+  import "../payment_page1/Mystyle.css"
   import {AiOutlineShoppingCart} from "react-icons/ai"
   export const MyAccordion =()=>{
     return <>
@@ -26,7 +26,7 @@ import {
     <AccordionPanel pb={4}>
     <Box style={{overflowY:"scroll",height:"100px"}}>
             <Box style={{display:"flex",gap:"40px",height:"90px",fontSize:"15px",fontWeight:"400 ",color:"#050038"}}>
-            <img style={{width:"50px",height:"70px"}} src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_e0d541c5-72de-4f54-a19b-1c324082742a.png?v=1654195093"/>
+            <img alt="" style={{width:"50px",height:"70px"}} src="https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_e0d541c5-72de-4f54-a19b-1c324082742a.png?v=1654195093"/>
             <Box className="order_summary_detail">
             <Box>boAt Rockerz 260-Electronics</Box>
             <Box>Quantity:1</Box>

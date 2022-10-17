@@ -1,6 +1,7 @@
 import {Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Text, useDisclosure } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import { FaShoppingCart } from 'react-icons/fa'
+import { MainModal } from '../payment_page1/Main_Modal'
 import { CartProduct } from './CartProduct'
 
 export const Cart = ({setCartVal}) => {
@@ -177,7 +178,9 @@ export const Cart = ({setCartVal}) => {
                         <Text fontSize="22px" fontWeight="500" mt={5}>Total:</Text>
                         <Text fontSize="22px" fontWeight="500" mt={5}>Rs. {cartTotal}</Text>
                     </Box>
-                    <Button onClick={()=>handleOrders()} mt={10} width="100%" height="50px" fontSize="20px" bg="red" color="white" colorScheme="red">Place Order</Button>
+                    {/* onClick={()=>handleOrders()} */}
+                    <MainModal />
+                    <Button  mt={10} width="100%" height="50px" fontSize="20px" bg="red" color="white" colorScheme="red">Place Order</Button>
                 </Box>
             </> : <Box width="100%" textAlign="center" marginTop="300px">
                     <Text fontSize="20px">Your cart is empty</Text>
