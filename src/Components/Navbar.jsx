@@ -169,9 +169,11 @@ export const Navbar = () => {
                       <MenuItem _focus={{bg:"white"}} >
                         <Text color="red">Hi User!</Text>
                       </MenuItem>
-                      <MenuItem _focus={{bg:"white"}} >
-                        <Text color="black">Manage Your Order</Text>
-                      </MenuItem>
+                        <NavLink to="/orders">
+                          <MenuItem _focus={{bg:"white"}} >
+                              <Text color="black">Manage Your Order</Text>
+                          </MenuItem>
+                        </NavLink>
                       <MenuItem _focus={{bg:"white"}} >
                         <Text color="black">Account</Text>
                       </MenuItem>
@@ -185,7 +187,7 @@ export const Navbar = () => {
           <Box><NavLink><RiCustomerService2Fill color="black" fontSize="22px"/></NavLink></Box>
           <Box>
             <NavLink>
-              <Text position="absolute" top="6" right="8" fontSize="14px" w="22px" textAlign="center" h="22px" color="white" bg="red" colorScheme="red" borderRadius="50%">{cartVal}</Text>
+              <Text position="absolute" top="6" right="7" fontSize="14px" w="22px" textAlign="center" h="22px" color="white" bg="red" colorScheme="red" borderRadius="50%">{cartVal}</Text>
               {/* <FaShoppingCart color="black" fontSize="22px"/> */}
               <Cart setCartVal={setCartVal}/>
             </NavLink>

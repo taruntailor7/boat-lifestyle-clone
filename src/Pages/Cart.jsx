@@ -44,8 +44,8 @@ export const Cart = ({setCartVal}) => {
     }
 
     const handleDelete = (id)=>{
-        console.log(id,"delete id")
-        console.log("delete called")
+        // console.log(id,"delete id")
+        // console.log("delete called")
         fetch(`http://localhost:3001/cart/${id}`,{
             method: 'DELETE'
         })
@@ -105,6 +105,50 @@ export const Cart = ({setCartVal}) => {
         }))
     }
 
+    const handleOrders = ()=>{
+        fetch(`http://localhost:3001/users/${userId}/cart`)
+        .then(res=>res.json())
+        .then((res)=>{
+           res.map( (product)=>{
+                let obj = {
+                    cartId: product.id,
+                    count:1,
+                    name: product.name,
+                    category: product.category,
+                    rating: product.rating,
+                    reviews: product.reviews,
+                    price: product.price,
+                    original_price: product.original_price,
+                    discount: product.discount,
+                    isAvailable: product.isAvailable,
+                    image: [
+                    product.image[0],
+                    product.image[1],
+                    product.image[2]
+                    ],
+                    color: [
+                    product.color[0],
+                    product.color[1],
+                    product.color[2]
+                    ],
+                    "userId": userId,
+                }
+                 fetch(`http://localhost:3001/users/${userId}/orders`,{
+                    method: 'POST',
+                    body: JSON.stringify(obj),
+                    headers : {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(()=>handleDelete(product.id))
+                .catch(err=>console.log(err))
+                
+           })
+        })
+        .catch(err=>console.log(err))
+        
+    }
+
 
     return (
         <>
@@ -133,7 +177,7 @@ export const Cart = ({setCartVal}) => {
                         <Text fontSize="22px" fontWeight="500" mt={5}>Total:</Text>
                         <Text fontSize="22px" fontWeight="500" mt={5}>Rs. {cartTotal}</Text>
                     </Box>
-                    <Button mt={10} width="100%" height="50px" fontSize="20px" bg="red" color="white" colorScheme="red">Place Order</Button>
+                    <Button onClick={()=>handleOrders()} mt={10} width="100%" height="50px" fontSize="20px" bg="red" color="white" colorScheme="red">Place Order</Button>
                 </Box>
             </> : <Box width="100%" textAlign="center" marginTop="300px">
                     <Text fontSize="20px">Your cart is empty</Text>

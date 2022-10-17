@@ -17,7 +17,7 @@ export const ShopByCategory = () => {
     },[])
     return (
         <Box width="100%" margin="auto" marginTop={{base:"30px",sm:"30px",md:"40px",lg:"70px"}}>
-        <Text fontSize="25px" fontWeight="500">SHOP BY CATEGORY</Text>
+        <Text fontSize={{base:"25px",sm:"25px",md:"25px",lg:"25px"}} fontWeight="500">SHOP BY CATEGORY</Text>
         <Grid width="100%" margin="auto" overflowX='auto'
           gridAutoColumns= "minmax(150px,1fr)" gridAutoFlow={{ base:'column',sm:'column',md:'row',lg:'row' }}  
           templateColumns={{base:"repeat(auto-fill,minmax(150px,1fr))",   sm:"repeat(auto-fill,minmax(150px,1fr))", md:"repeat(3, 1fr)", lg:"repeat(7, 1fr)"}} 
