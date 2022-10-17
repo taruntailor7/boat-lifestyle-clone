@@ -12,15 +12,6 @@ import { AddToCart } from './AddToCart'
 import { useDispatch, useSelector } from 'react-redux';
 import { get_loading, get_suceess } from '../Redux App/action';
 import { Navigate } from 'react-router-dom'
-import { 
-    AlertDialog, 
-    AlertDialogBody,
-    AlertDialogFooter,
-    AlertDialogHeader,
-    AlertDialogContent,
-    AlertDialogOverlay,
-    useDisclosure,
-  } from '@chakra-ui/react';
 
 export const IndivisualCategory = () => {
     const [bannerImg, setBannerImg] = useState("")
@@ -42,9 +33,6 @@ export const IndivisualCategory = () => {
 
     const {url} = useParams();
     const {id} = useParams();
-
-    const [cartProduct, setCartProduct] = useState([])
-    const { isOpen, onOpen, onClose } = useDisclosure()
 
     let fetchUrl = "http://localhost:3001/shopByCategory"
     if(url==="true-wireless-earbuds"){
@@ -87,7 +75,6 @@ export const IndivisualCategory = () => {
     // http://localhost:3001/allProducts?original_price_gte=3000&original_price_lte=5000
 
     const getData = ({_sort, _order, price_gte, price_lte  }) => {
-        dispatch(get_loading());
         Axios.get(fetchUrl, {
             params: { _sort, _order, price_gte, price_lte}
         })
@@ -95,40 +82,18 @@ export const IndivisualCategory = () => {
             setProducts(res.data)
             setBannerImg(res.data[0].bannerImge)
             setHeading(res.data[1].heading)
-            dispatch(get_suceess())
         });
     };
     const updatedProducts = products.filter((elem)=>{
         return elem.id !==1001 && elem.id !==1002;
     })
-    
-    let userId = localStorage.getItem("userId");
-    const getProducts = ()=>{
-        fetch(`http://localhost:3001/users/${userId}/cart`)
-        .then(res=>res.json())
-        .then(res=>{
-            setCartProduct(res)
-        })
-        .catch(err=>console.log(err))
-    }
-
+    // console.log(updatedProducts)
 
     let isAuth = localStorage.getItem('isAuth') || false;
-    userId = localStorage.getItem("userId") || false;
+    let userId = localStorage.getItem("userId") || false;
     
   
-    const addToCart = (product,id)=>{
-        getProducts();
-      for(let i=0;i<cartProduct.length;i++){
-        if(cartProduct[i].cartId === id){
-          console.log(id,"id");
-          console.log(cartProduct[i].cartId,"Cartid");
-          onOpen()
-          // alert("Already added in cart!")
-          // getProducts();
-          return;
-        }
-      }
+    const addToCart = (product)=>{
      let prod = {
           cartId: product.id,
           count:1,
@@ -156,7 +121,7 @@ export const IndivisualCategory = () => {
         return <Navigate to='/login'/>
       }
       else{
-        // dispatch(get_loading());
+        dispatch(get_loading());
         fetch(`http://localhost:3001/users/${userId}/cart`,{
           method: 'POST',
           body: JSON.stringify(prod),
@@ -164,7 +129,7 @@ export const IndivisualCategory = () => {
               'content-type': 'application/json'
           }
         })
-        // dispatch(get_suceess())
+        dispatch(get_suceess())
   
       }
     }
@@ -269,7 +234,7 @@ export const IndivisualCategory = () => {
                             <Image width="100%" src={data.image[0]} alt="img" />
                         </Box>
                         <Box w="100%" bg='white' p={3} borderRadius="10px">
-                        <Text fontSize="18px" fontWeight="500">{data.name.length>19 ? data.name.slice(0, 19-1)+'...' : data.name}</Text>
+                        <Text fontSize="18px" fontWeight="500">{data.name}</Text>
                         <Text display="flex" alignItems="center" my={2}><AiFillStar color="#ff0000" margin="10px"/> {data.rating} | {data.reviews} reviews</Text>
                         <hr />
                         <Box display="flex" >
@@ -277,36 +242,13 @@ export const IndivisualCategory = () => {
                             <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                         </Box>
                         <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
-                        <Button  w="100%" onClick={()=>addToCart(data,data.id)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
+                        <Button isLoading={loading} w="100%" onClick={()=>addToCart(data)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
                             <AddToCart />
                         </Button>
                         </Box>
                     </GridItem>
                     ))}
                 </Grid>
-                <AlertDialog
-                    isOpen={isOpen}
-                    // leastDestructiveRef={cancelRef}
-                    onClose={onClose}
-                    >
-                    <AlertDialogOverlay>
-                        <AlertDialogContent>
-                        <AlertDialogHeader fontSize='lg' fontWeight='bold'>
-                        ALert!!!
-                        </AlertDialogHeader>
-
-                        <AlertDialogBody>
-                            <Text>Product already added in the cart you can increase the quantity.</Text>
-                        </AlertDialogBody>
-
-                        <AlertDialogFooter>
-                            <Button colorScheme='red' onClick={()=>onClose()} ml={3}>
-                            Okay
-                            </Button>
-                        </AlertDialogFooter>
-                        </AlertDialogContent>
-                    </AlertDialogOverlay>
-                </AlertDialog>
             </Box>
         </Box>
     )

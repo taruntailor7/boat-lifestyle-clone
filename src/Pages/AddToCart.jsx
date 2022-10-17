@@ -117,50 +117,6 @@ export const AddToCart = () => {
         }))
     }
 
-    const handleOrders = ()=>{
-        fetch(`http://localhost:3001/users/${userId}/cart`)
-        .then(res=>res.json())
-        .then((res)=>{
-           res.map( (product)=>{
-                let obj = {
-                    cartId: product.id,
-                    count:1,
-                    name: product.name,
-                    category: product.category,
-                    rating: product.rating,
-                    reviews: product.reviews,
-                    price: product.price,
-                    original_price: product.original_price,
-                    discount: product.discount,
-                    isAvailable: product.isAvailable,
-                    image: [
-                    product.image[0],
-                    product.image[1],
-                    product.image[2]
-                    ],
-                    color: [
-                    product.color[0],
-                    product.color[1],
-                    product.color[2]
-                    ],
-                    "userId": userId,
-                }
-                 fetch(`http://localhost:3001/users/${userId}/orders`,{
-                    method: 'POST',
-                    body: JSON.stringify(obj),
-                    headers : {
-                        'Content-Type': 'application/json'
-                    }
-                })
-                .then(()=>handleDelete(product.id))
-                .catch(err=>console.log(err))
-                
-           })
-        })
-        .catch(err=>console.log(err))
-        
-    }
-
     if(navigate===1){
         return <Navigate to='/login'/>
     }
@@ -183,7 +139,7 @@ export const AddToCart = () => {
             cartItems!==0 ?
                 <>
                 <DrawerBody  bg="#ececec" p={0} scrollbar-width="thin">
-                    <CartProduct  handleDecrease={handleDecrease} handleIncrease={handleIncrease}  cartProduct={cartProduct} handleDelete={handleDelete}/>
+                <CartProduct  handleDecrease={handleDecrease} handleIncrease={handleIncrease}  cartProduct={cartProduct} handleDelete={handleDelete}/>
                 </DrawerBody>
                 <Box height="235px"p={5}>
                     <Box display="flex" justifyContent="space-between">

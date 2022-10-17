@@ -7,7 +7,7 @@ import { MdOutlineDelete } from 'react-icons/md';
 
 export const CartProduct = ({handleDecrease,handleIncrease,cartProduct,handleDelete}) => {
 
-    
+
     return (
         <>
         {cartProduct.map((elem,index)=>(

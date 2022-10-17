@@ -1,23 +1,16 @@
 import { Box, Grid, GridItem, Image, Text,Button } from '@chakra-ui/react'
-import React, {useState } from 'react'
+import React, { useState } from 'react'
 import { useEffect } from 'react'
 import {AiFillStar, AiFillThunderbolt} from 'react-icons/ai'
 import { AddToCart } from './AddToCart'
 // import { useDispatch, useSelector } from 'react-redux';
 // import { get_loading, get_suceess } from '../Redux App/action';
 import { Navigate } from 'react-router-dom'
-import { 
-  AlertDialog, 
-  AlertDialogBody,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogContent,
-  AlertDialogOverlay,
-  useDisclosure,
-} from '@chakra-ui/react';
+// import { extendTheme } from '@chakra-ui/react'
 
 export const HomeSailWithBoat = () => {
   const [sailWithBoat, setSailWithBoat] = useState([]);
+<<<<<<< HEAD
   // const { loading  }=useSelector((state)=>state)
   // const dispatch = useDispatch();
   const [cartProduct, setCartProduct] = useState([])
@@ -26,6 +19,15 @@ export const HomeSailWithBoat = () => {
 
   const getData = ()=>{
     // dispatch(get_loading());
+=======
+  const { loading  }=useSelector((state)=>state)
+  const dispatch = useDispatch();
+
+
+  const getData = ()=>{
+    dispatch(get_loading());
+    console.log(loading,"loading inside");
+>>>>>>> parent of ceab7be (added cart functionalities in all pages)
     fetch(`http://localhost:3001/sailWithBoatOnHome`)
     .then((res)=>res.json())
     .then((res)=>{
@@ -35,6 +37,7 @@ export const HomeSailWithBoat = () => {
     .catch((err)=>console.log(err))
     // dispatch(get_suceess())
   }
+<<<<<<< HEAD
 
   let userId = localStorage.getItem("userId");
   const getProducts = ()=>{
@@ -46,39 +49,21 @@ export const HomeSailWithBoat = () => {
       .catch(err=>console.log(err))
       // dispatch(get_suceess())
   }
+=======
+>>>>>>> parent of ceab7be (added cart functionalities in all pages)
   
   useEffect(() =>{
     getData();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
   let isAuth = localStorage.getItem('isAuth') || false;
-  userId = localStorage.getItem("userId") || false;
-
-  // for(let i=0;i<sailWithBoat.length;i++){
-  //   for(let j=0;j<cartProduct.length;j++){
-  //     if(cartProduct[j].cartId === sailWithBoat[i].id){
-  //       setDisable(true)
-  //       return;
-  //     }
-  //   }
-  // }
+  let userId = localStorage.getItem("userId") || false;
 
   // if(loading){
   //   return <Image src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/preloader_50x.gif?v=1649585765"/>
   // }
 
-  const addToCart = (product,id)=>{
-      getProducts();
-      for(let i=0;i<cartProduct.length;i++){
-        if(cartProduct[i].cartId === id){
-          console.log(id,"id");
-          console.log(cartProduct[i].cartId,"Cartid");
-          onOpen()
-          // alert("Already added in cart!")
-          // getProducts();
-          return;
-        }
-      }
+  const addToCart = (product)=>{
    let prod = {
         cartId: product.id,
         count:1,
@@ -106,7 +91,7 @@ export const HomeSailWithBoat = () => {
       return <Navigate to='/login'/>
     }
     else{
-      // dispatch(get_loading());
+      dispatch(get_loading());
       fetch(`http://localhost:3001/users/${userId}/cart`,{
         method: 'POST',
         body: JSON.stringify(prod),
@@ -114,7 +99,7 @@ export const HomeSailWithBoat = () => {
             'content-type': 'application/json'
         }
       })
-      // dispatch(get_suceess())
+      dispatch(get_suceess())
     }
   }
 
@@ -150,7 +135,7 @@ export const HomeSailWithBoat = () => {
               <Image width="100%" src={data.image[0]} alt="image" />
             </Box>
             <Box w="100%" bg='white' p={3} borderRadius="10px">
-              <Text fontSize="18px" fontWeight="500">{data.name.length>19 ? data.name.slice(0, 19-1)+'...' : data.name}</Text>
+              <Text fontSize="18px" fontWeight="500">{data.name}</Text>
               <Text display="flex" alignItems="center" my={2}><AiFillStar color="#ff0000" margin="10px"/> {data.rating} | {data.reviews} reviews</Text>
               <hr />
               <Box display="flex" >
@@ -158,36 +143,13 @@ export const HomeSailWithBoat = () => {
                 <Text as="s" ml={2}> ₹ {data.original_price}</Text>
               </Box>
               <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
-              <Button w="100%" onClick={()=>addToCart(data,data.id)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
+              <Button isLoading={loading} w="100%" onClick={()=>addToCart(data)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
                 <AddToCart />
               </Button>
             </Box>
           </GridItem>
         ))}
       </Grid>
-      <AlertDialog
-          isOpen={isOpen}
-          // leastDestructiveRef={cancelRef}
-          onClose={onClose}
-        >
-          <AlertDialogOverlay>
-            <AlertDialogContent>
-              <AlertDialogHeader fontSize='lg' fontWeight='bold'>
-              ALert!!!
-              </AlertDialogHeader>
-
-              <AlertDialogBody>
-                <Text>Product already added in the cart you can increase the quantity.</Text>
-              </AlertDialogBody>
-
-              <AlertDialogFooter>
-                <Button colorScheme='red' onClick={()=>onClose()} ml={3}>
-                  Okay
-                </Button>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialogOverlay>
-      </AlertDialog>
     </Box>
   )
 }

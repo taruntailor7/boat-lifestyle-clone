@@ -6,42 +6,17 @@ import { AddToCart } from './AddToCart'
 import { useDispatch, useSelector } from 'react-redux';
 import { get_loading, get_suceess } from '../Redux App/action';
 import { Navigate } from 'react-router-dom'
-import { 
-  AlertDialog, 
-  AlertDialogBody,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogContent,
-  AlertDialogOverlay,
-  useDisclosure,
-} from '@chakra-ui/react';
 
 export const HomeBestOfBoat = () => {
   const [bestOfBoat, setBestOfBoat] = useState([]);
   const { loading  }=useSelector((state)=>state)
   const dispatch = useDispatch();
-  const [cartProduct, setCartProduct] = useState([])
-  const { isOpen, onOpen, onClose } = useDisclosure()
 
   const getData = ()=>{
-    dispatch(get_loading());
     fetch(`http://localhost:3001/bestOfBoat`)
     .then((res)=>res.json())
-    .then((res)=>{
-      setBestOfBoat(res)
-      dispatch(get_suceess())
-    })
+    .then((res)=>setBestOfBoat(res))
     .catch((err)=>console.log(err))
-  }
-
-  let userId = localStorage.getItem("userId");
-  const getProducts = ()=>{
-      fetch(`http://localhost:3001/users/${userId}/cart`)
-      .then(res=>res.json())
-      .then(res=>{
-          setCartProduct(res)
-      })
-      .catch(err=>console.log(err))
   }
   
   const first = bestOfBoat.filter((prod)=>{
@@ -65,21 +40,10 @@ export const HomeBestOfBoat = () => {
   },[])
 
   let isAuth = localStorage.getItem('isAuth') || false;
-  userId = localStorage.getItem("userId") || false;
+  let userId = localStorage.getItem("userId") || false;
 
   
-  const addToCart = (product,id)=>{
-    getProducts();
-      for(let i=0;i<cartProduct.length;i++){
-        if(cartProduct[i].cartId === id){
-          console.log(id,"id");
-          console.log(cartProduct[i].cartId,"Cartid");
-          onOpen()
-          // alert("Already added in cart!")
-          // getProducts();
-          return;
-        }
-      }
+  const addToCart = (product)=>{
     let prod = {
          cartId: product.id,
          count:1,
@@ -107,7 +71,7 @@ export const HomeBestOfBoat = () => {
        return <Navigate to='/login'/>
      }
      else{
-      //  dispatch(get_loading());
+       dispatch(get_loading());
        fetch(`http://localhost:3001/users/${userId}/cart`,{
          method: 'POST',
          body: JSON.stringify(prod),
@@ -115,7 +79,7 @@ export const HomeBestOfBoat = () => {
              'content-type': 'application/json'
          }
        })
-      //  dispatch(get_suceess())
+       dispatch(get_suceess())
  
      }
    }
@@ -126,7 +90,7 @@ export const HomeBestOfBoat = () => {
 
   return (
     <Box width="100%" margin="auto" marginTop={{base:"50px",sm:"20px",md:"30px",lg:"50px"}}>
-      <Text fontSize={{base:"25px",sm:"20px",md:"25px",lg:"25px"}} fontWeight="500">BEST OF boAt</Text>
+      <Text fontSize={{base:"25px",sm:"20px",md:"25px",lg:"45px"}} fontWeight="500">BEST OF boAt</Text>
       <Tabs colorScheme="red" isFitted="true"  mt={6}>
         <TabList overflowX='auto'>
           <Tab fontSize={{base:"22px",sm:"12px",md:"12px",lg:"22px"}} fontWeight="500" color="#979696">Best Sellers</Tab>
@@ -149,7 +113,7 @@ export const HomeBestOfBoat = () => {
                     <Image width="100%" src={data.image[0]} alt="image" />
                   </Box>
                   <Box w="100%" bg='white' p={3} borderRadius="10px">
-                    <Text fontSize="18px" fontWeight="500">{data.name.length>19 ? data.name.slice(0, 19-1)+'...' : data.name}</Text>
+                    <Text fontSize="18px" fontWeight="500">{data.name}</Text>
                     <Text display="flex" alignItems="center" my={2}><AiFillStar color="#ff0000" margin="10px"/> {data.rating} | {data.reviews} reviews</Text>
                     <hr />
                     <Box display="flex" >
@@ -157,36 +121,13 @@ export const HomeBestOfBoat = () => {
                       <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                     </Box>
                     <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
-                    <Button w="100%" onClick={()=>addToCart(data,data.id)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
+                    <Button isLoading={loading} w="100%" onClick={()=>addToCart(data)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
                       <AddToCart />
                     </Button>
                   </Box>
                 </GridItem>
               ))}
             </Grid>
-            <AlertDialog
-                isOpen={isOpen}
-                // leastDestructiveRef={cancelRef}
-                onClose={onClose}
-              >
-                <AlertDialogOverlay>
-                  <AlertDialogContent>
-                    <AlertDialogHeader fontSize='lg' fontWeight='bold'>
-                    ALert!!!
-                    </AlertDialogHeader>
-
-                    <AlertDialogBody>
-                      <Text>Product already added in the cart you can increase the quantity.</Text>
-                    </AlertDialogBody>
-
-                    <AlertDialogFooter>
-                      <Button colorScheme='red' onClick={()=>onClose()} ml={3}>
-                        Okay
-                      </Button>
-                    </AlertDialogFooter>
-                  </AlertDialogContent>
-                </AlertDialogOverlay>
-            </AlertDialog>
           </TabPanel>
           <TabPanel>
               <Grid width="100%" margin="auto"
@@ -200,7 +141,7 @@ export const HomeBestOfBoat = () => {
                       <Image width="100%" src={data.image[0]} alt="image" />
                     </Box>
                     <Box w="100%" bg='white' p={3} borderRadius="10px">
-                      <Text fontSize="18px" fontWeight="500">{data.name.length>19 ? data.name.slice(0, 19-1)+'...' : data.name}</Text>
+                      <Text fontSize="18px" fontWeight="500">{data.name}</Text>
                       <Text display="flex" alignItems="center" my={2}><AiFillStar color="#ff0000" margin="10px"/> {data.rating} | {data.reviews} reviews</Text>
                       <hr />
                       <Box display="flex" >
@@ -208,36 +149,13 @@ export const HomeBestOfBoat = () => {
                         <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                       </Box>
                       <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
-                      <Button w="100%" onClick={()=>addToCart(data,data.id)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
+                      <Button isLoading={loading} w="100%" onClick={()=>addToCart(data)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
                         <AddToCart />
                       </Button>
                     </Box>
                   </GridItem>
                 ))}
               </Grid>
-              <AlertDialog
-                isOpen={isOpen}
-                // leastDestructiveRef={cancelRef}
-                onClose={onClose}
-              >
-                <AlertDialogOverlay>
-                  <AlertDialogContent>
-                    <AlertDialogHeader fontSize='lg' fontWeight='bold'>
-                    ALert!!!
-                    </AlertDialogHeader>
-
-                    <AlertDialogBody>
-                      <Text>Product already added in the cart you can increase the quantity.</Text>
-                    </AlertDialogBody>
-
-                    <AlertDialogFooter>
-                      <Button colorScheme='red' onClick={()=>onClose()} ml={3}>
-                        Okay
-                      </Button>
-                    </AlertDialogFooter>
-                  </AlertDialogContent>
-                </AlertDialogOverlay>
-              </AlertDialog>
             </TabPanel>
           <TabPanel>
               <Grid width="100%" margin="auto"gridAutoColumns= "minmax(270px,1fr)" gridAutoFlow={{ base:'column',sm:'column',md:'row',lg:'row' }} overflowX='auto'
@@ -250,7 +168,7 @@ export const HomeBestOfBoat = () => {
                       <Image width="100%" src={data.image[0]} alt="image" />
                     </Box>
                     <Box w="100%" bg='white' p={3} borderRadius="10px">
-                      <Text fontSize="18px" fontWeight="500">{data.name.length>19 ? data.name.slice(0, 19-1)+'...' : data.name}</Text>
+                      <Text fontSize="18px" fontWeight="500">{data.name}</Text>
                       <Text display="flex" alignItems="center" my={2}><AiFillStar color="#ff0000" margin="10px"/> {data.rating} | {data.reviews} reviews</Text>
                       <hr />
                       <Box display="flex" >
@@ -258,36 +176,13 @@ export const HomeBestOfBoat = () => {
                         <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                       </Box>
                       <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
-                      <Button w="100%" onClick={()=>addToCart(data,data.id)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
+                      <Button isLoading={loading} w="100%" onClick={()=>addToCart(data)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
                         <AddToCart />
                       </Button>
                     </Box>
                   </GridItem>
                 ))}
               </Grid>
-              <AlertDialog
-                isOpen={isOpen}
-                // leastDestructiveRef={cancelRef}
-                onClose={onClose}
-              >
-                <AlertDialogOverlay>
-                  <AlertDialogContent>
-                    <AlertDialogHeader fontSize='lg' fontWeight='bold'>
-                    ALert!!!
-                    </AlertDialogHeader>
-
-                    <AlertDialogBody>
-                      <Text>Product already added in the cart you can increase the quantity.</Text>
-                    </AlertDialogBody>
-
-                    <AlertDialogFooter>
-                      <Button colorScheme='red' onClick={()=>onClose()} ml={3}>
-                        Okay
-                      </Button>
-                    </AlertDialogFooter>
-                  </AlertDialogContent>
-                </AlertDialogOverlay>
-              </AlertDialog>
           </TabPanel>
           <TabPanel>
               <Grid width="100%" margin="auto" gridAutoColumns= "minmax(270px,1fr)" gridAutoFlow={{ base:'column',sm:'column',md:'row',lg:'row' }} overflowX='auto'
@@ -300,7 +195,7 @@ export const HomeBestOfBoat = () => {
                       <Image width="100%" src={data.image[0]} alt="image" />
                     </Box>
                     <Box w="100%" bg='white' p={3} borderRadius="10px">
-                      <Text fontSize="18px" fontWeight="500">{data.name.length>19 ? data.name.slice(0, 19-1)+'...' : data.name}</Text>
+                      <Text fontSize="18px" fontWeight="500">{data.name}</Text>
                       <Text display="flex" alignItems="center" my={2}><AiFillStar color="#ff0000" margin="10px"/> {data.rating} | {data.reviews} reviews</Text>
                       <hr />
                       <Box display="flex" >
@@ -308,36 +203,13 @@ export const HomeBestOfBoat = () => {
                         <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                       </Box>
                       <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
-                      <Button w="100%" onClick={()=>addToCart(data,data.id)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
+                      <Button isLoading={loading} w="100%" onClick={()=>addToCart(data)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
                         <AddToCart />
                       </Button>
                     </Box>
                   </GridItem>
                 ))}
               </Grid>
-              <AlertDialog
-                isOpen={isOpen}
-                // leastDestructiveRef={cancelRef}
-                onClose={onClose}
-              >
-                <AlertDialogOverlay>
-                  <AlertDialogContent>
-                    <AlertDialogHeader fontSize='lg' fontWeight='bold'>
-                    ALert!!!
-                    </AlertDialogHeader>
-
-                    <AlertDialogBody>
-                      <Text>Product already added in the cart you can increase the quantity.</Text>
-                    </AlertDialogBody>
-
-                    <AlertDialogFooter>
-                      <Button colorScheme='red' onClick={()=>onClose()} ml={3}>
-                        Okay
-                      </Button>
-                    </AlertDialogFooter>
-                  </AlertDialogContent>
-                </AlertDialogOverlay>
-              </AlertDialog>
           </TabPanel>
           <TabPanel>
               <Grid width="100%" margin="auto" gridAutoColumns= "minmax(270px,1fr)" gridAutoFlow={{ base:'column',sm:'column',md:'row',lg:'row' }} overflowX='auto'
@@ -349,7 +221,7 @@ export const HomeBestOfBoat = () => {
                       <Image width="100%" src={data.image[0]} alt="image" />
                     </Box>
                     <Box w="100%" bg='white' p={3} borderRadius="10px">
-                      <Text fontSize="18px" fontWeight="500">{data.name.length>19 ? data.name.slice(0, 19-1)+'...' : data.name}</Text>
+                      <Text fontSize="18px" fontWeight="500">{data.name}</Text>
                       <Text display="flex" alignItems="center" my={2}><AiFillStar color="#ff0000" margin="10px"/> {data.rating} | {data.reviews} reviews</Text>
                       <hr />
                       <Box display="flex" >
@@ -357,36 +229,13 @@ export const HomeBestOfBoat = () => {
                         <Text as="s" ml={2}> ₹ {data.original_price}</Text>
                       </Box>
                       <Text my={2}>You Save: ₹ {Math.ceil(data.original_price*(data.discount/100)) } ({data.discount}%)</Text>
-                      <Button w="100%" onClick={()=>addToCart(data,data.id)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
+                      <Button isLoading={loading} w="100%" onClick={()=>addToCart(data)} colorScheme={data.isSuperSaver?"#F7C20A":"#ff0000"} bg={data.isSuperSaver?"#F7C20A":"#ff0000"} size='md'>
                       <AddToCart />
                       </Button>
                     </Box>
                   </GridItem>
                 ))}
               </Grid>
-              <AlertDialog
-                isOpen={isOpen}
-                // leastDestructiveRef={cancelRef}
-                onClose={onClose}
-              >
-                <AlertDialogOverlay>
-                  <AlertDialogContent>
-                    <AlertDialogHeader fontSize='lg' fontWeight='bold'>
-                    ALert!!!
-                    </AlertDialogHeader>
-
-                    <AlertDialogBody>
-                      <Text>Product already added in the cart you can increase the quantity.</Text>
-                    </AlertDialogBody>
-
-                    <AlertDialogFooter>
-                      <Button colorScheme='red' onClick={()=>onClose()} ml={3}>
-                        Okay
-                      </Button>
-                    </AlertDialogFooter>
-                  </AlertDialogContent>
-                </AlertDialogOverlay>
-              </AlertDialog>
           </TabPanel>
         </TabPanels>
       </Tabs>

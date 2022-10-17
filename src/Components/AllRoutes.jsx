@@ -10,8 +10,11 @@ import LoginPage from "../Pages/Login";
 import SignUpPage from "../Pages/Signup";
 import { NotFound } from "../Pages/NotFound";
 import { AllProducts } from "../Pages/AllProducts";
+<<<<<<< HEAD
 import { Orders } from "../Pages/Orders";
 // import ProductDetails from "../ProducDetails/ProductDetails";
+=======
+>>>>>>> parent of ceab7be (added cart functionalities in all pages)
 
 
 
@@ -21,7 +24,6 @@ export const AllRoutes = () => {
       <Route path="/" element={<Home />}></Route>
       <Route path='/signup' element={<SignUpPage/>} ></Route>
       <Route path="/login" element={<LoginPage/>} ></Route>
-      <Route path="/orders" element={<Orders/>} ></Route>
       <Route path='/change_password' element={<ChangePassword/>} ></Route>
       <Route path="/forgot_password" element={<ForgotPassword/>} ></Route>
       <Route path="/collections/:id/" element={<Collections />}></Route>

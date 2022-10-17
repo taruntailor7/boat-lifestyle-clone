@@ -166,6 +166,7 @@ export const Navbar = () => {
                     <FaUserAlt color="black" fontSize="20px" />
                     </MenuButton>
                     <MenuList mt={6} colorScheme="white" bg="white">
+<<<<<<< HEAD
                         <MenuItem _focus={{bg:"white"}} >
                           <Text color="red">Hi User!</Text>
                         </MenuItem>
@@ -179,6 +180,17 @@ export const Navbar = () => {
                             <Text color="black">Account</Text>
                           </MenuItem>
                         {/* </NavLink> */}
+=======
+                      <MenuItem _focus={{bg:"white"}} >
+                        <Text color="red">Hi User!</Text>
+                      </MenuItem>
+                      <MenuItem _focus={{bg:"white"}} >
+                        <Text color="black">Manage Your Order</Text>
+                      </MenuItem>
+                      <MenuItem _focus={{bg:"white"}} >
+                        <Text color="black">Account</Text>
+                      </MenuItem>
+>>>>>>> parent of ceab7be (added cart functionalities in all pages)
                       <MenuItem  _focus={{bg:"white"}} >
                         <Box textAlign="center" p={2} onClick={handleLogout}  width="100%" colorScheme="#ea2127" bg="#ea2127" color="white"><Text color="white">Logout</Text></Box>
                       </MenuItem>
@@ -189,7 +201,7 @@ export const Navbar = () => {
           <Box><NavLink><RiCustomerService2Fill color="black" fontSize="22px"/></NavLink></Box>
           <Box>
             <NavLink>
-              <Text position="absolute" top="6" right="7" fontSize="14px" w="22px" textAlign="center" h="22px" color="white" bg="red" colorScheme="red" borderRadius="50%">{cartVal}</Text>
+              <Text position="absolute" top="6" right="8" fontSize="14px" w="22px" textAlign="center" h="22px" color="white" bg="red" colorScheme="red" borderRadius="50%">{cartVal}</Text>
               {/* <FaShoppingCart color="black" fontSize="22px"/> */}
               <Cart setCartVal={setCartVal}/>
             </NavLink>
