@@ -1,0 +1,7 @@
+import { Button, ButtonGroup } from '@chakra-ui/react'
+import {ArrowForwardIcon} from "@chakra-ui/icons"
+export const CommonButton=()=>{
+    return <>
+    <Button backgroundColor="black" w={{lg:"180px",md:"100%",sm:"100%",base:"100%"}} height="60px" marginTop="10px" color="white" align={{sm:"center",md:"center ",base:"center"}} ml={{lg:"140px",md:"50px",sm:"5px",base:"5px"}}>Continue <ArrowForwardIcon/></Button>
+    </>
+}
