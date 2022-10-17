@@ -1,0 +1,64 @@
+.tab_box{
+    display: flex;
+    gap:1px;
+    width: 120px;
+  
+    
+}
+.number{
+    border: 2px solid rgb(75, 74, 74);
+    height: 17px;
+    border-radius: 50%;
+   
+   width: 15px;
+    align-items: center;
+}
+.discount_box{
+    background-color: #d5d7f1;
+    border-radius:10px;
+    border: 1px dashed black;
+    width: 220px;
+    height: 30px;
+    margin: auto;
+    margin-top: 30px;
+    font-size: 19px;
+    padding: 5px;
+    
+}
+ h6{
+ margin-bottom: -20px;
+}
+.order_summary_detail{
+    margin-top: 20px;
+    gap: 5px;
+}
+.order_data{
+    display: flex;
+    justify-content: space-between;
+}
+/*address page css*/
+.input_box{
+    display: flex;
+    gap:9px
+}
+.baby_input{
+width: 49%;
+display: flex;
+flex-direction: column  ;
+
+}
+.Input_boxes{
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* input::placeholder {
+    font: 23px sans-serif;
+    color: rgb(126, 122, 122);
+   
+} */
+.Tab{
+   font-weight: 400;
+   color: #000000;
+   
+}
