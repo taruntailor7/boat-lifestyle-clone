@@ -32,6 +32,24 @@
     background-color:red;
     height: 3px;
   }
+  .hover-1 {
+    background: 
+      linear-gradient(red 0 0) no-repeat
+      calc(200% - var(--i, 0) * 100%) 100% / 200% calc(100% * var(--i, 0) + .08em);
+    transition: .3s calc(var(--i, 0) * .3s), background-position .3s calc(.3s - calc(var(--i, 0) * .3s));
+  }
+  .hover-1:hover {
+    --i: 1;
+  }
+  .hover-2 {
+    background: 
+      linear-gradient(#3b5998 0 0) no-repeat
+      calc(200% - var(--i, 0) * 100%) 100% / 200% calc(100% * var(--i, 0) + .08em);
+    transition: .3s calc(var(--i, 0) * .3s), background-position .3s calc(.3s - calc(var(--i, 0) * .3s));
+  }
+  .hover-2:hover {
+    --i: 1;
+  }
 
 
 

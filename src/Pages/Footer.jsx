@@ -7,8 +7,29 @@ import {
    FaLinkedinIn,
 } from "react-icons/fa";
 import { Box,Button,Grid,GridItem,Image,Img,Input,Stack,Tab,TabList,TabPanel,TabPanels,Tabs,Text } from "@chakra-ui/react";
+import emailjs from 'emailjs-com'
+import { useState } from "react";
+
+const initState={
+   user_email:""
+}
 
 const Footer = () => {
+   const [email,setMail]=useState(initState);
+
+   const handleChange=(e)=>{
+      const {name,value}=e.target;
+      setMail({...email,[name]:value})
+    }
+
+    const handleSubmit=(e)=>{
+      e.preventDefault();
+      console.log("hello")
+      emailjs.sendForm('service_0jdojop','template_wvp7w7x',e.target,'y3zcxMjtk2g0bGO0a').then(res=>console.log(res)).catch(res=>console.log(res))
+    }
+
+    console.log(email);
+
    return (
       <Box>
          <Box bg='rgb(0,0,0)'  >
@@ -21,8 +42,10 @@ const Footer = () => {
                   <Image width='40%' src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Asset_2_288x-8_5.png?v=1661838672" ></Image>
                   <Text mt={4} fontSize='14px' textAlign='left' >Subscribe to email alerts. We promise not to spam your inbox.</Text>
                   <Box mt={4} position='relative' >
-                     <Input focusBorderColor="none" outlineColor='red' variant='unstyled' p={3} placeholder="Email Adress" ></Input>
-                     <Button bg='red' color='white' position='absolute'  top='1' right='0' >SUSCRIBE</Button>
+                    <form onSubmit={handleSubmit} >
+                    <Input   focusBorderColor="none" name="user_email" value={email.user_email} outlineColor='red' variant='unstyled' p={3} placeholder="Email Adress" onChange={handleChange} />
+                     <Button type='submit' bg='red' color='white' position='absolute'  top='1' right='0' >SUSCRIBE</Button>
+                    </form>
                   </Box>
             </Box>
             <Grid mt={4} display={{base:'none',sm:'none' , md:'grid', lg:'grid' }} templateColumns={{base:'repeat(1, 1fr)',sm:'repeat(2, 1fr)' , md:'repeat(5, 1fr)',lg:'repeat(5, 1fr)'}} gap={6}>
