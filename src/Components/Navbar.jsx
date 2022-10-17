@@ -25,7 +25,7 @@ import { AuthContext } from '../AuthContextProvider/AuthContextProvider';
 
 const links = [
     {
-      to:"/collections/all-products",
+      to:"/collections/products",
       title:"ALL PRODUCTS"
     },
     {

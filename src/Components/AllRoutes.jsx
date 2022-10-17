@@ -11,6 +11,7 @@ import SignUpPage from "../Pages/Signup";
 import { NotFound } from "../Pages/NotFound";
 import { AllProducts } from "../Pages/AllProducts";
 import { Orders } from "../Pages/Orders";
+import ProductDetails from "../ProducDetails/ProductDetails";
 
 
 
@@ -26,7 +27,8 @@ export const AllRoutes = () => {
       <Route path="/collections/:id/" element={<Collections />}></Route>
       <Route path="/collections/sail-with-boat" element={<SailWithBoat />}></Route>
       <Route path="/collections/:id/:url" element={<IndivisualCategory />}></Route>
-      <Route path="/collections/all-products" element={<AllProducts/>}></Route>
+      <Route path="/collections/products" element={<AllProducts/>}></Route>
+      {/* <Route path="/collections/products/:id/:name" element={<ProductDetails/>}></Route> */}
       <Route path="*" element={<NotFound />}></Route>
     </Routes>
   );
